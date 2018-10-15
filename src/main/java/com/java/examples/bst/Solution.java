@@ -1,4 +1,4 @@
-package com.tmon.problem1;
+package com.java.examples.bst;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

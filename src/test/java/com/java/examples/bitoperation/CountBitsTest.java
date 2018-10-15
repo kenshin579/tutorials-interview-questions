@@ -1,4 +1,4 @@
-package com.tmon.problem2;
+package com.java.examples.bitoperation;
 
 import org.junit.Test;
 import org.slf4j.Logger;
