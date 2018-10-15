@@ -8,10 +8,6 @@ import java.util.Stack;
 public class ValidParenthesis {
     private static final Logger LOG = LoggerFactory.getLogger(ValidParenthesis.class);
 
-    //    char[][] PARENTHESIS_SYMBOLS = {{'(', ')'}};
-    char OPEN_PARENTHESIS = '(';
-    char CLOSE_PARENTHESIS = ')';
-
     /**
      * Parentheses가 valid한지 체크하는 함수를 작성하시오
      * ex. ()()() -> true
@@ -30,12 +26,12 @@ public class ValidParenthesis {
             return false;
         }
 
-        if (chars[0] == CLOSE_PARENTHESIS) {
+        if (chars[0] == ')') {
             return false;
         }
 
         for (char ch : chars) {
-            if (ch == OPEN_PARENTHESIS) {
+            if (ch == '(') {
                 stack.push(ch);
             } else {
                 // close parenthesis
