@@ -37,7 +37,7 @@ public class CountBitsTest {
     public void countBits2() {
         int num = 23;
         LOG.info("{}", Integer.toString(num, 2));
-        assertEquals(2, CountBits.countBits2(num));
+        assertEquals(4, CountBits.countBits2(num));
     }
 
     /**
@@ -52,11 +52,5 @@ public class CountBitsTest {
         int num = 13;
         LOG.info("{}", Integer.toString(num, 2));
         assertEquals(3, CountBits.countBits2(num));
-    }
-
-    @Test
-    public void test_bit_shift() {
-        int num = 7; //111 -> 011
-        LOG.info("{}", num >> 1);
     }
 }

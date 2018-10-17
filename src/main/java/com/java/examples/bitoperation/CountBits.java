@@ -31,12 +31,9 @@ public class CountBits {
      */
     public static int countBits2(int number) {
         int count = 0;
-        LOG.info("number: {}", number);
         while (number > 0) {
-            LOG.info("= {}", number - 1);
             number &= number - 1;
             count++;
-            LOG.info("number : {} count: {}", number, count);
         }
         return count;
     }
