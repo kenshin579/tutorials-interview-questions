@@ -21,6 +21,7 @@ public class CountBitsTest {
     public void countBits() {
         int num = 7;
         LOG.info("{}", Integer.toString(num, 2));
+        assertEquals(3, CountBits.countBits1(num));
         assertEquals(3, CountBits.countBits2(num));
     }
 
@@ -37,6 +38,7 @@ public class CountBitsTest {
     public void countBits2() {
         int num = 23;
         LOG.info("{}", Integer.toString(num, 2));
+        assertEquals(4, CountBits.countBits1(num));
         assertEquals(4, CountBits.countBits2(num));
     }
 
@@ -51,6 +53,7 @@ public class CountBitsTest {
     public void countBits3() {
         int num = 13;
         LOG.info("{}", Integer.toString(num, 2));
+        assertEquals(3, CountBits.countBits1(num));
         assertEquals(3, CountBits.countBits2(num));
     }
 }
