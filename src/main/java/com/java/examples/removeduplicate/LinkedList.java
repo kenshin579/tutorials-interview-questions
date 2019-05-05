@@ -19,117 +19,116 @@ import java.util.HashSet;
  ***********************************************************/
 
 public class LinkedList {
-    Node head;        // head pointer
+	Node head;        // head pointer
 
-    /**
-     * Insert a node at the end of linked list
-     *
-     * @param data - integer value
-     */
-    public void insert(int data) {
-        if (head == null) {
-            head = new Node(data);
-        } else {
-            Node currNode = head;
-            while (currNode.next != null) {
-                currNode = currNode.next;
-            }
+	public static void main(String[] args) {
+		LinkedList myLinkedList = new LinkedList();
 
-            // append the data at the end
-            currNode.next = new Node(data);
-        }
-    }
+		int[] arr = { 1, 2, 3, 1, 5, 3, 7 }; // sample array
 
-    /**
-     * Delete a node with the given data value
-     *
-     * @param data - integer value
-     */
-    public void delete(int data) {
-        if (head.data == data) {
-            head = head.next;
-            return;
-        }
+		// converting Array to LinkedLisit data structure
+		for (int i = 0; i < arr.length; i++) {
+			myLinkedList.insert(arr[i]);
+		}
 
-        Node currNode = head;
+		myLinkedList.print();
 
-        while (currNode.next != null) {
-            if (currNode.next.data == data) {
-                currNode.next = currNode.next.next;
-                break;
-            }
-            currNode = currNode.next;
-        }
+		System.out.format("\n--------- After removing duplicates ------------\n\n");
 
-    }
+		myLinkedList.removeDuplicate();
 
-    /**
-     * Print all values in the LinkedList
-     */
-    public void print() {
+		myLinkedList.print();
 
-        for (Node currNode = head; currNode != null; currNode = currNode.next) {
-            System.out.println(currNode.data);
-        }
-    }
+	}
 
-    /**
-     * Remove duplicate data from the LinkedList
-     */
-    public void removeDuplicate() {
-        HashSet<Integer> uniqueSet = new HashSet<Integer>(); // used to keep track of dataset
+	/**
+	 * Insert a node at the end of linked list
+	 *
+	 * @param data - integer value
+	 */
+	public void insert(int data) {
+		if (head == null) {
+			head = new Node(data);
+		} else {
+			Node currNode = head;
+			while (currNode.next != null) {
+				currNode = currNode.next;
+			}
 
-        Node currNode = head;
-        Node prevNode = null;
+			// append the data at the end
+			currNode.next = new Node(data);
+		}
+	}
 
-        while (currNode != null) {
-            if (!uniqueSet.contains(currNode.data)) {
-                uniqueSet.add(currNode.data);
-                prevNode = currNode;        // saving previous node for deletion
-            } else {
-                // duplicate found - need to delete current node
-                prevNode.next = currNode.next;
-            }
-            currNode = currNode.next;    // go to next node
-        }
-    }
+	/**
+	 * Delete a node with the given data value
+	 *
+	 * @param data - integer value
+	 */
+	public void delete(int data) {
+		if (head.data == data) {
+			head = head.next;
+			return;
+		}
 
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList();
+		Node currNode = head;
 
-        int[] arr = {1, 2, 3, 1, 5, 3, 7}; // sample array
+		while (currNode.next != null) {
+			if (currNode.next.data == data) {
+				currNode.next = currNode.next.next;
+				break;
+			}
+			currNode = currNode.next;
+		}
 
-        // converting Array to LinkedLisit data structure
-        for (int i = 0; i < arr.length; i++) {
-            myLinkedList.insert(arr[i]);
-        }
+	}
 
-        myLinkedList.print();
+	/**
+	 * Print all values in the LinkedList
+	 */
+	public void print() {
 
-        System.out.format("\n--------- After removing duplicates ------------\n\n");
+		for (Node currNode = head; currNode != null; currNode = currNode.next) {
+			System.out.println(currNode.data);
+		}
+	}
 
-        myLinkedList.removeDuplicate();
+	/**
+	 * Remove duplicate data from the LinkedList
+	 */
+	public void removeDuplicate() {
+		HashSet<Integer> uniqueSet = new HashSet<Integer>(); // used to keep track of dataset
 
-        myLinkedList.print();
+		Node currNode = head;
+		Node prevNode = null;
 
-    }
+		while (currNode != null) {
+			if (!uniqueSet.contains(currNode.data)) {
+				uniqueSet.add(currNode.data);
+				prevNode = currNode;        // saving previous node for deletion
+			} else {
+				// duplicate found - need to delete current node
+				prevNode.next = currNode.next;
+			}
+			currNode = currNode.next;    // go to next node
+		}
+	}
 
 }
-
 
 /**
  * Define Node Class
  */
 class Node {
-    int data;
-    Node next = null;
+	int data;
+	Node next = null;
 
-    public Node(int d) {
-        this.data = d;
-    }
+	public Node(int d) {
+		this.data = d;
+	}
 
-    public Node(int d, Node next) {
-        this.data = d;
-        this.next = next;
-    }
+	public Node(int d, Node next) {
+		this.data = d;
+		this.next = next;
+	}
 }

@@ -1,14 +1,12 @@
 package com.codility.lessons.fabonaccinumbers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class FibFrog {
-    private static final Logger LOG = LoggerFactory.getLogger(FibFrog.class);
 
-    public int solution(int[] A) {
+	public int solution(int[] A) {
 
-
-        return 0;
-    }
+		return 0;
+	}
 }

@@ -1,5 +1,6 @@
 package com.hackerrank.ArraysDS;
 
+import com.hackerrank.arrays.ReverseArrays;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

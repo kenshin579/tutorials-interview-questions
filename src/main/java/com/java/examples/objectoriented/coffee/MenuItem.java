@@ -1,19 +1,19 @@
 package com.java.examples.objectoriented.coffee;
 
 public class MenuItem {
-    private String name;
-    private int price;
+	private String name;
+	private int price;
 
-    public MenuItem(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
+	public MenuItem(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int cost() {
-        return price;
-    }
+	public int cost() {
+		return price;
+	}
 }
