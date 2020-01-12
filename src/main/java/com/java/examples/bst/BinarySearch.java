@@ -3,19 +3,7 @@ package com.java.examples.bst;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class Solution {
-
-	public static void main(String[] args) {
-		int priceCount = 4000;
-
-		// 가격정보 배열
-		int[] priceArray = new int[priceCount];
-		for (int priceArrayIdx = 1; priceArrayIdx < priceCount; priceArrayIdx++) {
-			priceArray[priceArrayIdx - 1] = priceArrayIdx * 1000;
-		}
-		System.out.println("가격의 배열인덱스 : " + getSearchPriceArrayIntex(priceArray, 690000));
-
-	}
+public class BinarySearch {
 
 	/**
 	 * 이건 recursive로 디자인됨.
@@ -26,7 +14,7 @@ public class Solution {
 	 * @param searchNumber
 	 * @return
 	 */
-	public static int binarySearch(int[] priceArray, int start, int end, int searchNumber) {
+	public static int RecursiveBinarySeach(int[] priceArray, int start, int end, int searchNumber) {
 		if (end >= start) {
 			int mid = start + (end - start) / 2;
 
@@ -35,9 +23,9 @@ public class Solution {
 			}
 
 			if (priceArray[mid] > searchNumber) {
-				return binarySearch(priceArray, start, mid - 1, searchNumber);
+				return RecursiveBinarySeach(priceArray, start, mid - 1, searchNumber);
 			}
-			return binarySearch(priceArray, mid + 1, end, searchNumber);
+			return RecursiveBinarySeach(priceArray, mid + 1, end, searchNumber);
 		}
 		return -1;
 	}
@@ -50,7 +38,7 @@ public class Solution {
 	 * @param searchPrice
 	 * @return
 	 */
-	public static int getSearchPriceArrayIntex(int[] priceArray, int searchPrice) {
+	public static int nonrecursiveBinarySearch(int[] priceArray, int searchPrice) {
 		int startIndex = 0;
 		int endIndex = priceArray.length - 1;
 		int midIndex;
