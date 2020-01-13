@@ -29,7 +29,6 @@ public class BinarySearchTest {
 //        numArr = getRandomArray();
 //        searchNum = numArr[this.getRandomNumber(MAX_ARRAY)];
         log.info("searchNum : {} numArr : {}", searchNum, numArr);
-
     }
 
     @Test

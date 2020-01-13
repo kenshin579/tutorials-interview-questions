@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class BinarySearch {
 
+	//기록:|
 	public static int RecursiveBinarySeach(int[] numArr, int start, int end, int searchNumber) {
 		if (end >= start) {
 			int mid = start + (end - start) / 2;
@@ -29,6 +30,7 @@ public class BinarySearch {
 	}
 
 	/**
+	 * 기록:|
 	 * https://www.youtube.com/watch?v=j5uXyPJ0Pew
 	 * non recursive 방식임.
 	 *
@@ -52,25 +54,5 @@ public class BinarySearch {
 			}
 		}
 		return -1;
-	}
-
-	//    public static int binarySearch(int[] priceArray, int start, int end, int searchNumber) {
-	//        if (end >= start) {
-	//            int mid = start + (end - start) / 2;
-	//
-	//            if (priceArray[mid] == searchNumber) {
-	//                return mid;
-	//            }
-	//
-	//            if (priceArray[mid] > searchNumber) {
-	//                return binarySearch(priceArray, start, mid - 1, searchNumber);
-	//            }
-	//            return binarySearch(priceArray, mid + 1, end, searchNumber);
-	//        }
-	//        return -1;
-	//    }
-
-	public long solution(int N) {
-		return 0;
 	}
 }
