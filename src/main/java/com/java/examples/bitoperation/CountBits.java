@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 public class CountBits {
 
 	/**
+	 * 기록:|
 	 * https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
 	 * Loop through all bits in an integer, check if a bit is set and if it is then increment the set bit count. See below program.
 	 *
@@ -22,6 +23,7 @@ public class CountBits {
 	}
 
 	/**
+	 * 기록:|
 	 * https://github.com/mission-peace/interview/blob/master/src/com/interview/bits/CountBits.java
 	 * https://www.quora.com/How-do-you-count-the-number-of-1-bits-in-a-number-using-only-bitwise-operations
 	 *

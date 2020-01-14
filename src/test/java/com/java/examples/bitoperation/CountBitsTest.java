@@ -1,15 +1,12 @@
 package com.java.examples.bitoperation;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 
+@Slf4j
 public class CountBitsTest {
-
-    private static final Logger LOG = LoggerFactory.getLogger(CountBitsTest.class);
-
     /**
      * 7:111
      * 6:110 -> 110(6)
@@ -20,7 +17,7 @@ public class CountBitsTest {
     @Test
     public void countBits() {
         int num = 7;
-        LOG.info("{}", Integer.toString(num, 2));
+        log.info("{}", Integer.toString(num, 2));
         assertEquals(3, CountBits.countBits1(num));
         assertEquals(3, CountBits.countBits2(num));
     }
@@ -37,7 +34,7 @@ public class CountBitsTest {
     @Test
     public void countBits2() {
         int num = 23;
-        LOG.info("{}", Integer.toString(num, 2));
+        log.info("{}", Integer.toString(num, 2));
         assertEquals(4, CountBits.countBits1(num));
         assertEquals(4, CountBits.countBits2(num));
     }
@@ -52,7 +49,7 @@ public class CountBitsTest {
     @Test
     public void countBits3() {
         int num = 13;
-        LOG.info("{}", Integer.toString(num, 2));
+        log.info("{}", Integer.toString(num, 2));
         assertEquals(3, CountBits.countBits1(num));
         assertEquals(3, CountBits.countBits2(num));
     }
