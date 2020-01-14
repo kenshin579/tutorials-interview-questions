@@ -11,6 +11,7 @@ import java.util.Set;
 public class CommonSet {
 
 	/**
+	 * 기록:|
 	 * 복잡도 : O(n)
 	 *
 	 * @param A

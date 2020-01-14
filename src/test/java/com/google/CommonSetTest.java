@@ -1,8 +1,7 @@
 package com.google;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -10,9 +9,8 @@ import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
+@Slf4j
 public class CommonSetTest {
-    private static final Logger LOG = LoggerFactory.getLogger(CommonSetTest.class);
-
     @Test
     public void test_find_common_values() {
         int[] A = {1, 1, 1, 1, 2, 2};
