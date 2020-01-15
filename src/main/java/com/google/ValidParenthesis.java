@@ -8,6 +8,9 @@ import java.util.Stack;
 public class ValidParenthesis {
 
 	/**
+	 * 기록:
+	 * https://blog.advenoh.pe.kr/algorithm/Algorithm-2%EA%B0%9C%EC%9D%98-array%EC%97%90%EC%84%9C-common-value-%EC%B0%BE%EA%B8%B0/
+	 * <p>
 	 * Parentheses가 valid한지 체크하는 함수를 작성하시오
 	 * ex. ()()() -> true
 	 * )( -> false
@@ -17,7 +20,7 @@ public class ValidParenthesis {
 	 * @param str
 	 * @return
 	 */
-	public boolean solution(String str) {
+	public boolean isBalanced(String str) {
 		char[] chars = str.toCharArray();
 		Stack<Character> stack = new Stack<>();
 
