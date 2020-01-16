@@ -123,7 +123,44 @@ public class LinkedList<T> {
         head = headNode;
     }
 
-    public LinkedList<Integer> calculateSumOfLL2(Node head1, Node head2) {
+    public LinkedList<Integer> sumUpTwoLinkedListV1(Node<Integer> n1, Node<Integer> n2) {
+        LinkedList<Integer> sumLL = new LinkedList<Integer>();
+
+        Node<Integer> currN1 = n1;
+        Node<Integer> currN2 = n2;
+        int sum, carryValue = 0;
+        int n1Value = 0, n2Value = 0;
+
+        while (currN1 != null || currN2 != null) {
+            if (currN1 == null)
+                n1Value = 0;
+            else
+                n1Value = currN1.data;
+            if (currN2 == null)
+                n2Value = 0;
+            else
+                n2Value = currN2.data;
+
+            sum = n1Value + n2Value + carryValue;
+            System.out.println(sum);
+
+            if (sum >= 10) {
+                sum = sum - 10;
+                carryValue = 1;
+            }
+
+            sumLL.insert(sum);
+
+            if (currN1 != null)
+                currN1 = currN1.next;
+            if (currN2 != null)
+                currN2 = currN2.next;
+        }
+
+        return sumLL;
+    }
+
+    public LinkedList<Integer> sumUpTwoLinkedListsV2(Node head1, Node head2) {
         LinkedList<Integer> result = new LinkedList<Integer>();
         int sum, carryover = 0, remainder = 0;
 
