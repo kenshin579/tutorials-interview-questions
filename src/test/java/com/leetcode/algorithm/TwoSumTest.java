@@ -1,5 +1,6 @@
 package com.leetcode.algorithm;
 
+import com.leetcode.algorithm.easy.TwoSum;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 

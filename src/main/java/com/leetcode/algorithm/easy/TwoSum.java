@@ -1,4 +1,4 @@
-package com.leetcode.algorithm;
+package com.leetcode.algorithm.easy;
 
 import lombok.extern.slf4j.Slf4j;
 
