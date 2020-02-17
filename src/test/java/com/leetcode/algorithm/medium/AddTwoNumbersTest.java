@@ -10,7 +10,6 @@ public class AddTwoNumbersTest {
     public void test_addTwoNumbers() {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(2);
-
-        assertThat(new AddTwoNumbers().addTwoNumbers(l1, l2)).isEqualTo(new ListNode(3));
+        assertThat(new AddTwoNumbers().addTwoNumbers(l1, l2).val).isEqualTo(new ListNode(3).val);
     }
 }
