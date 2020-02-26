@@ -1,6 +1,6 @@
 package com.leetcode.algorithm.easy;
 
-import com.leetcode.algorithm.common.ListNode;
+import com.leetcode.algorithm.common.struct.ListNode;
 import lombok.extern.slf4j.Slf4j;
 
 /**

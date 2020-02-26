@@ -1,6 +1,6 @@
 package com.leetcode.algorithm.easy;
 
-import com.leetcode.algorithm.common.TreeNode;
+import com.leetcode.algorithm.common.struct.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 

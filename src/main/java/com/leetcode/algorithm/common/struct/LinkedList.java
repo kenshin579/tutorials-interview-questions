@@ -1,4 +1,4 @@
-package com.leetcode.algorithm.common;
+package com.leetcode.algorithm.common.struct;
 
 /**
  * https://freestrokes.tistory.com/84

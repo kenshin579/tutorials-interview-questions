@@ -1,6 +1,6 @@
 package com.leetcode.algorithm.easy;
 
-import com.leetcode.algorithm.common.LinkedList;
+import com.leetcode.algorithm.common.struct.LinkedList;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
