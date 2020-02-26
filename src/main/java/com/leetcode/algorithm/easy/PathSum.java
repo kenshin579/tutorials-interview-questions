@@ -1,6 +1,6 @@
 package com.leetcode.algorithm.easy;
 
-import com.leetcode.algorithm.common.TreeNode;
+import com.leetcode.algorithm.common.struct.TreeNode;
 
 /**
  * https://leetcode.com/problems/path-sum-iii/

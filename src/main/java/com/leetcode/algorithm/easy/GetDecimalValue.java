@@ -10,29 +10,26 @@ import lombok.extern.slf4j.Slf4j;
  * ListNode next;
  * ListNode(int x) { val = x; }
  * }
- * <p>
- * https://leetcode.com/problems/middle-of-the-linked-list/
+ * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
  */
 @Slf4j
-public class MiddleNode {
-    public ListNode middleNode(ListNode head) {
+public class GetDecimalValue {
+    public int getDecimalValue(ListNode head) {
         ListNode tempNode = head;
-        int count = 1;
-
+        int nthCount = 0;
         while (tempNode.next != null) {
             tempNode = tempNode.next;
-            count++;
+            nthCount++;
         }
 
-        int middle = count / 2;
-        log.info("count : {} {}", count, middle);
-        count = 0;
         tempNode = head;
-        while (tempNode.next != null && count < middle) {
+        int decimalValue = 0;
+        while (tempNode.next != null) {
+            decimalValue += (int) (tempNode.val * Math.pow(2, nthCount));
             tempNode = tempNode.next;
-            count++;
+            nthCount--;
         }
-
-        return tempNode;
+        decimalValue += tempNode.val;
+        return decimalValue;
     }
 }
