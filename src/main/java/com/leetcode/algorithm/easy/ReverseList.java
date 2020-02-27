@@ -16,21 +16,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ReverseList {
     public ListNode reverseList(ListNode head) {
+        ListNode prevNode = null;
+        ListNode currNode = head;
         ListNode tempNode;
-        ListNode reverseNode = head;
-        ListNode traverseNode = head;
 
-        if (traverseNode != null)
-            traverseNode = traverseNode.next;
-        if (reverseNode != null)
-            reverseNode.next = null;
+        while (currNode != null) {
+            tempNode = currNode.next;
 
-        while (traverseNode != null) {
-            tempNode = new ListNode(traverseNode.val);
-            tempNode.next = reverseNode;
-            reverseNode = tempNode;
-            traverseNode = traverseNode.next;
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = tempNode;
         }
-        return reverseNode;
+        return prevNode;
     }
 }
