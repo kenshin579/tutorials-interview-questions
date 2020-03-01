@@ -11,6 +11,7 @@ import com.leetcode.algorithm.common.struct.TreeNode;
  * TreeNode(int x) { val = x; }
  * }
  * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ * https://www.baeldung.com/java-binary-tree
  */
 public class MaxDepth {
     public int maxDepth(TreeNode root) {
