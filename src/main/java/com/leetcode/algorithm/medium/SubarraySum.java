@@ -2,6 +2,9 @@ package com.leetcode.algorithm.medium;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * https://leetcode.com/problems/subarray-sum-equals-k/
  * https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
@@ -9,6 +12,50 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class SubarraySum {
     public int subarraySum(int[] nums, int k) {
+        return solution2(nums, k);
+    }
+
+    /**
+     * hint : map 사용하기
+     * - 그전의 sum을 각각 map에 기록을 둔다
+     * - 현재 값 - K의 값이 map에 있으면 subarray의 값이 zero라는 의미이고 매칭이 있다는 의미로 count를 ++하면 된다
+     * ㅁ. 9, 4 | 20, 30, 10 , 5
+     * <p>
+     * O(n)
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    private int solution2(int[] nums, int k) {
+        int count = 0;
+        int currSum = 0;
+        int key;
+        Map<Integer, Integer> prevSumMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            currSum += nums[i];
+            if (currSum == k) {
+                count++;
+            }
+
+            key = currSum - k;
+            if (prevSumMap.containsKey(key)) {
+                count += prevSumMap.get(key);
+            }
+
+            prevSumMap.put(currSum, prevSumMap.getOrDefault(currSum, 0) + 1);
+        }
+        return count;
+    }
+
+    /**
+     * O(N^2)
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
+    private int solution1(int[] nums, int k) {
         int count = 0;
         int sum;
         for (int i = 0; i < nums.length; i++) {
