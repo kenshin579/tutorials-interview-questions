@@ -1,11 +1,38 @@
 package com.leetcode.algorithm.easy;
 
+import com.leetcode.algorithm.common.struct.BinaryTree;
+import com.leetcode.algorithm.common.util.BinaryTreeUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.util.Arrays;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+@Slf4j
 public class MaxDepthTest {
 
     @Test
-    public void maxDepth() {
+    public void maxDepth1() {
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2, 7, 8, 6));
+        binaryTree.print();
 
+        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(3);
+    }
+
+    @Test
+    public void maxDepth2() {
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList());
+        binaryTree.print();
+
+        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(0);
+    }
+
+    @Test
+    public void maxDepth3() {
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2));
+        binaryTree.print();
+
+        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(2);
     }
 }
