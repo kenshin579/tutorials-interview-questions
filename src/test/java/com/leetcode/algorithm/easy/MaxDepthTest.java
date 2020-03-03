@@ -7,15 +7,32 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @Slf4j
 public class MaxDepthTest {
 
     @Test
-    public void maxDepth() {
-        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(1));
+    public void maxDepth1() {
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2, 7, 8, 6));
         binaryTree.print();
 
-//        log.info("{}", BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2, 7, 8, 6)));
+        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(3);
+    }
 
+    @Test
+    public void maxDepth2() {
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList());
+        binaryTree.print();
+
+        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(0);
+    }
+
+    @Test
+    public void maxDepth3() {
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2));
+        binaryTree.print();
+
+        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(2);
     }
 }
