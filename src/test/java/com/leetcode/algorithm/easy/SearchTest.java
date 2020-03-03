@@ -29,4 +29,10 @@ public class SearchTest {
         int[] nums = {-1, 0, 3, 5, 7, 9, 12};
         assertThat(new Search().search(nums, 5)).isEqualTo(3);
     }
+
+    @Test
+    public void search5() {
+        int[] nums = {5};
+        assertThat(new Search().search(nums, 5)).isEqualTo(0);
+    }
 }

@@ -14,14 +14,14 @@ public class Search {
     }
 
     public int recursiveBinarySearch(int[] nums, int startIndex, int endIndex, int target) {
+        int midIndex = startIndex + (endIndex - startIndex) / 2;
+        log.info("midIndex : {}", midIndex);
+
+        if (nums[midIndex] == target) {
+            return midIndex;
+        }
+
         if (startIndex < endIndex) {
-            int midIndex = startIndex + (endIndex - startIndex) / 2;
-            log.info("midIndex : {}", midIndex);
-
-            if (nums[midIndex] == target) {
-                return midIndex;
-            }
-
             if (nums[midIndex] < target) {
                 return recursiveBinarySearch(nums, midIndex + 1, endIndex, target);
             } else if (nums[midIndex] > target)
