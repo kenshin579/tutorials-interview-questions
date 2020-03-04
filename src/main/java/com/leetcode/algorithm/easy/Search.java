@@ -10,10 +10,37 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Search {
     public int search(int[] nums, int target) {
-        return recursiveBinarySearch(nums, 0, nums.length - 1, target);
+        return nonRecursiveBST(nums, target);
     }
 
-    public int recursiveBinarySearch(int[] nums, int startIndex, int endIndex, int target) {
+    private int nonRecursiveBST(int[] nums, int target) {
+        int startIndex = 0;
+        int endIndex = nums.length - 1;
+        int midIndex;
+
+        if (nums.length == 1 && nums[0] == target) {
+            return 0;
+        }
+
+        while (startIndex < endIndex) {
+            midIndex = startIndex + (endIndex - startIndex) / 2;
+            log.info("midIndex : {}", midIndex);
+
+            if (nums[midIndex] == target) {
+                return midIndex;
+            }
+
+            if (nums[midIndex] < target) {
+                startIndex = midIndex + 1;
+            } else if (nums[midIndex] > target) {
+                endIndex = midIndex - 1;
+            }
+
+        }
+        return -1;
+    }
+
+    private int recursiveBinarySearch(int[] nums, int startIndex, int endIndex, int target) {
         int midIndex = startIndex + (endIndex - startIndex) / 2;
         log.info("midIndex : {}", midIndex);
 
