@@ -23,13 +23,25 @@ public class LongestCommonPrefixTest {
     @Test
     public void longestCommonPrefix3() {
         String[] strs = {"dar", "racecar", "car"};
-        assertThat(new LongestCommonPrefix().longestCommonPrefix(strs)).isEqualTo("ar");
+        assertThat(new LongestCommonPrefix().longestCommonPrefix(strs)).isEqualTo("");
     }
 
     @Test
-    public void longestCommonPrefix4() {
-        String[] strs = {"dar", "racecar", "car"};
-        assertThat(new LongestCommonPrefix().longestCommonPrefix(strs)).isEqualTo("ar");
+    public void longestCommonPrefix5() {
+        String[] strs = {};
+        assertThat(new LongestCommonPrefix().longestCommonPrefix(strs)).isEqualTo("");
+    }
+
+    @Test
+    public void longestCommonPrefix6() {
+        String[] strs = {"a"};
+        assertThat(new LongestCommonPrefix().longestCommonPrefix(strs)).isEqualTo("a");
+    }
+
+    @Test
+    public void longestCommonPrefix7() {
+        String[] strs = {"aaa", "aa", "aaa"};
+        assertThat(new LongestCommonPrefix().longestCommonPrefix(strs)).isEqualTo("aa");
     }
 
     @Test

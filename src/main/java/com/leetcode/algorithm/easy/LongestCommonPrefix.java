@@ -22,11 +22,18 @@ public class LongestCommonPrefix {
     }
 
     private String wordByWordMatchingSolution(String[] strs) {
-        String compareStr = strs[0];
+        if (strs.length == 0) {
+            return "";
+        }
+        if (strs.length == 1) {
+            return strs[0];
+        }
         String currentLCPStr = "";
 
+        currentLCPStr = getCommonPrefix(strs[0], strs[1]);
+        log.info("currentLCPStr : {}", currentLCPStr);
         for (int i = 1; i < strs.length; i++) {
-            currentLCPStr = getCommonPrefix(compareStr, strs[i]);
+            currentLCPStr = getCommonPrefix(currentLCPStr, strs[i]);
             log.info("currentLCPStr : {}", currentLCPStr);
         }
         return currentLCPStr;
