@@ -1,7 +1,7 @@
 package com.leetcode.algorithm.easy;
 
-import com.leetcode.algorithm.common.struct.BinaryTree;
-import com.leetcode.algorithm.common.util.BinaryTreeUtil;
+import com.leetcode.algorithm.common.struct.BinarySearchTree;
+import com.leetcode.algorithm.common.util.BinarySearchTreeUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -14,25 +14,25 @@ public class MaxDepthTest {
 
     @Test
     public void maxDepth1() {
-        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2, 7, 8, 6));
-        binaryTree.print();
+        BinarySearchTree binarySearchTree = BinarySearchTreeUtil.generateBinaryTree(Arrays.asList(5, 2, 7, 8, 6));
+        binarySearchTree.print();
 
-        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(3);
+        assertThat(new MaxDepth().maxDepth(binarySearchTree.root)).isEqualTo(3);
     }
 
     @Test
     public void maxDepth2() {
-        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList());
-        binaryTree.print();
+        BinarySearchTree binarySearchTree = BinarySearchTreeUtil.generateBinaryTree(Arrays.asList());
+        binarySearchTree.print();
 
-        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(0);
+        assertThat(new MaxDepth().maxDepth(binarySearchTree.root)).isEqualTo(0);
     }
 
     @Test
     public void maxDepth3() {
-        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2));
-        binaryTree.print();
+        BinarySearchTree binarySearchTree = BinarySearchTreeUtil.generateBinaryTree(Arrays.asList(5, 2));
+        binarySearchTree.print();
 
-        assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(2);
+        assertThat(new MaxDepth().maxDepth(binarySearchTree.root)).isEqualTo(2);
     }
 }
