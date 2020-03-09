@@ -14,7 +14,7 @@ public class MaxDepthTest {
 
     @Test
     public void maxDepth1() {
-        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 2, 7, 8, 6));
+        BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(3, 9, 20, null, null, 15, 7));
         binaryTree.print();
 
         assertThat(new MaxDepth().maxDepth(binaryTree.root)).isEqualTo(3);
