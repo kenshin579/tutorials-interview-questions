@@ -14,10 +14,23 @@ public class Question2Test {
 	}
 
 	@Test
+	public void countBits1() {
+		int num = 115;
+		log.info("{}", Integer.toString(num, 2));
+		assertThat(Question2.countBits(num)).isEqualTo(5);
+	}
+
+	@Test
 	public void countBits2() {
 		int num = 999999;
 		log.info("{}", Integer.toString(num, 2));
 		assertThat(Question2.countBits(num)).isEqualTo(12);
+	}
 
+	@Test
+	public void countBits_negative1() {
+		int num = -10;
+		log.info("{}", Integer.toString(num, 2));
+		assertThat(Question2.countBits(num)).isEqualTo(30);
 	}
 }
