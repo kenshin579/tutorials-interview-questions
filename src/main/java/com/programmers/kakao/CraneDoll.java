@@ -13,14 +13,18 @@ public class CraneDoll {
     public int solution(int[][] board, int[] moves) {
         Stack<Integer> bucket = new Stack();
         int value;
+        int answer = 0;
 
         for (int pos = 0; pos < moves.length; pos++) {
             value = popDollFromBoard(board, moves[pos]);
+            if (value != 0) {
+                if (putIntoBucket(bucket, value))
+                    answer++;
+            }
 
-            putIntoBucket(bucket, value);
-            log.info("pos : {} bucket : {} value : {}", pos, bucket, value);
+            log.info("pos : {} bucket : {} value : {} answer : {}", pos, bucket, value, answer);
         }
-        return bucket.size();
+        return answer;
     }
 
     protected int popDollFromBoard(int[][] board, int pos) {
@@ -35,14 +39,17 @@ public class CraneDoll {
         return value;
     }
 
-    protected int putIntoBucket(Stack<Integer> bucket, Integer number) {
+    protected boolean putIntoBucket(Stack<Integer> bucket, Integer number) {
+        boolean disappear = false;
         if (bucket.size() == 0) {
             bucket.add(number);
         } else if (bucket.peek().equals(number)) {
             bucket.pop();
+            disappear = true;
         } else {
             bucket.add(number);
         }
-        return bucket.size();
+
+        return disappear;
     }
 }

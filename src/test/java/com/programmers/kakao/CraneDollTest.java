@@ -21,7 +21,7 @@ public class CraneDollTest {
         };
 
         int[] moves = {1};
-        assertThat(new CraneDoll().solution(board, moves)).isEqualTo(1);
+        assertThat(new CraneDoll().solution(board, moves)).isEqualTo(0);
     }
 
     @Test
@@ -49,6 +49,8 @@ public class CraneDollTest {
         };
 
         int[] moves = {1, 5, 3, 5, 1, 2, 1, 4};
+        //4, 3, 1, 1 -> 4, 3 (cnt: 1)
+        //4, 3, 3 -> 4(cnt:2)
         assertThat(new CraneDoll().solution(board, moves)).isEqualTo(4);
     }
 
@@ -64,6 +66,46 @@ public class CraneDollTest {
 
         int[] moves = {1, 4, 1};
         assertThat(new CraneDoll().solution(board, moves)).isEqualTo(1);
+    }
+
+    @Test
+    public void solution5() {
+        int[][] board = {
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0}
+        };
+
+        int[] moves = {1, 4, 1};
+        assertThat(new CraneDoll().solution(board, moves)).isEqualTo(0);
+    }
+
+    @Test
+    public void solution6() {
+        int[][] board = {
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0}
+        };
+
+        int[] moves = {1, 4, 1};
+        assertThat(new CraneDoll().solution(board, moves)).isEqualTo(0);
+    }
+
+    @Test
+    public void solution7() {
+        int[][] board = {
+                {0, 0, 0},
+                {0, 0, 0},
+                {0, 0, 0}
+        };
+
+        int[] moves = {1, 2, 3};
+        assertThat(new CraneDoll().solution(board, moves)).isEqualTo(0);
     }
 
     @Test
@@ -88,10 +130,9 @@ public class CraneDollTest {
         Stack<Integer> bucket = new Stack<>();
 
         CraneDoll craneDoll = new CraneDoll();
-        assertThat(craneDoll.putIntoBucket(bucket, 3)).isEqualTo(1);
-        assertThat(craneDoll.putIntoBucket(bucket, 1)).isEqualTo(2);
-        assertThat(craneDoll.putIntoBucket(bucket, 2)).isEqualTo(3);
-
+        assertThat(craneDoll.putIntoBucket(bucket, 3)).isFalse();
+        assertThat(craneDoll.putIntoBucket(bucket, 1)).isFalse();
+        assertThat(craneDoll.putIntoBucket(bucket, 2)).isFalse();
     }
 
     @Test
@@ -99,8 +140,8 @@ public class CraneDollTest {
         Stack<Integer> bucket = new Stack<>();
 
         CraneDoll craneDoll = new CraneDoll();
-        assertThat(craneDoll.putIntoBucket(bucket, 1)).isEqualTo(1);
-        assertThat(craneDoll.putIntoBucket(bucket, 1)).isEqualTo(0);
-        assertThat(craneDoll.putIntoBucket(bucket, 2)).isEqualTo(1);
+        assertThat(craneDoll.putIntoBucket(bucket, 1)).isFalse();
+        assertThat(craneDoll.putIntoBucket(bucket, 1)).isTrue();
+        assertThat(craneDoll.putIntoBucket(bucket, 2)).isFalse();
     }
 }
