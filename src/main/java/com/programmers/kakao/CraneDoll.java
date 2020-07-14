@@ -11,19 +11,38 @@ import java.util.Stack;
 @Slf4j
 public class CraneDoll {
     public int solution(int[][] board, int[] moves) {
-        int answer = 0;
-
         Stack<Integer> bucket = new Stack();
+        int value;
 
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                log.info("[{}][{}] = {}", i, j, board[i][j]);
-            }
+        for (int pos = 0; pos < moves.length; pos++) {
+            value = popDollFromBoard(board, moves[pos]);
+
+            putIntoBucket(bucket, value);
+            log.info("pos : {} bucket : {} value : {}", pos, bucket, value);
         }
-        return answer;
+        return bucket.size();
     }
 
     protected int popDollFromBoard(int[][] board, int pos) {
-        return 0;
+        int value = 0;
+        for (int rowIndex = 0; rowIndex < board.length; rowIndex++) {
+            value = board[rowIndex][pos - 1];
+            if (value != 0) {
+                board[rowIndex][pos - 1] = 0;
+                break;
+            }
+        }
+        return value;
+    }
+
+    protected int putIntoBucket(Stack<Integer> bucket, Integer number) {
+        if (bucket.size() == 0) {
+            bucket.add(number);
+        } else if (bucket.peek().equals(number)) {
+            bucket.pop();
+        } else {
+            bucket.add(number);
+        }
+        return bucket.size();
     }
 }
