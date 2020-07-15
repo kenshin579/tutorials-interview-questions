@@ -1,4 +1,4 @@
-package com.programmers.kakao.hash;
+package com.programmers.hash;
 
 import org.junit.Test;
 

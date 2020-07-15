@@ -1,4 +1,4 @@
-package com.programmers.kakao.stack;
+package com.programmers.stack;
 
 import org.junit.Test;
 

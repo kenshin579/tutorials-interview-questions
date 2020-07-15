@@ -1,4 +1,4 @@
-package com.programmers.kakao.binarysearch;
+package com.programmers.binarysearch;
 
 import java.util.stream.IntStream;
 
@@ -9,7 +9,11 @@ import java.util.stream.IntStream;
  * https://willbfine.tistory.com/299
  */
 public class Budget {
-    public int solution(int[] budgets, int M) {
+    public int mySolution(int[] budgets, int M) {
+        return 0;
+    }
+
+    public int solution2(int[] budgets, int M) {
         int sum = IntStream.of(budgets).sum();
         int max = IntStream.of(budgets).max().getAsInt();
         /******************************

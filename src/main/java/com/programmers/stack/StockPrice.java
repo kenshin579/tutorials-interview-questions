@@ -1,4 +1,4 @@
-package com.programmers.kakao.stack;
+package com.programmers.stack;
 
 import lombok.extern.slf4j.Slf4j;
 

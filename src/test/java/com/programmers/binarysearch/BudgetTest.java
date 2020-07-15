@@ -1,4 +1,4 @@
-package com.programmers.kakao.binarysearch;
+package com.programmers.binarysearch;
 
 import org.junit.Test;
 
@@ -23,8 +23,9 @@ public class BudgetTest {
      */
     @Test
     public void solution() {
-        int[] bucket = {120, 110, 140, 150}; //520 (110, 120, 140, 150)
+        int[] bucket = {120, 110, 140, 150};
 
-        assertThat(new Budget().solution(bucket, 485)).isEqualTo(127);
+        assertThat(new Budget().mySolution(bucket, 485)).isEqualTo(127);
+        assertThat(new Budget().solution2(bucket, 485)).isEqualTo(127);
     }
 }
