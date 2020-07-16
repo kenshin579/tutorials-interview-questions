@@ -16,11 +16,10 @@ public class HIndexTest {
         int[] citations = {3, 0, 6, 1, 5};
         //0, 1, 3, 5, 6
 
-        //1 h:(4, 1) : 4편의 논문 1회 이상 인용, 1편의 논문: 1회 이하 인용
-        //3 h:(3, 2) : 3편의 논문 h:3회 이상 인용, 2편의 논문: 3회 이하 인용
-        //5 h:(2, 3) : 2편의 논문 5회 이상 인용, 3편의 눈몬: 5회 이하 인용함
-        //6 h:(1, 5) : 1편의 논문 6회 이상 인용, 4편의 논문: 6회 이사 인용함
-
+        //H:1 4편
+        //H:2 3편
+        //H:3 3편 <-- 이게 정답
+        //H:4 2편
         assertThat(new HIndex().solution(citations)).isEqualTo(3);
     }
 
@@ -29,11 +28,75 @@ public class HIndexTest {
         int[] citations = {0, 15, 4, 0, 7, 10, 0};
         //0, 0, 0, 4, 7, 10, 15
 
-        //4 (4, 3)
-        //7 (3, 4)
-        //10 (2, 5)
-        //15 (1, 6)
-
+        //H:1 4편
+        //H:2 4편
+        //H:3 4편
+        //H:4 4편 <-- 이게 정답
+        //H:5 3편
+        assertThat(new HIndex().countCitations(citations, 5)).isEqualTo(3);
         assertThat(new HIndex().solution(citations)).isEqualTo(4);
+    }
+
+    @Test
+    public void solution3() {
+        int[] citations = {20, 19, 18, 1};
+        //1, 18, 19, 20
+
+        //h:1, 4편
+        //h:2, 3편
+        //H:3, 3편 <-- 이게 답임
+        //h:4, 3편
+
+        assertThat(new HIndex().countCitations(citations, 1)).isEqualTo(4);
+        assertThat(new HIndex().solution(citations)).isEqualTo(3);
+    }
+
+    @Test
+    public void solution4() {
+        int[] citations = {20, 19, 18, 17};
+        //17, 18, 19, 20
+
+        //h:1, 4편
+        //h:2, 4편
+        //H:3, 4편
+        //h:4, 4편 <- 이게 답임
+        //h:5, 4편
+
+        assertThat(new HIndex().countCitations(citations, 4)).isEqualTo(4);
+        assertThat(new HIndex().solution(citations)).isEqualTo(4);
+
+    }
+
+    @Test
+    public void solution5() {
+        int[] citations = {0, 0, 0, 0, 0};
+
+        assertThat(new HIndex().solution(citations)).isEqualTo(0);
+
+    }
+
+    @Test
+    public void solution6() {
+        int[] citations = {};
+
+        assertThat(new HIndex().solution(citations)).isEqualTo(0);
+
+    }
+
+    @Test
+    public void solution7() {
+        int[] citations = {0, 67, 2, 3, 15, 9, 0, 2};
+        //0, 0, 2, 2, 3, 9, 15, 67
+
+        //h:1, 6편
+        //h:2, 6편
+        //H:3, 4편 <-- ??
+        //h:4, 3편
+        //h:5, 3편
+        //h:6, 3편
+        //h:9, 3편
+
+        assertThat(new HIndex().solution(citations)).isEqualTo(3);
+
     }
 }

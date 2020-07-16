@@ -15,23 +15,29 @@ public class HIndex {
         Arrays.sort(citations);
 
         log.info("citations : {}", citations);
-        int numOfCitation;
-        int high;
-        int low;
 
-        for (int i = 0; i < citations.length; i++) {
-            numOfCitation = citations[i];
+        int countOccurrence;
+        for (int hIndex = 1; hIndex <= citations.length; hIndex++) {
+            countOccurrence = countCitations(citations, hIndex);
 
-            if (numOfCitation != 0) {
-                high = citations.length - i;
-                low = citations.length - high;
-                log.info("high : {} low : {}", high, low);
-                if (numOfCitation == high && numOfCitation > low) {
-                    answer = numOfCitation;
-                    break;
-                }
+            log.info("hIndex : {} countOccurrence : {}", hIndex, countOccurrence);
+            if (hIndex == countOccurrence) {
+                answer = hIndex;
+                break;
             }
+
         }
         return answer;
+    }
+
+    protected int countCitations(int[] citations, int countOccurrence) {
+        int count = 0;
+        for (int i = 0; i < citations.length; i++) {
+            if (citations[i] != 0 && citations[i] >= countOccurrence) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
