@@ -12,37 +12,6 @@ import java.util.PriorityQueue;
  */
 @Slf4j
 public class MoreSpicy {
-    public int mySolution(int[] scoville, int K) {
-        int answer = 0;
-        PriorityQueue<Integer> heap = new PriorityQueue<>();
-
-        for (int aScoville : scoville) {
-            heap.add(aScoville);
-        }
-
-//        log.info("heap : {}", heap);
-
-        while (heap.size() > 0) {
-            Integer poll = heap.poll();
-            log.info("poll : {}", poll);
-        }
-//
-//        while (heap.peek() < K) {
-//            if (heap.size() == 1) return -1;
-//
-//            //섞는다.
-//            int val1 = heap.poll();
-//            int val2 = heap.poll();
-//
-//            int result = val1 + (val2 * 2);
-//
-//
-//            heap.add(result);
-//            answer++;
-//        }
-        return answer;
-    }
-
     public int bestSolution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> heap = new PriorityQueue<>();
@@ -50,7 +19,8 @@ public class MoreSpicy {
         for (int aScoville : scoville) {
             heap.add(aScoville);
         }
-        while (heap.peek() < K) {
+
+        while (heap.peek() < K) { //min값이 뭔지 바로 알 수 있음 (heap에서는)
             if (heap.size() == 1) return -1;
 
             //섞는다.
@@ -61,6 +31,7 @@ public class MoreSpicy {
 
             heap.add(result);
             answer++;
+            log.info("val1: {} val2: {} result : {} answer : {} heap :{}", val1, val2, result, answer, heap);
         }
         return answer;
     }

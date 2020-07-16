@@ -18,11 +18,9 @@ public class MoreSpicyTest {
      */
     @Test
     public void solution() {
-//        int[] scoville = {1, 2, 3, 9, 10, 12};
         int[] scoville = {1, 2, 3, 9, 10, 12};
 
-        assertThat(new MoreSpicy().mySolution(scoville, 7)).isEqualTo(2);
-//        assertThat(new MoreSpicy().bestSolution(scoville, 7)).isEqualTo(2);
+        assertThat(new MoreSpicy().bestSolution(scoville, 7)).isEqualTo(2);
     }
 
     @Test
