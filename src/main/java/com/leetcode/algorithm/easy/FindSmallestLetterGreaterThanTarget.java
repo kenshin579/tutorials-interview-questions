@@ -8,6 +8,11 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class FindSmallestLetterGreaterThanTarget {
+    /**
+     * Time Complexity : O(N)
+     * Algorithm : 단순 loop 방식
+     * - loop 돌면서 target보다 큰 값을 찾음
+     */
     public char nextGreatestLetter(char[] letters, char target) {
         char letter;
         for (char c : letters) {
@@ -22,7 +27,7 @@ public class FindSmallestLetterGreaterThanTarget {
     /**
      * Time complexity : O(log N)
      * Algorithm : Binary Search + Iterative
-     * todo : 작업중
+     * todo : 스터디 중
      */
     public char nextGreatestLetter2(char[] letters, char target) {
         int leftIndex = 0;
