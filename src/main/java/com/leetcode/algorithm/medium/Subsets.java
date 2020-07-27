@@ -15,22 +15,38 @@ import java.util.List;
  */
 @Slf4j
 public class Subsets {
+    /**
+     * Time Complexity : O(N*M) where M is the num of bits
+     * Algorithm :
+     * - power set을 만들기 위해 숫자의(ex. 1~N) bit 패턴을 이용해서 생성함
+     *
+     * 참고
+     * - Power set P(S) of a set S is the set of all subsets of S
+     * ㅁ. P(s) = {{}, {a}, {b}, {c}, {a,b}, {a, c}, {b, c}, {a, b, c}}
+     */
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
-        int max = convertBinaryStrToDecimal(generateBinaryStr(nums.length));
+        String maxBinaryStr = generateBinaryStr(nums.length);
+        int max = convertBinaryStrToDecimal(maxBinaryStr);
+        log.info("maxBinaryStr : {} max : {}", maxBinaryStr, max);
+
         List<Integer> subList;
 
         for (int eachNum = 0; eachNum <= max; eachNum++) {
             subList = new ArrayList<>();
+            log.info("eachNum : {} {}", eachNum, Integer.toBinaryString(eachNum));
 
             for (int bitIdx = 0; bitIdx < nums.length; bitIdx++) {
                 if ((eachNum & (1 << bitIdx)) > 0) {
                     subList.add(nums[bitIdx]);
+                    log.info(" {}.subList : {}", bitIdx, subList);
                 }
             }
             result.add(subList);
         }
+
+        log.info("result : {}", result);
         return result;
     }
 
