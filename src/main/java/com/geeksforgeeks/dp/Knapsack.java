@@ -18,9 +18,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Knapsack {
     /**
-     * Time Complexity :
+     * Time Complexity : O(N*W)
+     * - where ‘N’ is the number of weight element and ‘W’ is capacity
      * <p>
-     * Algorithm :
+     * Algorithm : create max value table
      */
     public int getSumOfWeights(int[] values, int[] weights, int W) {
         int N = values.length;
