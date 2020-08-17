@@ -1,90 +1,71 @@
 package com.java.examples.linkedlist;
 
+import lombok.ToString;
+
+@ToString
 public class LinkedList<T> {
     Node<T> head;
+    private int size = 0;
 
     public void insert(T data) {
+        size++;
         if (head == null) {
-            head = new Node<T>(data);
+            head = new Node<>(data);
             return;
         }
 
         Node<T> currNode = head;
-
         while (currNode.next != null) {
             currNode = currNode.next;
         }
-
-        currNode.next = new Node<T>(data);
+        currNode.next = new Node<>(data);
     }
 
+    //todo: 여기서부터 하면 됨
     public void remove(T data) {
-        if (head.data == data) {
-            head = head.next;
+        Node<T> currNode = head;
+
+        if (data == currNode.data) {
+            head = currNode.next;
+            size--;
             return;
         }
 
-        Node<T> currNode = head;
-        Node<T> prevNode = null;
-
-        while (currNode != null) {
-            if (currNode.data != data) {
-                prevNode = currNode;
-                currNode = currNode.next;
-            } else { // found
-                prevNode.next = currNode.next;
-                break;
-            }
+        while (currNode.next != null && currNode.next.data != data) {
+            currNode = currNode.next;
         }
+        currNode.next = currNode.next.next;
+        size--;
+    }
 
+    public T getIndex(int index) {
+        int count = 0;
+        Node<T> currNode = head;
+        while (count < index && currNode != null) {
+            currNode = currNode.next;
+            count++;
+        }
+        return currNode.data;
     }
 
     public LinkedList<Integer> calculateSumOfLL(Node<Integer> n1, Node<Integer> n2) {
-        LinkedList<Integer> sumLL = new LinkedList<Integer>();
 
-        Node<Integer> currN1 = n1;
-        Node<Integer> currN2 = n2;
-        int sum, carryValue = 0;
-        int n1Value = 0, n2Value = 0;
-
-        while (currN1 != null || currN2 != null) {
-            if (currN1 == null)
-                n1Value = 0;
-            else
-                n1Value = currN1.data;
-            if (currN2 == null)
-                n2Value = 0;
-            else
-                n2Value = currN2.data;
-
-            sum = n1Value + n2Value + carryValue;
-            System.out.println(sum);
-
-            if (sum >= 10) {
-                sum = sum - 10;
-                carryValue = 1;
-            }
-
-            sumLL.insert(sum);
-
-            if (currN1 != null)
-                currN1 = currN1.next;
-            if (currN2 != null)
-                currN2 = currN2.next;
-        }
-
-        return sumLL;
+        return null;
     }
 
     public void print() {
         Node<T> currNode = head;
-
         while (currNode != null) {
             System.out.print(currNode.data + " ");
             currNode = currNode.next;
         }
         System.out.println();
     }
+
+    public int size() {
+        return this.size;
+    }
+
 
     /**
      * Not quite work, yet.

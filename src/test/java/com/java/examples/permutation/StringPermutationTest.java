@@ -1,13 +1,26 @@
 package com.java.examples.permutation;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
+@Slf4j
 public class StringPermutationTest {
     @Test
-    public void test_string_permutation() {
-        String str = "ABC";
-        int n = str.length();
-        StringPermutation stringPermutation = new StringPermutation();
-        stringPermutation.permute(str, 0, n - 1);
+    public void permute() {
+        StringPermutation.printPermutedString("ABC");
+//        StringPermutation.printPermutedString("AB");
+    }
+
+    @Test
+    public void getPermutatedStringAsList() {
+        ArrayList<String> abc = StringPermutation.getPermutatedStringAsList("ABC");
+        log.info("abc : {}", abc);
+    }
+
+    @Test
+    public void printPermutatedString() {
+        StringPermutation.permuteStrWithPrefixStr("ABC");
     }
 }
