@@ -9,7 +9,8 @@ import java.util.regex.Pattern;
 /**
  * 211. Add and Search Word - Data structure design
  * https://leetcode.com/problems/add-and-search-word-data-structure-design/
- * Time Limit Exceeded 발생함
+ * todo : Time Limit Exceeded 발생함
+ * @see com.leetcode.algorithm.medium.WordDictionary2
  */
 @Slf4j
 public class WordDictionary {

@@ -1,6 +1,7 @@
 package com.java.examples.test.test5;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -29,6 +30,7 @@ public class Question1Test {
 	}
 
 	@Test
+	@Ignore
 	public void change4() {
 		String expected = Integer.toString(94, 16);
 		log.info("expected : {}", expected);

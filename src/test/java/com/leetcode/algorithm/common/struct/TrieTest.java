@@ -3,6 +3,8 @@ package com.leetcode.algorithm.common.struct;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @Slf4j
 public class TrieTest {
     @Test
@@ -25,13 +27,19 @@ public class TrieTest {
     public void trie_test2() {
         Trie trie = new Trie();
 
-//        trie.insert("DEV");
-//        trie.insert("DEAR");
-        trie.insert("PIE");
-//        trie.insert("POP");
-//        trie.insert("POW");
+        trie.insert("abc");
+        trie.insert("abgl");
+        trie.insert("cdf");
+        trie.insert("abcd");
+        trie.insert("lmn");
 
-//        log.info("trie : {}", trie);
+        assertThat(trie.containsNode("lmn")).isTrue();
+        assertThat(trie.containsNode("cdf")).isTrue();
+        assertThat(trie.containsNode("ab")).isFalse();
+        assertThat(trie.containsNode("lm")).isFalse();
+
+        trie.delete("abcd");
+        assertThat(trie.containsNode("abcd")).isFalse();
 
         trie.print();
     }

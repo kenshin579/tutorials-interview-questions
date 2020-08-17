@@ -17,6 +17,7 @@ public class ParenthesesTest {
      * 4-3. ')'를 다시 붙입니다.
      * 4-4. u의 첫 번째와 마지막 문자를 제거하고, 나머지 문자열의 괄호 방향을 뒤집어서 뒤에 붙입니다.
      * 4-5. 생성된 문자열을 반환합니다.
+     * 반환값 :
      */
     @Test
     public void solution() {
