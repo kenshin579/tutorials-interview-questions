@@ -34,7 +34,17 @@ public class Trie {
     }
 
     private void insertRecursive(TrieNode current, String word, int index) {
-
+        if (index < word.length()) {
+            char key = word.charAt(index);
+            current = current.getChildren().computeIfAbsent(key, k -> new TrieNode());
+//            if (!current.getChildren().containsKey(key)) {
+//                current.getChildren().put(key, new TrieNode());
+//            }
+//            current = current.getChildren().get(key);
+            insertRecursive(current, word, index + 1);
+        } else {
+            current.setEndOfWord(true);
+        }
     }
 
     public boolean delete(String word) {

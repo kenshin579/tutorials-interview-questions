@@ -2,6 +2,9 @@ package com.leetcode.algorithm.medium;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 208. Implement Trie (Prefix Tree)
  * https://leetcode.com/problems/implement-trie-prefix-tree/
@@ -18,13 +21,13 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
-public class Trie {
+public class TrieWithMap {
     private final TrieNode root;
 
     /**
      * Initialize your data structure here.
      */
-    public Trie() {
+    public TrieWithMap() {
         root = new TrieNode();
     }
 
@@ -35,12 +38,12 @@ public class Trie {
     public void insert(String word) {
         TrieNode current = root;
         for (char ch : word.toCharArray()) {
-            if (!current.containsKey(ch)) {
-                current.put(ch, new TrieNode());
-            }
-            current = current.get(ch);
+           if (!current.getChildren().containsKey(ch)) {
+               current.getChildren().put(ch, new TrieNode());
+           }
+           current = current.getChildren().get(ch);
         }
-        current.setEnd();
+        current.setEndOfWord(true);
     }
 
     /**
@@ -49,15 +52,15 @@ public class Trie {
      */
     public boolean search(String word) {
         TrieNode last = searchPrefix(word);
-        return last != null && last.isEnd();
+        return last != null && last.isEndOfWord();
     }
 
     private TrieNode searchPrefix(String word) {
         TrieNode current = root;
 
         for (char ch : word.toCharArray()) {
-            if (current.containsKey(ch)) {
-                current = current.get(ch);
+            if (current.getChildren().containsKey(ch)) {
+                current = current.getChildren().get(ch);
             } else {
                 return null;
             }
@@ -74,35 +77,19 @@ public class Trie {
     }
 
     class TrieNode {
-        // R links to node children
-        private TrieNode[] links;
+        private final Map<Character, TrieNode> children = new HashMap<>();
+        private boolean endOfWord;
 
-        private final int R = 26;
-
-        private boolean isEnd;
-
-        public TrieNode() {
-            links = new TrieNode[R];
+        public Map<Character, TrieNode> getChildren() {
+            return children;
         }
 
-        private boolean containsKey(char ch) {
-            return links[ch - 'a'] != null;
+        public boolean isEndOfWord() {
+            return endOfWord;
         }
 
-        private TrieNode get(char ch) {
-            return links[ch - 'a'];
-        }
-
-        private void put(char ch, TrieNode node) {
-            links[ch - 'a'] = node;
-        }
-
-        private void setEnd() {
-            isEnd = true;
-        }
-
-        private boolean isEnd() {
-            return isEnd;
+        public void setEndOfWord(boolean endOfWord) {
+            this.endOfWord = endOfWord;
         }
     }
 }

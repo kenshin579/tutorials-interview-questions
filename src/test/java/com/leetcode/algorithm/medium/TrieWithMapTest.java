@@ -4,16 +4,11 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TrieTest {
 
-    /**
-     * 조건
-     * - lowercase만
-     * - non-empty strings 만
-     */
+public class TrieWithMapTest {
     @Test
-    public void trie_test1() {
-        Trie trie = new Trie();
+    public void trie_test() {
+        TrieWithMap trie = new TrieWithMap();
 
         trie.insert("apple");
         assertThat(trie.search("apple")).isTrue();
@@ -26,10 +21,11 @@ public class TrieTest {
 
     @Test
     public void trie_test2() {
-        Trie trie = new Trie();
+        TrieWithMap trie = new TrieWithMap();
 
         trie.insert("a");
         assertThat(trie.search("a")).isTrue();
         assertThat(trie.startsWith("a")).isTrue();
     }
+
 }
