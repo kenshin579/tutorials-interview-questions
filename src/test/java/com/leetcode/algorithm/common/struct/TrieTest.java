@@ -43,4 +43,12 @@ public class TrieTest {
 
         trie.print();
     }
+
+    @Test
+    public void insertRecursive() {
+        Trie trie = new Trie();
+
+        trie.insertRecursive("abc");
+        assertThat(trie.containsNode("abc")).isTrue();
+    }
 }
