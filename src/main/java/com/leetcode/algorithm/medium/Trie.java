@@ -70,7 +70,7 @@ public class Trie {
      */
     public boolean startsWith(String prefix) {
         TrieNode last = searchPrefix(prefix);
-        return last != null && !last.isEnd();
+        return last != null;
     }
 
     class TrieNode {

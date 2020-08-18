@@ -23,4 +23,13 @@ public class TrieTest {
         trie.insert("app");
         assertThat(trie.search("app")).isTrue();
     }
+
+    @Test
+    public void trie_test2() {
+        Trie trie = new Trie();
+
+        trie.insert("a");
+        assertThat(trie.search("a")).isTrue();
+        assertThat(trie.startsWith("a")).isTrue();
+    }
 }

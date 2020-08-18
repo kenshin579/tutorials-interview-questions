@@ -18,4 +18,14 @@ public class TrieWithMapTest {
         trie.insert("app");
         assertThat(trie.search("app")).isTrue();
     }
+
+    @Test
+    public void trie_test2() {
+        TrieWithMap trie = new TrieWithMap();
+
+        trie.insert("a");
+        assertThat(trie.search("a")).isTrue();
+        assertThat(trie.startsWith("a")).isTrue();
+    }
+
 }

@@ -73,7 +73,7 @@ public class TrieWithMap {
      */
     public boolean startsWith(String prefix) {
         TrieNode last = searchPrefix(prefix);
-        return last != null && !last.isEndOfWord();
+        return last != null;
     }
 
     class TrieNode {
