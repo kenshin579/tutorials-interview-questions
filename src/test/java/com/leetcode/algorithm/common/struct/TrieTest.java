@@ -51,4 +51,25 @@ public class TrieTest {
         trie.insertRecursive("abc");
         assertThat(trie.containsNode("abc")).isTrue();
     }
+
+    @Test
+    public void searchRecursive() {
+        Trie trie = new Trie();
+
+        trie.insertRecursive("at");
+        trie.insertRecursive("and");
+        trie.insertRecursive("an");
+        trie.insertRecursive("add");
+
+        assertThat(trie.searchRecursive("at")).isTrue();
+        assertThat(trie.searchRecursive("an")).isTrue();
+        assertThat(trie.searchRecursive("add")).isTrue();
+
+        assertThat(trie.searchRecursive("adda")).isFalse();
+        assertThat(trie.searchRecursive("bat")).isFalse();
+        assertThat(trie.containsNode("ad")).isFalse();
+        assertThat(trie.searchRecursive("ad")).isFalse();
+        assertThat(trie.searchRecursive("ana")).isFalse();
+
+    }
 }
