@@ -1,5 +1,8 @@
 package com.leetcode.algorithm.medium;
 
+import com.leetcode.algorithm.common.struct.ListNode;
+import com.leetcode.algorithm.common.struct.TreeNode;
+
 /**
  * 109. Convert Sorted List to Binary Search Tree
  * https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
@@ -12,12 +15,6 @@ package com.leetcode.algorithm.medium;
  * ListNode(int val) { this.val = val; }
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
- */
-
-import com.leetcode.algorithm.common.struct.ListNode;
-import com.leetcode.algorithm.common.struct.TreeNode;
-
-/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
