@@ -12,7 +12,7 @@ import java.util.Queue;
  */
 @Slf4j
 public class BinaryTree {
-    public TreeNode root;
+    private TreeNode root;
 
     /**
      * BFS 방식으로 추가함
@@ -45,5 +45,9 @@ public class BinaryTree {
 
     public void print() {
         BTreePrinter.printNode(root);
+    }
+
+    public TreeNode getRoot() {
+        return root;
     }
 }

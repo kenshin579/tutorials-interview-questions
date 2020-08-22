@@ -15,7 +15,7 @@ public class GetDecimalValueTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(1, 0, 1));
         linkedList.printList();
 
-        assertThat(new GetDecimalValue().getDecimalValue(linkedList.head)).isEqualTo(5);
+        assertThat(new GetDecimalValue().getDecimalValue(linkedList.getHead())).isEqualTo(5);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class GetDecimalValueTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(1, 0, 0, 1, 1));
         linkedList.printList();
 
-        assertThat(new GetDecimalValue().getDecimalValue(linkedList.head)).isEqualTo(19);
+        assertThat(new GetDecimalValue().getDecimalValue(linkedList.getHead())).isEqualTo(19);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class GetDecimalValueTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(0));
         linkedList.printList();
 
-        assertThat(new GetDecimalValue().getDecimalValue(linkedList.head)).isEqualTo(0);
+        assertThat(new GetDecimalValue().getDecimalValue(linkedList.getHead())).isEqualTo(0);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class GetDecimalValueTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(1));
         linkedList.printList();
 
-        assertThat(new GetDecimalValue().getDecimalValue(linkedList.head)).isEqualTo(1);
+        assertThat(new GetDecimalValue().getDecimalValue(linkedList.getHead())).isEqualTo(1);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class GetDecimalValueTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0));
         linkedList.printList();
 
-        assertThat(new GetDecimalValue().getDecimalValue(linkedList.head)).isEqualTo(18880);
+        assertThat(new GetDecimalValue().getDecimalValue(linkedList.getHead())).isEqualTo(18880);
     }
 
     @Test
@@ -55,6 +55,6 @@ public class GetDecimalValueTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(0, 0));
         linkedList.printList();
 
-        assertThat(new GetDecimalValue().getDecimalValue(linkedList.head)).isEqualTo(0);
+        assertThat(new GetDecimalValue().getDecimalValue(linkedList.getHead())).isEqualTo(0);
     }
 }

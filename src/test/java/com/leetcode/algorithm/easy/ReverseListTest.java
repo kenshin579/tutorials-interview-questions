@@ -18,7 +18,7 @@ public class ReverseListTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(1, 2, 3, 4, 5));
         linkedList.printList();
 
-        ListNode tempNode = new ReverseList().reverseList(linkedList.head);
+        ListNode tempNode = new ReverseList().reverseList(linkedList.getHead());
         int count = 5;
         while (tempNode != null) {
             assertThat(tempNode.val).isEqualTo(count--);

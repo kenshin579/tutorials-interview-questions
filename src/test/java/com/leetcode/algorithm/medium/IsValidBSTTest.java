@@ -15,12 +15,12 @@ public class IsValidBSTTest {
     @Test
     public void isValidBST() {
         BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(2, 1, 3));
-        assertThat(new IsValidBST().isValidBST(binaryTree.root)).isTrue();
+        assertThat(new IsValidBST().isValidBST(binaryTree.getRoot())).isTrue();
     }
 
     @Test
     public void isValidBST2() {
         BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(5, 1, 4, null, null, 3, 6));
-        assertThat(new IsValidBST().isValidBST(binaryTree.root)).isFalse();
+        assertThat(new IsValidBST().isValidBST(binaryTree.getRoot())).isFalse();
     }
 }
