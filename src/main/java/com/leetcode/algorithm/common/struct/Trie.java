@@ -1,11 +1,15 @@
 package com.leetcode.algorithm.common.struct;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Iterator;
 import java.util.Map;
 
 /**
  * https://www.youtube.com/watch?v=AXjmTQ8LEoI
+ * https://www.geeksforgeeks.org/search-in-a-trie-recursively/
  */
+@Slf4j
 public class Trie {
     private final TrieNode root;
 
@@ -45,6 +49,29 @@ public class Trie {
         } else {
             current.setEndOfWord(true);
         }
+    }
+
+    public boolean searchRecursive(String word) {
+       return searchRecursive(root, word, 0);
+    }
+
+    private boolean searchRecursive(TrieNode current, String word, int index) {
+        log.info("i:{} word:{} {}", index, word, current);
+        if (current == null) {
+            return false;
+        }
+
+        if (current.isEndOfWord()
+                && word.length() == index) {
+            return true;
+        }
+
+        if (index < word.length()) {
+            char key = word.charAt(index);
+            log.info("word[{}]={}", index, key);
+            return searchRecursive(current.getChildren().get(key), word, index + 1);
+        }
+        return false;
     }
 
     public boolean delete(String word) {
