@@ -12,7 +12,7 @@ public class MiddleNodeTest {
     public void middleNode() {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(5);
         linkedList.printList();
-        assertThat(new MiddleNode().middleNode(linkedList.head).val).isEqualTo(3);
+        assertThat(new MiddleNode().middleNode(linkedList.getHead()).val).isEqualTo(3);
     }
 
     @Test
@@ -20,6 +20,6 @@ public class MiddleNodeTest {
         LinkedList linkedList = LinkedListUtil.generateLinkedListSample(2);
         linkedList.printList();
 
-        assertThat(new MiddleNode().middleNode(linkedList.head).val).isEqualTo(2);
+        assertThat(new MiddleNode().middleNode(linkedList.getHead()).val).isEqualTo(2);
     }
 }

@@ -4,7 +4,7 @@ package com.leetcode.algorithm.common.struct;
  * https://freestrokes.tistory.com/84
  */
 public class LinkedList {
-    public ListNode head;
+    private ListNode head;
 
     public LinkedList() {
         head = null;    // head 노드 초기화
@@ -33,5 +33,9 @@ public class LinkedList {
             tempNode = tempNode.next;
         }
         System.out.println();
+    }
+
+    public ListNode getHead() {
+        return head;
     }
 }
