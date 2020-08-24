@@ -29,18 +29,39 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class BstFromPreorder {
     /**
-     * Time Complexity :
+     * Time Complexity : todo : 복잡도 넣기
      * Algorithm :
+     * 1. array를 iterative하면서 현재 val값을 tree left, right 어느 곳에 위치시킬지 찾음
+     * - temp가 null일때가 하되 그전 node를 기억하기 위해서 prev 변수를 둠
+     * 2. prev 기억한 노드에 left, right에 위치시킴
      */
     public TreeNode bstFromPreorder(int[] preorder) {
         TreeNode current = new TreeNode(preorder[0]);
-//        TreeNode current;
+        TreeNode temp;
+        TreeNode prev = null;
+        int currentVal;
         for (int i = 1; i < preorder.length; i++) {
-            if (preorder[i] < current.val) {
-                //left
-                current.left = new TreeNode(preorder[i]);
+            currentVal = preorder[i];
+            temp = current;
+            //val값에 따라서 삽입해야 하는 위치를 찾음
+            while (temp != null) {
+                prev = temp;
+                log.info("temp : {}", temp);
+                if (currentVal < temp.val) {
+                    //left
+                    temp = temp.left;
+                    log.info(" left");
+                } else {
+                    //right
+                    temp = temp.right;
+                    log.info(" right");
+                }
+            }
+
+            if (currentVal < prev.val) {
+                prev.left = new TreeNode(currentVal);
             } else {
-                //right
+                prev.right = new TreeNode(currentVal);
             }
         }
         return current;
@@ -48,7 +69,7 @@ public class BstFromPreorder {
 
     /**
      * Time Complexity : todo : recursive time complexity 구하는 방법 리뷰 필요함
-     *
+     * <p>
      * Algorithm : Recursive
      * 1.기본 케이스는 startIndex < endIndex인 경우에만 로직 처리함
      * 2.preorder traversal는 root, left, right 순서로 되어 있어서 첫번째 root으로 node 생성함
