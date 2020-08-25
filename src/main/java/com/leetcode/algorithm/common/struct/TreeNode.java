@@ -1,7 +1,7 @@
 package com.leetcode.algorithm.common.struct;
 
 public class TreeNode {
-    public Integer val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
