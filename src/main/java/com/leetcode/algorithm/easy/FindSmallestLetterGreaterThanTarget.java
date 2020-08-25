@@ -27,7 +27,6 @@ public class FindSmallestLetterGreaterThanTarget {
     /**
      * Time complexity : O(log N)
      * Algorithm : Binary Search + Iterative
-     * todo : 스터디 중
      */
     public char nextGreatestLetter2(char[] letters, char target) {
         int leftIndex = 0;

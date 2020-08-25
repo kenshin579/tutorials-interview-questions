@@ -8,8 +8,15 @@ import com.leetcode.algorithm.common.struct.TreeNode;
  * https://www.geeksforgeeks.org/find-minimum-depth-of-a-binary-tree/
  */
 public class MinDepth {
+    /**
+     * Time Complexity : O(N)
+     * ==> O(N) = 2T(N/2) + 1
+     *
+     * Algorithm : todo : 알고리즘 스터디 다시 리뷰하기
+     *
+     */
     public int minDepth(TreeNode root) {
-        if (root == null || root.val == null) {
+        if (root == null) {
             return 0;
         }
 
