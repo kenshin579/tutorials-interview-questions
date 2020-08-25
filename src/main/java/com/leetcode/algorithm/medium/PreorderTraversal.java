@@ -16,7 +16,9 @@ import java.util.List;
 @Slf4j
 public class PreorderTraversal {
     /**
-     * Time Complexity : todo : 복잡도 스터디하고 적도록 함
+     * Time Complexity : O(N)
+     * => T(N) = 2T(N/2) + 1
+     * https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
      * <p>
      * Algorithm :
      * 1. node가 null이 아닌 경우에는 current.val을 list에 넣고

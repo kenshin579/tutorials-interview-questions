@@ -22,8 +22,12 @@ public class Combinations {
     }
 
     /**
+     * Time Complexity :
+     *
+     * Algorithm :
+     * - Power Set중에서 bit가 K인 것만 결과를 찾아내는 방법임
      * https://www.youtube.com/watch?v=NYpqCbHPEO4
-     * Power Set중에서 bit가 K인 것만 결과를 찾아내는 방법임
+     *
      */
     public List<String> combinationWithBits(String[] arr, int K) {
         List<String> result = new ArrayList<>();
