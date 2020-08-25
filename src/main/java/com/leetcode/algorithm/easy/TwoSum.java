@@ -3,6 +3,7 @@ package com.leetcode.algorithm.easy;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 1. Two Sum
  * https://leetcode.com/problems/two-sum/
  */
 @Slf4j
