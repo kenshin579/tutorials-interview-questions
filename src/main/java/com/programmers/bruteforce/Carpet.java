@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  * https://hoho325.tistory.com/204
  */
 @Slf4j
+@Deprecated
 public class Carpet {
     public int[] solution(int brown, int yellow) {
         int[] answer = new int[2];

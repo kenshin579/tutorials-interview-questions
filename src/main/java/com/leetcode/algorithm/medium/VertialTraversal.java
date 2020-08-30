@@ -23,6 +23,7 @@ import java.util.List;
  *     }
  * }
  */
+@Deprecated
 public class VertialTraversal {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         return null;

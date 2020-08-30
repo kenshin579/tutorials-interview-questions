@@ -5,6 +5,7 @@ package com.programmers.dp;
  * https://itchallenger.tistory.com/32
  * DP
  */
+@Deprecated
 public class NRepresentation {
     /**
      * Time Complexity :

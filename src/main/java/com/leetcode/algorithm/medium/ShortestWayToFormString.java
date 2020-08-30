@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  * https://leetcode.com/discuss/interview-question/363692/Google-or-Onsite-or-Shortest-Way-to-Form-Substring
  */
 @Slf4j
+@Deprecated
 public class ShortestWayToFormString {
     public int tranform(String target, String source) {
 //        if ()

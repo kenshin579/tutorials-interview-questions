@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
+@Deprecated
 public class IsValidBST {
     public boolean isValidBST(TreeNode root) {
         return false;

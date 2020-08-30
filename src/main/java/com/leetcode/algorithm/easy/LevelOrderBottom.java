@@ -22,6 +22,7 @@ import java.util.List;
  *     }
  * }
  */
+@Deprecated
 public class LevelOrderBottom {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         return null;
