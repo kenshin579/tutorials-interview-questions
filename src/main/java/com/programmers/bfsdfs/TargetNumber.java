@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
  * https://hees-dev.tistory.com/59
  */
 @Slf4j
+@Deprecated
 public class TargetNumber {
     public int solution(int[] numbers, int target) {
         int answer = 0;

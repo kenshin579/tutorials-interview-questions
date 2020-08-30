@@ -8,6 +8,7 @@ package com.leetcode.algorithm.medium;
  *
  * https://leetcode.com/problems/matrix-block-sum/
  */
+@Deprecated
 public class MatrixBlockSum {
     public int[][] matrixBlockSum(int[][] mat, int K) {
 

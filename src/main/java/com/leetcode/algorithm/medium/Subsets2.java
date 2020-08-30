@@ -11,6 +11,7 @@ import java.util.List;
  * backtracking
  */
 @Slf4j
+@Deprecated
 public class Subsets2 {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

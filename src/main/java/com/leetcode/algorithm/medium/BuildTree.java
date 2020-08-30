@@ -23,6 +23,7 @@ import com.leetcode.algorithm.common.struct.TreeNode;
  * https://www.youtube.com/watch?v=s5XRtcud35E
  * https://www.youtube.com/watch?v=5lWJpTEnyow
  */
+@Deprecated
 public class BuildTree {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
 

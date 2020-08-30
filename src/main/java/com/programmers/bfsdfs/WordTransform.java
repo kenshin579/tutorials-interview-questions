@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
+@Deprecated
 public class WordTransform {
     public int solution(String begin, String target, String[] words) {
         int answer = 0;
