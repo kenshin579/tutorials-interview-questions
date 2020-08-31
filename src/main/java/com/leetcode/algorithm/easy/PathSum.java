@@ -26,7 +26,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PathSum {
     /**
-     * Time Complexity : todo: O(??)
+     * Time Complexity : O(N)
+     * ==> T(N) = 2T(N/2) + 1
+     *
      * Algorithm :DFS
      * - Subproblem 찾기 : 문제를 더 작게 만들기 위해서 sum에서 현재 노드의 값을 빼면서 recursive하게 호출함
      * - Base 케이스는 root가 null일 때는 faslse 이고 sum이 현재 값과 같은 경우에는 true를 반환하도록 함
