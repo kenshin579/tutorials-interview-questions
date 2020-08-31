@@ -1,18 +1,58 @@
 package com.leetcode.algorithm.easy;
 
 import com.leetcode.algorithm.common.struct.TreeNode;
-import lombok.extern.slf4j.Slf4j;
+import com.leetcode.algorithm.common.util.BTreePrinter;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Slf4j
 public class PathSumTest {
 
     @Test
-    public void pathSum() {
-//        root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8
-//        TreeNode treeNode = new TreeNode(9);
-//        assertThat(new PathSum().pathSum(treeNode, 8)).isEqualTo(3);
+    public void hasPathSum() {
+        TreeNode root = new TreeNode(5,
+                new TreeNode(4,
+                        new TreeNode(11,
+                                new TreeNode(7),
+                                new TreeNode(2)),
+                        null),
+                new TreeNode(8,
+                        new TreeNode(13),
+                        new TreeNode(4,
+                                null,
+                                new TreeNode(1))));
+
+        BTreePrinter.printNode(root);
+
+        assertThat(new PathSum().hasPathSum(root, 22)).isTrue();
+    }
+
+    @Test
+    public void hasPathSum2() {
+        TreeNode root = new TreeNode(5);
+
+        BTreePrinter.printNode(root);
+
+        assertThat(new PathSum().hasPathSum(root, 5)).isTrue();
+    }
+
+    @Test
+    public void hasPathSum3() {
+        TreeNode root = new TreeNode(5,
+                new TreeNode(4),
+                new TreeNode(8));
+
+        BTreePrinter.printNode(root);
+
+        assertThat(new PathSum().hasPathSum(root, 13)).isTrue();
+    }
+
+    @Test
+    public void hasPathSum4() {
+        TreeNode root = new TreeNode();
+
+        BTreePrinter.printNode(root);
+
+        assertThat(new PathSum().hasPathSum(null, 0)).isFalse();
     }
 }
