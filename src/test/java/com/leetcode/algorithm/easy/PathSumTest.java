@@ -46,4 +46,13 @@ public class PathSumTest {
 
         assertThat(new PathSum().hasPathSum(root, 13)).isTrue();
     }
+
+    @Test
+    public void hasPathSum4() {
+        TreeNode root = new TreeNode();
+
+        BTreePrinter.printNode(root);
+
+        assertThat(new PathSum().hasPathSum(null, 0)).isFalse();
+    }
 }
