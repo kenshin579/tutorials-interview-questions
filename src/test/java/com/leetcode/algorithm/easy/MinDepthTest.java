@@ -17,7 +17,7 @@ public class MinDepthTest {
                         new TreeNode(7)));
         BTreePrinter.printNode(root);
 
-        assertThat(new MaxDepth().maxDepth(root)).isEqualTo(2);
+        assertThat(new MinDepth().minDepth(root)).isEqualTo(2);
     }
 
     @Test
@@ -49,6 +49,7 @@ public class MinDepthTest {
     public void minDepth5() {
         TreeNode root = new TreeNode(1);
         BTreePrinter.printNode(root);
+
         assertThat(new MinDepth().minDepth(root)).isEqualTo(1);
     }
 }
