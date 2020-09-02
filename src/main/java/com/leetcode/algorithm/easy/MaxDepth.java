@@ -4,6 +4,7 @@ import com.leetcode.algorithm.common.struct.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 104. Maximum Depth of Binary Tree
  * Definition for a binary tree node.
  * public class TreeNode {
  * int val;
@@ -18,12 +19,24 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class MaxDepth {
+    /**
+     * Time Complexity : O(N)
+     * ==> T(N) = 2T(N/2) + 1
+     *
+     * Algorithm : DFS
+     * 1.base case : root가 null이면 0
+     * 2.subproblem : left, right 호출하되 depth가 호출할 때마다 1로 증가되야 함
+     */
     public int maxDepth(TreeNode root) {
+        log.info("root : {}", root);
         if (root == null) {
             return 0;
         }
         int leftMaxDepth = maxDepth(root.left);
+        log.info("leftMaxDepth : {}", leftMaxDepth);
         int rightMaxDepth = maxDepth(root.right);
+        log.info("rightMaxDepth : {}", rightMaxDepth);
+
         return Math.max(leftMaxDepth, rightMaxDepth) + 1;
     }
 }
