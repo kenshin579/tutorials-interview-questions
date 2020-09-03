@@ -14,4 +14,13 @@ public class InsertionSortTest {
         assertThat(arr).isSorted();
 
     }
+
+    @Test
+    public void insertionSort2() {
+        int[] arr = {5, 3, 1, 7, 4, 5};
+
+        new InsertionSort().insertionSort(arr);
+
+        assertThat(arr).isSorted();
+    }
 }
