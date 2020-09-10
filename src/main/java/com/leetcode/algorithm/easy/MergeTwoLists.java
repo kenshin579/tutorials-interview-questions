@@ -23,8 +23,14 @@ public class MergeTwoLists {
      * Algorithm :
      */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-//        ListNode newNode = new ListNode();
+        ListNode result;
 
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                result = new ListNode(l1.val);
+
+            }
+        }
         return null;
     }
 }
