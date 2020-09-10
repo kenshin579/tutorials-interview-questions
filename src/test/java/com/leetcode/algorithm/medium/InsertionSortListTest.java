@@ -43,20 +43,15 @@ public class InsertionSortListTest {
                 new ListNode(2));
         ListNodeUtil.print(head);
 
-        ListNode result = new InsertionSortList().insertionSortList(head);
-        ListNodeUtil.print(result);
-        assertListNode(result);
+        ListNode sortedList = new InsertionSortList().insertionSortList(head);
+        ListNodeUtil.print(sortedList);
+
     }
 
     private void assertListNode(ListNode head) {
-        List<Integer> result = new ArrayList<>();
-        ListNode current = head;
-        while (current != null) {
-            result.add(current.val);
-            current = current.next;
-        }
+        List<Integer> intValues = ListNodeUtil.convertToList(head);
 
-        assertThat(result).isNotEmpty();
-        assertThat(result).isSorted();
+        assertThat(intValues).isNotEmpty();
+        assertThat(intValues).isSorted();
     }
 }

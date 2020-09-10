@@ -2,6 +2,9 @@ package com.leetcode.algorithm.common.util;
 
 import com.leetcode.algorithm.common.struct.ListNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public final class ListNodeUtil {
 
     public static void print(ListNode head) {
@@ -14,5 +17,15 @@ public final class ListNodeUtil {
             tempNode = tempNode.next;
         }
         System.out.println();
+    }
+
+    public static List<Integer> convertToList(ListNode head) {
+        List<Integer> result = new ArrayList<>();
+        ListNode current = head;
+        while (current != null) {
+            result.add(current.val);
+            current = current.next;
+        }
+        return result;
     }
 }
