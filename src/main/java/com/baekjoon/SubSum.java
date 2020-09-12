@@ -3,10 +3,10 @@ package com.baekjoon;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 2003 : 수들의 합2
  * https://www.acmicpc.net/problem/2003
  * Two Pointer 알고리즘
  * https://www.youtube.com/watch?v=iSjvuixMPmQ
- * 수들의 합2 (BOJ 2003번)
  */
 @Slf4j
 public class SubSum {
