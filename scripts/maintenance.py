@@ -16,6 +16,8 @@ import sys
 # Constants
 #
 ################################################################################################
+from os.path import dirname, basename
+
 SRC_ROOT_DIR = '../src/main/java/com'
 EXCLUDE_DIRS = ['utils', 'common']
 FILE_PATTERN_JAVA = '*.java'
@@ -32,19 +34,51 @@ def update_readme(src):
     generate_contents(files)
 
 
+def get_parent_of_childfolder(childfolder, full_file):
+    next = False
+    for path in split_path(full_file):
+        if next:
+            return path
+        if path == childfolder:
+            next = True
+
+
+def split_path(path):
+    allparts = []
+    while 1:
+        parts = os.path.split(path)
+        if parts[0] == path:  # sentinel for absolute paths
+            allparts.insert(0, parts[0])
+            break
+        elif parts[1] == path:  # sentinel for relative paths
+            allparts.insert(0, parts[1])
+            break
+        else:
+            path = parts[0]
+            allparts.insert(0, parts[1])
+    return allparts
+
+
 def generate_contents(files):
-    result = []
+    result = {}
+
     for file in files:
         print('file', file)
         print('basename', os.path.basename(file))
-        print('parent')
+        parent_folder = get_parent_of_childfolder('com', file)
+        print('parent_folder', parent_folder)
+        # todo: 여기서 부터 하면 됨
+        if parent_folder in result:
+            pass
 
         with open(file) as f:
             for line in f:
                 if line.startswith("/**"):
                     problem_title = re.sub('\*\s+', '', next(f, '').strip())
                     print(problem_title)
-                    result.append({'title' : problem_title})
+                    result.append({
+                        'title': problem_title
+                    })
                     break
     print('result', result)
     return result
