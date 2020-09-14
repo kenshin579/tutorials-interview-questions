@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * 최대 긴 Common Sub String 출력
  * todo : 다시 확인이 필요함
  * https://www.geeksforgeeks.org/print-longest-common-substring/
  * https://en.wikipedia.org/wiki/Longest_common_substring_problem

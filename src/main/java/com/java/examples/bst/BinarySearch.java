@@ -3,7 +3,8 @@ package com.java.examples.bst;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Binary Search 조건
+ * Binary Search
+ * 조건
  * - array는 정렬이 되어 있어야 함
  * <p>
  * 결과

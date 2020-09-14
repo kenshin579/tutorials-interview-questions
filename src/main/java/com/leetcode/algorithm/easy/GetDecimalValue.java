@@ -4,13 +4,15 @@ import com.leetcode.algorithm.common.struct.ListNode;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 1290. Convert Binary Number in a Linked List to Integer
+ * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
  * Definition for singly-linked list.
  * public class ListNode {
  * int val;
  * ListNode next;
  * ListNode(int x) { val = x; }
  * }
- * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+ *
  */
 @Slf4j
 public class GetDecimalValue {

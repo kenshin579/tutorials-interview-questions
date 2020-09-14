@@ -11,6 +11,7 @@ import java.util.Map;
 import static java.util.stream.Collectors.toMap;
 
 /**
+ * FractionalKnapsack
  * https://www.geeksforgeeks.org/fractional-knapsack-problem/
  * https://www.youtube.com/watch?v=m1p-eWxrt6g
  * Greedy

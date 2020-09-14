@@ -3,7 +3,7 @@ package com.java.examples.removeduplicate;
 import java.util.HashSet;
 
 /***********************************************************
- * @author: Frank Oh (kenshin579@gmail.com)
+ * Remove duplicate from an array of integers
  *
  * Description: Efficiently remove duplicates from an array of
  * integers.

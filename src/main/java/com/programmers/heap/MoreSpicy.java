@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.PriorityQueue;
 
 /**
+ * 더 맵게 Heap 문제
  * https://programmers.co.kr/learn/courses/30/lessons/42626
  * todo : 이거 문제 잘 이해가 안됨
  * http://blog.naver.com/PostView.nhn?blogId=h0609zxc&logNo=221492095742

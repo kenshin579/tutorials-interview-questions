@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author kenshin579
+ * String Permutation
  */
 @Slf4j
 public class StringPermutation {

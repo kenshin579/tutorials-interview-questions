@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Job Sequence 문제
  * 하나의 Job은 1 unit time을 사용한다고 이해하면 됨
  * -
  * https://www.geeksforgeeks.org/job-sequencing-problem/

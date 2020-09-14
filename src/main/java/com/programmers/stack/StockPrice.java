@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 
 /**
+ * 주식 가격 스택/큐 문제
  * https://programmers.co.kr/learn/courses/30/lessons/42584
  * https://youngest-programming.tistory.com/206
  * https://sas-study.tistory.com/256

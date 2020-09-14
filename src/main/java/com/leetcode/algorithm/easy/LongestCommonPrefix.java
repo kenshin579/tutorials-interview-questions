@@ -9,10 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 14. Longest Common Prefix
+ * https://leetcode.com/problems/longest-common-prefix/
  * 가정 : 공통 str을 찾을 때 첫 index부터 같아야 함
  * <p>
  * todo : 다양한 다른 방법도 알아보기
- * https://leetcode.com/problems/longest-common-prefix/
  * https://www.geeksforgeeks.org/longest-common-prefix-using-word-by-word-matching/
  */
 @Slf4j
