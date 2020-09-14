@@ -86,6 +86,10 @@ def split_path(path):
             allparts.insert(0, parts[1])
     return allparts
 
+def escape_dot(pattern):
+    _special_chars_map = {i: '\\' + chr(i) for i in b'\\.'}
+
+    return pattern.translate(_special_chars_map)
 
 def generate_contents(files):
     result = {}
@@ -100,8 +104,8 @@ def generate_contents(files):
         with open(file) as f:
             for line in f:
                 if line.startswith("/**"):
-                    problem_title = re.sub('\*\s+', '', next(f, '').strip())
-                    # print('title', problem_title)
+                    problem_title = escape_dot(re.sub('\*\s+', '', next(f, '').strip()))
+                    print('title', problem_title)
 
                     if parent_folder in result:
                         sub_list = result[parent_folder]
