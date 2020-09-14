@@ -4,6 +4,7 @@ import argparse
 import fnmatch
 import os
 import re
+import shutil
 import sys
 
 ################################################################################################
@@ -16,11 +17,12 @@ import sys
 # Constants
 #
 ################################################################################################
-from os.path import dirname, basename
 
+README_HEADER_FILE = 'data/HEADER.md'
 SRC_ROOT_DIR = '../src/main/java/com'
 EXCLUDE_DIRS = ['utils', 'common']
 FILE_PATTERN_JAVA = '*.java'
+README_FILE = '../README.md'
 
 
 ################################################################################################
@@ -28,11 +30,37 @@ FILE_PATTERN_JAVA = '*.java'
 #
 ################################################################################################
 
+def get_statistics(contents):
+    result = {}
+
+    for parent_folder_key in contents.keys():
+        result[parent_folder_key]= len(contents[parent_folder_key])
+
+    return result
+
+
 def update_readme(src):
     files = get_list_of_files(src, EXCLUDE_DIRS)
 
-    generate_contents(files)
+    contents = generate_contents(files)
+    study_stats = get_statistics(contents)
+    print('study_stats', study_stats)
 
+    shutil.copyfile(README_HEADER_FILE, README_FILE)
+
+    with open(README_FILE, "a") as f:
+
+        # stats
+        for parent_folder_key in study_stats.keys():
+            f.write('| ' + parent_folder_key + ' | ' + str(study_stats[parent_folder_key]) + ' |\n')
+
+        f.write("\n")
+        # contents
+        for parent_folder_key in contents.keys():
+            f.write('## ' + parent_folder_key + '\n')
+            for algorithm_info in contents[parent_folder_key]:
+                f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
+            f.write('\n')
 
 def get_parent_of_childfolder(childfolder, full_file):
     next = False
@@ -63,23 +91,33 @@ def generate_contents(files):
     result = {}
 
     for file in files:
-        print('file', file)
-        print('basename', os.path.basename(file))
+        filename = os.path.basename(file)
         parent_folder = get_parent_of_childfolder('com', file)
+        print('file', file)
+        print('filename', filename)
         print('parent_folder', parent_folder)
-        # todo: 여기서 부터 하면 됨
-        if parent_folder in result:
-            pass
 
         with open(file) as f:
             for line in f:
                 if line.startswith("/**"):
                     problem_title = re.sub('\*\s+', '', next(f, '').strip())
-                    print(problem_title)
-                    result.append({
-                        'title': problem_title
-                    })
+                    # print('title', problem_title)
+
+                    if parent_folder in result:
+                        sub_list = result[parent_folder]
+                        sub_list.append({
+                            'filename': filename,
+                            'title': problem_title
+                        })
+                        result[parent_folder] = sub_list
+                    else:
+                        sub_list = [{
+                            'filename': filename,
+                            'title': problem_title
+                        }]
+                        result[parent_folder] = sub_list
                     break
+            print()
     print('result', result)
     return result
 
