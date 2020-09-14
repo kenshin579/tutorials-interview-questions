@@ -1,6 +1,7 @@
 package com.java.examples.objectoriented.coffee;
 
 /**
+ * Object Oriented Problem
  * http://woowabros.github.io/study/2016/07/07/think_object_oriented.html
  */
 public class Coffee {

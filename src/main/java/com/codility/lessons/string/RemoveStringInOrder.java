@@ -5,7 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 
 /**
- * count how many
+ * Remove String In Order
+ *
  * 효휼적인 방법은?
  * https://stackoverflow.com/questions/52020057/form-lexicographically-small-string-among-others-by-removing-exactly-one-charact
  * https://stackoverflow.com/questions/39807066/how-many-minimum-numbers-of-characters-from-a-given-string-s-should-delete-to-m

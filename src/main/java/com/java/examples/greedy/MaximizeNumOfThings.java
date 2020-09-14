@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Maximize Num Of Things
  * 가장 작은 것부터 선택하면 됨
  * <p>
  * https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/

@@ -3,6 +3,7 @@ package com.geeksforgeeks.sort;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * Insertion Sort
  * https://www.geeksforgeeks.org/insertion-sort/
  */
 @Slf4j

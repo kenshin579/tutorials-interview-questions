@@ -3,13 +3,15 @@ package com.leetcode.algorithm.easy;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 541. Reverse String II
+ * https://leetcode.com/problems/reverse-string-ii/
  * 2k 블록마다 reverse 하는 예제임
  * ex.
  * 12345678901234567890
  * ___456___012___679__
  * 32145698701254367809
  * <p>
- * https://leetcode.com/problems/reverse-string-ii/
+ *
  */
 @Slf4j
 public class ReverseStr {

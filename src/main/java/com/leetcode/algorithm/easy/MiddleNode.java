@@ -4,6 +4,8 @@ import com.leetcode.algorithm.common.struct.ListNode;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 876. Middle of the Linked List
+ * https://leetcode.com/problems/middle-of-the-linked-list/
  * Definition for singly-linked list.
  * public class ListNode {
  * int val;
@@ -11,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
  * ListNode(int x) { val = x; }
  * }
  * <p>
- * https://leetcode.com/problems/middle-of-the-linked-list/
  */
 @Slf4j
 public class MiddleNode {

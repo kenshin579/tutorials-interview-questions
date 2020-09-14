@@ -3,6 +3,7 @@ package com.leetcode.algorithm.easy;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 704. Binary Search
  * Binary Search
  * <p>
  * https://leetcode.com/problems/binary-search/

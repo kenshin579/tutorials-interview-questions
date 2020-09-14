@@ -3,6 +3,7 @@ package com.geeksforgeeks.dp;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 0-1 Knapsack
  * https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
  * https://m.blog.naver.com/PostView.nhn?blogId=lhm0812&logNo=220853228613&proxyReferer=https:%2F%2Fwww.google.com%2F
  * <p>
