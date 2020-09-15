@@ -10,8 +10,16 @@ public class LinkedList {
         head = null;    // head 노드 초기화
     }
 
-    public void insertNode(int data) {
-        ListNode newNode = new ListNode(data);
+    /**
+     * Time Complexity : O(N)
+     *
+     * Algorithm :
+     * 1. 새로운 노드 생성(val)
+     * 2. tempNode가 head를 가리키도록 하고 tempNode가 마지막 노드까지 iterate함
+     * 3. 마지막 노드에서 .next가 새로운 노드로 연결시킴
+     */
+    public void insertNode(int val) {
+        ListNode newNode = new ListNode(val);
         if (head == null) {
             this.head = newNode;
         } else {
@@ -21,17 +29,5 @@ public class LinkedList {
             }
             tempNode.next = newNode;
         }
-    }
-
-    public void printList() {
-        ListNode tempNode = this.head;    // tempNode에 head가 가리키는 첫번째 노드를 할당
-
-        while (tempNode != null) {
-            System.out.print(tempNode.val);
-            if (tempNode.next != null)
-                System.out.print(" -> ");
-            tempNode = tempNode.next;
-        }
-        System.out.println();
     }
 }
