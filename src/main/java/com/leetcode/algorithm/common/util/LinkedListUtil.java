@@ -6,7 +6,7 @@ import java.util.List;
 
 public final class LinkedListUtil {
 
-    public static LinkedList generateLinkedListSample(int max) {
+    public static LinkedList convertLinkedList(int max) {
         LinkedList linkedList = new LinkedList();
         for (int i = 0; i < max; i++) {
             linkedList.insertNode(i + 1);
@@ -14,7 +14,7 @@ public final class LinkedListUtil {
         return linkedList;
     }
 
-    public static LinkedList generateLinkedListSample(List<Integer> list) {
+    public static LinkedList convertLinkedList(List<Integer> list) {
         LinkedList linkedList = new LinkedList();
         list.forEach(linkedList::insertNode);
         return linkedList;
