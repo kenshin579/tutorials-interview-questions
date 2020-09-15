@@ -15,7 +15,7 @@ public class ReverseListTest {
 
     @Test
     public void reverseList() {
-        LinkedList linkedList = LinkedListUtil.generateLinkedListSample(Arrays.asList(1, 2, 3, 4, 5));
+        LinkedList linkedList = LinkedListUtil.convertLinkedList(Arrays.asList(1, 2, 3, 4, 5));
         linkedList.printList();
 
         ListNode tempNode = new ReverseList().reverseList(linkedList.head);
