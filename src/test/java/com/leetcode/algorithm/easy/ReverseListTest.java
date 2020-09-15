@@ -3,6 +3,7 @@ package com.leetcode.algorithm.easy;
 import com.leetcode.algorithm.common.struct.LinkedList;
 import com.leetcode.algorithm.common.struct.ListNode;
 import com.leetcode.algorithm.common.util.LinkedListUtil;
+import com.leetcode.algorithm.common.util.ListNodeUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class ReverseListTest {
     @Test
     public void reverseList() {
         LinkedList linkedList = LinkedListUtil.convertLinkedList(Arrays.asList(1, 2, 3, 4, 5));
-        linkedList.printList();
+        ListNodeUtil.print(linkedList.head);
 
         ListNode tempNode = new ReverseList().reverseList(linkedList.head);
         int count = 5;
