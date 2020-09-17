@@ -22,6 +22,9 @@ public class ReverseBetween {
      * Time Complexity : O(N)
      * <p>
      * Algorithm :
+     * 1. 기존 reverseList를 동일함
+     * 2. front -> [reverse List, tail] -> end
+     * - 여기서 front 부분을 기억해두고 tail 부분을 기억해두고 나중에 연결시켬
      */
     public ListNode reverseBetween(ListNode head, int m, int n) {
         int index = 1;
@@ -39,15 +42,18 @@ public class ReverseBetween {
         while (currNode != null) {
             log.info("index : {} currNode.val: {}", index, currNode.val);
             if (index < m) {
+                log.info("case1");
                 if (index == m - 1) {
                     frontNode = currNode;
                 }
                 nextNode = currNode.next; //c의 다음 노드를 가리킴
                 currNode = nextNode; //c(현재) -> n(다음)을 가리키도록 함
             } else if (index > n) {
+                log.info("case2");
                 endNode = currNode;
                 break;
             } else {
+                log.info("case3");
                 nextNode = currNode.next; //c의 다음 노드를 가리킴
                 currNode.next = prevNode; //c -> p를 reverse하게 가리키도록 함
                 if (prevNode == null) {
@@ -61,8 +67,14 @@ public class ReverseBetween {
         }
 
         //front -> reverse -> end 연결하기
-        frontNode.next = prevNode;
-        tailNode.next = endNode;
-        return head;
+        if (frontNode != null) {
+            frontNode.next = prevNode;
+        }
+
+        if (endNode != null) {
+            tailNode.next = endNode;
+        }
+
+        return frontNode == null ? prevNode : head;
     }
 }
