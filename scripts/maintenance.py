@@ -33,6 +33,7 @@ README_FILE = '../README.md'
 def get_statistics(contents):
     result = {}
 
+    # todo: 여기서 부터 다시하면 됨
     for parent_folder_key in contents.keys():
         result[parent_folder_key]= len(contents[parent_folder_key])
 
@@ -48,6 +49,7 @@ def update_readme(src):
 
     shutil.copyfile(README_HEADER_FILE, README_FILE)
 
+    first_line = True
     with open(README_FILE, "a") as f:
 
         # stats
@@ -59,7 +61,12 @@ def update_readme(src):
         for parent_folder_key in contents.keys():
             f.write('## ' + parent_folder_key + '\n')
             for algorithm_info in contents[parent_folder_key]:
-                f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
+                if algorithm_info['title'].lower() == 'leetcode':
+                    if first_line:
+                        first_line = False
+
+                else:
+                    f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
             f.write('\n')
 
 def get_parent_of_childfolder(childfolder, full_file):
