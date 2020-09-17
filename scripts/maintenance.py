@@ -35,7 +35,9 @@ def get_statistics(contents):
 
     # todo: 여기서 부터 다시하면 됨
     for parent_folder_key in contents.keys():
-        result[parent_folder_key]= len(contents[parent_folder_key])
+        result[parent_folder_key] = len(contents[parent_folder_key])
+        print('parent_folder_key', parent_folder_key)
+        # if parent_folder_key == 'leetcode':
 
     return result
 
@@ -69,6 +71,7 @@ def update_readme(src):
                     f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
             f.write('\n')
 
+
 def get_parent_of_childfolder(childfolder, full_file):
     next = False
     for path in split_path(full_file):
@@ -93,10 +96,12 @@ def split_path(path):
             allparts.insert(0, parts[1])
     return allparts
 
+
 def escape_dot(pattern):
     _special_chars_map = {i: '\\' + chr(i) for i in b'\\.'}
 
     return pattern.translate(_special_chars_map)
+
 
 def generate_contents(files):
     result = {}
@@ -110,9 +115,17 @@ def generate_contents(files):
 
         with open(file) as f:
             for line in f:
+                # print('line', line)
                 if line.startswith("/**"):
                     problem_title = escape_dot(re.sub('\*\s+', '', next(f, '').strip()))
                     print('title', problem_title)
+
+                    if parent_folder == 'leetcode':
+                        match = re.search(' \* Difficulty : ([a-zA-Z]+)', next(f, '').strip())
+                        if match:
+                        # print('match', match)
+                            difficulty = match.group(0)
+                            print('difficulty', difficulty)
 
                     if parent_folder in result:
                         sub_list = result[parent_folder]
@@ -128,6 +141,8 @@ def generate_contents(files):
                         }]
                         result[parent_folder] = sub_list
                     break
+
+
             print()
     print('result', result)
     return result
