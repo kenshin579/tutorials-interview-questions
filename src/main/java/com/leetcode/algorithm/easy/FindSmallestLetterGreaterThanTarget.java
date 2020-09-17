@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 744. Find Smallest Letter Greater Than Target
+ * Difficulty : Easy
+ * Tags : Etc
+ *
  * https://leetcode.com/problems/find-smallest-letter-greater-than-target/
  */
 @Slf4j

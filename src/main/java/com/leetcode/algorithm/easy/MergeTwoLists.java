@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 21. Merge Two Sorted Lists
+ * Difficulty : Easy
+ * Tags : LinkedList
+ *
  * https://leetcode.com/problems/merge-two-sorted-lists/
  * <p>
  * Definition for singly-linked list.

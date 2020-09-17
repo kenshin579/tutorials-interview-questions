@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 104. Maximum Depth of Binary Tree
+ * Difficulty : Easy
+ * Tags : Tree
+ *
  * Definition for a binary tree node.
  * public class TreeNode {
  * int val;

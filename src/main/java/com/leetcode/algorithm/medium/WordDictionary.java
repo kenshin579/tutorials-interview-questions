@@ -7,6 +7,9 @@ import java.util.Map;
 
 /**
  * 211. Add and Search Word - Data structure design
+ * Difficulty : Medium
+ * Tags : Trie
+ *
  * https://leetcode.com/problems/design-add-and-search-words-data-structure/
  * https://wdxtub.com/interview/14520604445699.html
  * https://ttzztt.gitbooks.io/lc/content/add-and-search-word-data-structure-design.html

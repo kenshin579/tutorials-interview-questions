@@ -7,6 +7,9 @@ import java.util.Map;
 
 /**
  * 387. First Unique Character in a String
+ * Difficulty : Easy
+ * Tags : String
+ *
  * https://leetcode.com/problems/first-unique-character-in-a-string/
  */
 @Slf4j

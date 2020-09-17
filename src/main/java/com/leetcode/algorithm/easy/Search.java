@@ -4,7 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 704. Binary Search
- * Binary Search
+ * Difficulty : Easy
+ * Tags : BinarySearch
+ *
  * <p>
  * https://leetcode.com/problems/binary-search/
  */

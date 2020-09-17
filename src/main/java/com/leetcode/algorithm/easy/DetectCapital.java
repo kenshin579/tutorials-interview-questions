@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 520. Detect Capital
+ * Difficulty : Easy
+ * Tags : Etc
+ *
  * https://leetcode.com/problems/detect-capital/
  * https://www.youtube.com/watch?v=i8C2x_HvomM
  */

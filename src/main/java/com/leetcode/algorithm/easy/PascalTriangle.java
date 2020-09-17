@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * 118. Pascal's Triangle
+ * Difficulty : Easy
+ * Tags : Etc
+ *
  * https://leetcode.com/problems/pascals-triangle/
  */
 @Slf4j

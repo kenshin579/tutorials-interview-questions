@@ -7,6 +7,9 @@ import java.util.Map;
 
 /**
  * 208. Implement Trie (Prefix Tree)
+ * Difficulty : Medium
+ * Tags : Trie
+ *
  * https://leetcode.com/problems/implement-trie-prefix-tree/
  * https://leetcode.com/problems/implement-trie-prefix-tree/solution/
  * <p>

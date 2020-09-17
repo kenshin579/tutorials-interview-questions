@@ -10,6 +10,9 @@ import java.util.List;
 
 /**
  * 144. Binary Tree Preorder Traversal
+ * Difficulty : Medium
+ * Tags : Tree
+ *
  * https://leetcode.com/problems/binary-tree-preorder-traversal/
  * https://leetcode.com/problems/binary-tree-preorder-traversal/discuss/739974/Java-Two-solutions.
  */

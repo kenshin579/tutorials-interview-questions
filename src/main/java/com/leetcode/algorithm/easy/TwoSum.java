@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 1. Two Sum
+ * Difficulty : Easy
+ * Tags : Etc
+ *
  * https://leetcode.com/problems/two-sum/
  */
 @Slf4j

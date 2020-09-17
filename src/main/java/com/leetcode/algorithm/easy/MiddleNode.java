@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 876. Middle of the Linked List
+ * Difficulty : Easy
+ * Tags : LinkedList
+ *
  * https://leetcode.com/problems/middle-of-the-linked-list/
  * Definition for singly-linked list.
  * public class ListNode {

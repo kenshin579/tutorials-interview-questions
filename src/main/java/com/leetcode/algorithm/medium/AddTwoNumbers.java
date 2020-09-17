@@ -4,6 +4,9 @@ import com.leetcode.algorithm.common.struct.ListNode;
 
 /**
  * 2. Add Two Numbers
+ * Difficulty : Medium
+ * Tags : LinkedList
+ *
  * https://leetcode.com/problems/add-two-numbers/
  * Definition for singly-linked list.
  * public class ListNode {
@@ -14,6 +17,7 @@ import com.leetcode.algorithm.common.struct.ListNode;
  * <p>
  * 참고 : https://opentutorials.org/module/1335/8857
  */
+@Deprecated
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode sumList = null;

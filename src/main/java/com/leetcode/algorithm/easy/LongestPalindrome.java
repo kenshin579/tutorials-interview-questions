@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * 409. Longest Palindrome
+ * Difficulty : Easy
+ * Tags : String
+ *
  * https://leetcode.com/problems/longest-palindrome/
  * https://leetcode.com/problems/longest-palindrome/solution/
  */

@@ -11,6 +11,9 @@ import java.util.Map;
 
 /**
  * 1512. Number of Good Pairs
+ * Difficulty : Easy
+ * Tags : Map
+ *
  * https://leetcode.com/problems/number-of-good-pairs/
  */
 @Slf4j

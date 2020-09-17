@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 147. Insertion Sort List
+ * Difficulty : Medium
+ * Tags : LinkedList
+ *
  * https://leetcode.com/problems/insertion-sort-list/
  * <p>
  * Definition for singly-linked list.
