@@ -117,35 +117,57 @@ def generate_contents(files):
             for line in f:
                 # print('line', line)
                 if line.startswith("/**"):
-                    problem_title = escape_dot(re.sub('\*\s+', '', next(f, '').strip()))
+                    # problem_title = escape_dot(re.sub('\*\s+', '', next(f, '').strip()))
+                    problem_title = escape_dot(extract_text(' * (.*)', next(f, '').strip()))
                     print('title', problem_title)
 
                     if parent_folder == 'leetcode':
-                        match = re.search(' \* Difficulty : ([a-zA-Z]+)', next(f, '').strip())
-                        if match:
-                        # print('match', match)
-                            difficulty = match.group(0)
-                            print('difficulty', difficulty)
+                        difficulty = extract_text(' * Difficulty : ([a-zA-Z]+)', next(f, '').strip())
+                        tags = extract_text(' * Tags : ([a-zA-Z]+)', next(f, '').strip())
 
                     if parent_folder in result:
                         sub_list = result[parent_folder]
-                        sub_list.append({
-                            'filename': filename,
-                            'title': problem_title
-                        })
+                        if parent_folder == 'leetcode':
+                            sub_list.append({
+                                'filename': filename,
+                                'title': problem_title,
+                                'difficulty':difficulty,
+                                'tags':tags
+                            })
+                        else:
+                            sub_list.append({
+                                'filename': filename,
+                                'title': problem_title
+                            })
                         result[parent_folder] = sub_list
                     else:
-                        sub_list = [{
-                            'filename': filename,
-                            'title': problem_title
-                        }]
+                        if parent_folder == 'leetcode':
+                            sub_list = [{
+                                'filename': filename,
+                                'title': problem_title,
+                                'difficulty':difficulty,
+                                'tags':tags
+                            }]
+                        else:
+                            sub_list = [{
+                                'filename': filename,
+                                'title': problem_title
+                            }]
                         result[parent_folder] = sub_list
                     break
-
 
             print()
     print('result', result)
     return result
+
+
+def extract_text(regex_str, line):
+    match = re.search(regex_str, line)
+    if match:
+        extract_str = match.group(1)
+        return extract_str
+    else:
+        return None
 
 
 def get_list_of_files(src, exclude_dirs):
