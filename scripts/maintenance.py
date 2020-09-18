@@ -37,7 +37,11 @@ def get_statistics(contents):
     for parent_folder_key in contents.keys():
         result[parent_folder_key] = len(contents[parent_folder_key])
         print('parent_folder_key', parent_folder_key)
+
         # if parent_folder_key == 'leetcode':
+        #
+        #     print('content', contents[parent_folder_key])
+        #     for each in contents[parent_folder_key]:
 
     return result
 
