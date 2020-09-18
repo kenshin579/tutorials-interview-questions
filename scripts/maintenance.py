@@ -35,13 +35,32 @@ def get_statistics(contents):
 
     # todo: 여기서 부터 다시하면 됨
     for parent_folder_key in contents.keys():
-        result[parent_folder_key] = len(contents[parent_folder_key])
+        sub_total = {
+            parent_folder_key: len(contents[parent_folder_key])
+        }
         print('parent_folder_key', parent_folder_key)
 
-        # if parent_folder_key == 'leetcode':
-        #
-        #     print('content', contents[parent_folder_key])
-        #     for each in contents[parent_folder_key]:
+        if parent_folder_key == 'leetcode':
+            count_map = {}
+            print('content', contents[parent_folder_key])
+            for leetcode_problem in contents[parent_folder_key]:
+                print('leetcode_problem', leetcode_problem)
+                # todo : 여기서 부터 작업하면 됨
+                # sub_leetcode['difficulty'] = leetcode_problem['difficulty']
+                # sub_leetcode['tags'] = leetcode_problem['tags']
+
+            result['leetcode'] = {
+                'difficulty': {
+                    'Easy': 0,
+                    'Medium': 0,
+                    'Hard': 0
+                },
+                'tags': {
+                    'String': 1,
+                    'LinkedList': 1
+                }
+            }
+        result['total'] = sub_total
 
     return result
 
@@ -59,17 +78,21 @@ def update_readme(src):
     with open(README_FILE, "a") as f:
 
         # stats
-        for parent_folder_key in study_stats.keys():
-            f.write('| ' + parent_folder_key + ' | ' + str(study_stats[parent_folder_key]) + ' |\n')
+        for parent_folder_key in study_stats['total'].keys():
+            print('parent_folder_key', parent_folder_key)
+            f.write('| ' + parent_folder_key + ' | ' + str(study_stats['total'][parent_folder_key]) + ' |\n')
 
         f.write("\n")
         # contents
         for parent_folder_key in contents.keys():
-            f.write('## ' + parent_folder_key + '\n')
+            f.write('## ' + parent_folder_key + '\n\n')
             for algorithm_info in contents[parent_folder_key]:
-                if algorithm_info['title'].lower() == 'leetcode':
+                if algorithm_info['title'] == 'leetcode':
                     if first_line:
                         first_line = False
+                        f.write('| 등급  | 총 수 | \n')
+                        f.write('| :---------: | :-----------: |\n')
+                        # f.write('| Easy | ' + study_stats[parent_folder_key]['difficulty'])
 
                 else:
                     f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
@@ -135,8 +158,8 @@ def generate_contents(files):
                             sub_list.append({
                                 'filename': filename,
                                 'title': problem_title,
-                                'difficulty':difficulty,
-                                'tags':tags
+                                'difficulty': difficulty,
+                                'tags': tags
                             })
                         else:
                             sub_list.append({
@@ -149,8 +172,8 @@ def generate_contents(files):
                             sub_list = [{
                                 'filename': filename,
                                 'title': problem_title,
-                                'difficulty':difficulty,
-                                'tags':tags
+                                'difficulty': difficulty,
+                                'tags': tags
                             }]
                         else:
                             sub_list = [{
