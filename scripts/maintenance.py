@@ -31,6 +31,7 @@ README_FILE = '../README.md'
 ################################################################################################
 
 def get_statistics(contents):
+
     result = {}
 
     # todo: 여기서 부터 다시하면 됨
@@ -41,14 +42,7 @@ def get_statistics(contents):
         print('parent_folder_key', parent_folder_key)
 
         if parent_folder_key == 'leetcode':
-            count_map = {}
             print('content', contents[parent_folder_key])
-            for leetcode_problem in contents[parent_folder_key]:
-                print('leetcode_problem', leetcode_problem)
-                # todo : 여기서 부터 작업하면 됨
-                # sub_leetcode['difficulty'] = leetcode_problem['difficulty']
-                # sub_leetcode['tags'] = leetcode_problem['tags']
-
             result['leetcode'] = {
                 'difficulty': {
                     'Easy': 0,
@@ -60,8 +54,13 @@ def get_statistics(contents):
                     'LinkedList': 1
                 }
             }
+
+            for leetcode_problem in contents[parent_folder_key]:
+                print('leetcode_problem', leetcode_problem)
+                result[parent_folder_key]['difficulty'][leetcode_problem['difficulty']] = result[parent_folder_key]['difficulty'][leetcode_problem['difficulty']] + 1
         result['total'] = sub_total
 
+    # print('result', result)
     return result
 
 
@@ -87,15 +86,18 @@ def update_readme(src):
         for parent_folder_key in contents.keys():
             f.write('## ' + parent_folder_key + '\n\n')
             for algorithm_info in contents[parent_folder_key]:
-                if algorithm_info['title'] == 'leetcode':
+                print('algorithm_info', algorithm_info)
+                if parent_folder_key == 'leetcode':
                     if first_line:
+                        print('first line')
                         first_line = False
                         f.write('| 등급  | 총 수 | \n')
                         f.write('| :---------: | :-----------: |\n')
-                        # f.write('| Easy | ' + study_stats[parent_folder_key]['difficulty'])
+                        f.write('| Easy | ' + str(study_stats[parent_folder_key]['difficulty']['Easy']) + ' | \n')
+                        f.write('| Medium | ' + str(study_stats[parent_folder_key]['difficulty']['Medium']) + ' | \n')
+                        f.write('| Hard | ' + str(study_stats[parent_folder_key]['difficulty']['Hard']) + ' | \n\n')
 
-                else:
-                    f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
+                f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
             f.write('\n')
 
 
