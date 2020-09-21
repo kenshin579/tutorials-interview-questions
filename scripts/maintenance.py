@@ -34,15 +34,13 @@ README_FILE = '../README.md'
 def get_statistics(contents):
     result = {}
 
-    # todo: 여기서 부터 다시하면 됨
     for parent_folder_key in contents.keys():
+        logging.debug('parent_folder_key : %s', parent_folder_key)
         sub_total = {
             parent_folder_key: len(contents[parent_folder_key])
         }
-        logging.debug('parent_folder_key : %s', parent_folder_key)
 
         if parent_folder_key == 'leetcode':
-            # logging.debug('content', contents[parent_folder_key])
             result['leetcode'] = {
                 'difficulty': {
                     'Easy': 0,
@@ -61,9 +59,12 @@ def get_statistics(contents):
                 else:
                     result[parent_folder_key]['tags'][each_problem['tags']] = 1
 
-        result['total'] = sub_total
+        if result.get('total') is not None:
+            result['total'].update(sub_total)
+        else:
+            result['total'] = sub_total
 
-    # logging.debug('result', result)
+    logging.debug('result : %s', result)
     return result
 
 
