@@ -7,6 +7,7 @@ import re
 import shutil
 import sys
 import logging
+from datetime import datetime
 
 ################################################################################################
 # todo :
@@ -79,6 +80,10 @@ def update_readme(src):
 
     first_line = True
     with open(README_FILE, "a") as f:
+        f.write('\nUpdated ' + datetime.now().strftime('%Y-%m-%d') + '\n\n')
+        f.write('### 스터디한 알고리즘\n')
+        f.write('| 사이트  | 총 수 |\n')
+        f.write('| :---------: | :-----------: |\n')
 
         # stats
         for parent_folder_key in study_stats['total'].keys():
