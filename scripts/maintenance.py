@@ -20,7 +20,7 @@ import logging
 ################################################################################################
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 README_HEADER_FILE = os.path.join(ROOT_DIR, 'scripts/data/HEADER.md')
-SRC_ROOT_DIR = '../src/main/java/com'
+SRC_ROOT_DIR = os.path.join(ROOT_DIR, 'src/main/java/com')
 EXCLUDE_DIRS = ['utils', 'common']
 FILE_PATTERN_JAVA = '*.java'
 README_FILE = os.path.join(ROOT_DIR, 'README.md')
