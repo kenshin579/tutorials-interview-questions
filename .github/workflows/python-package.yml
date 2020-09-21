@@ -25,7 +25,7 @@ jobs:
         if [ -f scripts/requirements.txt ]; then pip install -r scripts/requirements.txt; fi
     - name: Run maintenance.py
       run: |
-        python scripts/maintenance.py -g
+        python scripts/maintenance.py -u
     - name: Create commits
       run: |
         git config user.name 'kenshin579'
