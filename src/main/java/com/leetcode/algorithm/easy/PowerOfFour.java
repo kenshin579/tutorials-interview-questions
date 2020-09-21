@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 342. Power of Four
+ * Difficulty : Easy
+ * Tags : BitManipulation
+ *
  * https://leetcode.com/problems/power-of-four/
  * https://www.geeksforgeeks.org/find-whether-a-given-number-is-a-power-of-4-or-not/
  */

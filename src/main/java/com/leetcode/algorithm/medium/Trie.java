@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 208. Implement Trie (Prefix Tree)
+ * Difficulty : Medium
+ * Tags : Trie
+ *
  * https://leetcode.com/problems/implement-trie-prefix-tree/
  * https://leetcode.com/problems/implement-trie-prefix-tree/solution/
  * <p>

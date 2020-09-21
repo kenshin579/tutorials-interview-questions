@@ -10,6 +10,9 @@ import java.util.Map;
 
 /**
  * 14. Longest Common Prefix
+ * Difficulty : Easy
+ * Tags : String
+ *
  * https://leetcode.com/problems/longest-common-prefix/
  * 가정 : 공통 str을 찾을 때 첫 index부터 같아야 함
  * <p>

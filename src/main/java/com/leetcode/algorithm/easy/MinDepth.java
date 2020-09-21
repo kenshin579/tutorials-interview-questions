@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 111. Minimum Depth of Binary Tree
+ * Difficulty : Easy
+ * Tags : Tree
+ *
  * https://leetcode.com/problems/minimum-depth-of-binary-tree/
  * https://www.geeksforgeeks.org/find-minimum-depth-of-a-binary-tree/
  */

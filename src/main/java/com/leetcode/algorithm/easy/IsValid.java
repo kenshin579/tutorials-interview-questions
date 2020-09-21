@@ -8,7 +8,9 @@ import java.util.Stack;
 
 /**
  * 20. Valid Parentheses
- * 이건 stack 사용하면 됨
+ * Difficulty : Easy
+ * Tags : String
+ *
  * https://leetcode.com/problems/valid-parentheses/
  */
 @Slf4j
@@ -21,6 +23,11 @@ public class IsValid {
         }
     };
 
+    /**
+     * Time Complexity :
+     * Algorithm :
+     * - 이건 stack 사용하면 됨
+     */
     public boolean isValid(String s) {
         char[] charS = s.toCharArray();
         Stack<Character> stack = new Stack<>();

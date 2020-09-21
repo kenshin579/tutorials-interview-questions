@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 125. Valid Palindrome
+ * Difficulty : Easy
+ * Tags : String
+ *
  * https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/549/week-1-august-1st-august-7th/3411/
  * https://leetcode.com/problems/valid-palindrome/
  */

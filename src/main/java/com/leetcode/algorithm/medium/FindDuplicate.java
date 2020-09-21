@@ -9,6 +9,9 @@ import java.util.Map;
 
 /**
  * 287. Find the Duplicate Number
+ * Difficulty : Medium
+ * Tags : Array
+ *
  * https://leetcode.com/explore/challenge/card/august-leetcoding-challenge/549/week-1-august-1st-august-7th/3414/
  * https://leetcode.com/problems/find-all-duplicates-in-an-array/
  */

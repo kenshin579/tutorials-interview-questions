@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 112. Path Sum
+ * Difficulty : Easy
+ * Tags : Tree
+ *
  * https://leetcode.com/problems/path-sum/
  * <p>
  * Definition for a binary tree node.

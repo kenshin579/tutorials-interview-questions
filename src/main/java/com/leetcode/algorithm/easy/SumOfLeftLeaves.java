@@ -8,6 +8,9 @@ import java.util.LinkedList;
 
 /**
  * 404. Sum of Left Leaves
+ * Difficulty : Easy
+ * Tags : Tree
+ *
  * https://leetcode.com/problems/sum-of-left-leaves/
  * https://leetcode.com/problems/sum-of-left-leaves/discuss/808901/100-Faster-or-3-Solutions-or-Recursive-DFS-or-Iterative-BFS-or-Ugly-1-Liner
  * <p>

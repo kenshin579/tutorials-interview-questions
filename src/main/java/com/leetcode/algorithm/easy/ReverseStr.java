@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 541. Reverse String II
+ * Difficulty : Easy
+ * Tags : String
+ *
  * https://leetcode.com/problems/reverse-string-ii/
  * 2k 블록마다 reverse 하는 예제임
  * ex.

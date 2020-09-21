@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 206. Reverse Linked List
+ * Difficulty : Easy
+ * Tags : LinkedList
+ *
  * https://leetcode.com/problems/reverse-linked-list/
  * Definition for singly-linked list.
  * public class ListNode {
