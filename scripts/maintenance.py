@@ -7,6 +7,7 @@ import re
 import shutil
 import sys
 import logging
+from datetime import datetime
 
 ################################################################################################
 # todo :
@@ -67,11 +68,10 @@ def get_statistics(contents):
     logging.debug('result : %s', result)
     return result
 
-
 def update_readme(src):
     files = get_list_of_files(src, EXCLUDE_DIRS)
 
-    contents = generate_contents(files)
+    contents = parse_source_files(files)
     study_stats = get_statistics(contents)
     logging.debug('study_stats : %s', study_stats)
 
@@ -79,6 +79,10 @@ def update_readme(src):
 
     first_line = True
     with open(README_FILE, "a") as f:
+        f.write('\nUpdated ' + datetime.now().strftime('%Y-%m-%d') + '\n\n')
+        f.write('### 스터디한 알고리즘\n')
+        f.write('| 사이트  | 총 수 |\n')
+        f.write('| :---------: | :-----------: |\n')
 
         # stats
         for parent_folder_key in study_stats['total'].keys():
@@ -90,7 +94,10 @@ def update_readme(src):
         for parent_folder_key in contents.keys():
             f.write('## ' + parent_folder_key + '\n\n')
             for algorithm_info in contents[parent_folder_key]:
+
                 if parent_folder_key == 'leetcode':
+                    # logging.info('title :(%s)', int(extract_text('([0-9]+)', algorithm_info['title'])))
+
                     if first_line:
                         first_line = False
                         print_rank_stats(f, parent_folder_key, study_stats)
@@ -154,7 +161,7 @@ def escape_dot(pattern):
     return pattern.translate(_special_chars_map)
 
 
-def generate_contents(files):
+def parse_source_files(files):
     result = {}
 
     for file in files:
@@ -207,11 +214,18 @@ def generate_contents(files):
                     break
 
             # logging.debug('\n')
+    logging.debug('result : %s', result)
+
+    # sort leetcode by problem #
+    sort_leetcode_list = sorted(result['leetcode'], key=lambda x : int(extract_text('([0-9]+)', x['title'])))
+    result['leetcode'] = sort_leetcode_list
+
     return result
 
 
 def extract_text(regex_str, line):
     match = re.search(regex_str, line)
+    logging.debug('match : %s <-- (%s)', match, line)
     if match:
         extract_str = match.group(1)
         return extract_str
