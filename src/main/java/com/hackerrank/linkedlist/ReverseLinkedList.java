@@ -2,7 +2,6 @@ package com.hackerrank.linkedlist;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.BufferedWriter;
 import java.io.IOException;
 
 /**
@@ -10,6 +9,7 @@ import java.io.IOException;
  * https://www.hackerrank.com/challenges/reverse-a-linked-list/problem
  */
 @Slf4j
+@Deprecated
 public class ReverseLinkedList {
     public static void printSinglyLinkedList(SinglyLinkedList singlyLinkedList) throws IOException {
         while (singlyLinkedList.head != null) {
