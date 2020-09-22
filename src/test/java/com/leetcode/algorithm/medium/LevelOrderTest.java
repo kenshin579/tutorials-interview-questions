@@ -15,9 +15,10 @@ public class LevelOrderTest {
 
 	@Test
 	public void levelOrder() {
-		//todo : 다시 보기
+		//todo : 작업이 더 필요함
 		//		BinaryTree binaryTree = BinaryTreeUtil.generateBinaryTree(Arrays.asList(3, 9, 20, null, null, 15, 7));
 		//		binaryTree.print();
+
 		TreeNode root = new TreeNode(
 				3,
 				new TreeNode(9),
@@ -31,6 +32,54 @@ public class LevelOrderTest {
 				asList(3),
 				asList(9, 20),
 				asList(15, 7)
+		);
+
+		List<List<Integer>> result = new LevelOrder().levelOrder(root);
+		assertThat(result).isEqualTo(expected);
+	}
+
+	@Test
+	public void levelOrder2() {
+		TreeNode root = new TreeNode(
+				3,
+				new TreeNode(9),
+				new TreeNode(20)
+
+		);
+
+		List<List<Integer>> expected = Arrays.asList(
+				asList(3),
+				asList(9, 20)
+		);
+
+		List<List<Integer>> result = new LevelOrder().levelOrder(root);
+		assertThat(result).isEqualTo(expected);
+	}
+
+	@Test
+	public void levelOrder3() {
+		TreeNode root = new TreeNode(3);
+
+		List<List<Integer>> expected = Arrays.asList(
+				asList(3)
+		);
+
+		List<List<Integer>> result = new LevelOrder().levelOrder(root);
+		assertThat(result).isEqualTo(expected);
+	}
+
+	@Test
+	public void levelOrder4() {
+		TreeNode root = new TreeNode(1,
+				new TreeNode(2,
+						new TreeNode(4),
+						new TreeNode(5)),
+				new TreeNode(3));
+
+		List<List<Integer>> expected = Arrays.asList(
+				asList(1),
+				asList(2, 3),
+				asList(4, 5)
 		);
 
 		List<List<Integer>> result = new LevelOrder().levelOrder(root);
