@@ -5,7 +5,11 @@ name: generate README file
 
 on:
   push:
-    branches: [ master ]
+    paths-ignore:
+    - 'README.md'
+
+    branches:
+    - master
 
 jobs:
   build:
