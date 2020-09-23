@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-09-22
+Updated 2020-09-23
 
 ### 스터디한 알고리즘
 | 사이트  | 총 수 |
