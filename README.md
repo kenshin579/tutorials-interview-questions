@@ -26,26 +26,18 @@ Updated 2020-09-25
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
 | 총 수 | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 7 | 3 |
 
+
+#### Easy
 * 1\. Two Sum (TwoSum.java)
 * 14\. Longest Common Prefix (LongestCommonPrefix.java)
 * 20\. Valid Parentheses (IsValid.java)
 * 21\. Merge Two Sorted Lists (MergeTwoLists.java)
-* 77\. Combinations (Combinations.java)
-* 78\. Subsets (Subsets.java)
-* 92\. Reverse Linked List II (ReverseBetween.java)
-* 102\. Binary Tree Level Order Traversal (LevelOrder.java)
 * 104\. Maximum Depth of Binary Tree (MaxDepth.java)
 * 111\. Minimum Depth of Binary Tree (MinDepth.java)
 * 112\. Path Sum (PathSum.java)
 * 118\. Pascal's Triangle (PascalTriangle.java)
 * 125\. Valid Palindrome (ValidPalindrome.java)
-* 144\. Binary Tree Preorder Traversal (PreorderTraversal.java)
-* 147\. Insertion Sort List (InsertionSortList.java)
 * 206\. Reverse Linked List (ReverseList.java)
-* 208\. Implement Trie (Prefix Tree) (Trie.java)
-* 208\. Implement Trie (Prefix Tree) (TrieWithMap.java)
-* 211\. Add and Search Word - Data structure design (WordDictionary.java)
-* 287\. Find the Duplicate Number (FindDuplicate.java)
 * 342\. Power of Four (PowerOfFour.java)
 * 344\. Reverse String (ReverseString.java)
 * 387\. First Unique Character in a String (FirstUniqChar.java)
@@ -55,14 +47,26 @@ Updated 2020-09-25
 * 520\. Detect Capital (DetectCapital.java)
 * 541\. Reverse String II (ReverseStr.java)
 * 557\. Reverse Words in a String III (ReverseWords.java)
-* 560\. Subarray Sum Equals K (SubarraySum.java)
 * 704\. Binary Search (Search.java)
 * 705\. Design HashSet (MyHashSet.java)
 * 744\. Find Smallest Letter Greater Than Target (FindSmallestLetterGreaterThanTarget.java)
 * 876\. Middle of the Linked List (MiddleNode.java)
-* 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
 * 1290\. Convert Binary Number in a Linked List to Integer (GetDecimalValue.java)
 * 1512\. Number of Good Pairs (NumberOfGoodPairs.java)
+
+#### Medium
+* 77\. Combinations (Combinations.java)
+* 78\. Subsets (Subsets.java)
+* 92\. Reverse Linked List II (ReverseBetween.java)
+* 102\. Binary Tree Level Order Traversal (LevelOrder.java)
+* 144\. Binary Tree Preorder Traversal (PreorderTraversal.java)
+* 147\. Insertion Sort List (InsertionSortList.java)
+* 208\. Implement Trie (Prefix Tree) (Trie.java)
+* 208\. Implement Trie (Prefix Tree) (TrieWithMap.java)
+* 211\. Add and Search Word - Data structure design (WordDictionary.java)
+* 287\. Find the Duplicate Number (FindDuplicate.java)
+* 560\. Subarray Sum Equals K (SubarraySum.java)
+* 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
 
 ## codility
 
