@@ -134,6 +134,35 @@ public class LevelOrderTest {
 	}
 
 	@Test
+	public void levelOrder7() {
+		TreeNode root = new TreeNode(0,
+				new TreeNode(2,
+						new TreeNode(1,
+								new TreeNode(5),
+								new TreeNode(1)),
+						null),
+				new TreeNode(4,
+						new TreeNode(3,
+								null,
+								new TreeNode(6)),
+						new TreeNode(-1,
+								null,
+								new TreeNode(8))));
+
+		BTreePrinter.printNode(root);
+
+		List<List<Integer>> expected = Arrays.asList(
+				Arrays.asList(0),
+				Arrays.asList(2, 4),
+				Arrays.asList(1, 3, -1),
+				Arrays.asList(5, 1, 6, 8)
+		);
+
+		List<List<Integer>> result = new LevelOrder().levelOrder(root);
+		assertThat(result).isEqualTo(expected);
+	}
+
+	@Test
 	public void ArrayDequeTest() {
 		Queue<Integer> queue = new ArrayDeque<>();
 		queue.add(1);
