@@ -78,6 +78,7 @@ def update_readme(src):
     shutil.copyfile(README_HEADER_FILE, README_FILE)
 
     first_line = True
+    checked_tag_headers = []
     with open(README_FILE, "a") as f:
         f.write('\nUpdated ' + datetime.now().strftime('%Y-%m-%d') + '\n\n')
         f.write('### 스터디한 알고리즘\n')
@@ -103,6 +104,10 @@ def update_readme(src):
                         print_rank_stats(f, parent_folder_key, study_stats)
 
                         print_tags_stats(f, parent_folder_key, study_stats)
+
+                    if algorithm_info['difficulty'] not in checked_tag_headers:
+                        checked_tag_headers.append(algorithm_info['difficulty'])
+                        f.write('\n#### ' + algorithm_info['difficulty'] + '\n')
 
                 f.write('* ' + algorithm_info['title'] + ' (' + algorithm_info['filename'] + ')\n')
             f.write('\n')
@@ -217,15 +222,14 @@ def parse_source_files(files):
     logging.debug('result : %s', result)
 
     # sort leetcode by problem #
-    sort_leetcode_list = sorted(result['leetcode'], key=lambda x : int(extract_text('([0-9]+)', x['title'])))
+    sort_leetcode_list = sorted(result['leetcode'], key=lambda x : (x['difficulty'], int(extract_text('([0-9]+)', x['title']))))
     result['leetcode'] = sort_leetcode_list
-
     return result
 
 
 def extract_text(regex_str, line):
     match = re.search(regex_str, line)
-    logging.debug('match : %s <-- (%s)', match, line)
+    # logging.debug('match : %s <-- (%s)', match, line)
     if match:
         extract_str = match.group(1)
         return extract_str
