@@ -33,12 +33,13 @@ import java.util.Queue;
 @Slf4j
 public class LevelOrder {
 	/**
-	 * Time Complexity : O(N)
+	 * Time Complexity : O(N) : while loop이 2개 있지만, N만큼의 loop이라서 O(N)으로 봐도 괜찮지 않을 까 싶음
 	 * <p>
-	 * Algorithm :
+	 * Algorithm : Level 단위로 traversal 하기 위해서 기본적으로 queue를 사용함 (BFS)
+	 * - 각 level마다 List를 생성해야 해서 level마다 별도 Queue를 사용함
 	 */
 	public List<List<Integer>> levelOrder(TreeNode root) {
-		List<Queue<TreeNode>> queueList = new ArrayList<>(1);
+		Queue<Queue<TreeNode>> queueList = new ArrayDeque<>();
 		Queue<TreeNode> currentQueue = new ArrayDeque<>();
 		List<List<Integer>> result = new ArrayList<>();
 		List<Integer> subResult;
@@ -49,18 +50,20 @@ public class LevelOrder {
 			queueList.add(currentQueue);
 		}
 
-		Queue<TreeNode> newQueue = null;
+		Queue<TreeNode> newQueue;
 
 		while (!queueList.isEmpty()) {
-			currentQueue = queueList.remove(0);
+			currentQueue = queueList.poll();
 			subResult = new ArrayList<>();
+			newQueue = null;
 
 			while (!currentQueue.isEmpty()) {
 				current = currentQueue.poll();
 				subResult.add(current.val);
-				log.info("current.val : {}", current.val);
+//				log.info("current.val : {}", current.val);
 
-				if (queueList.size() == 0) {
+				if (newQueue == null) {
+//					log.info("creating new queue");
 					newQueue = new ArrayDeque<>();
 				}
 
@@ -71,9 +74,10 @@ public class LevelOrder {
 				if (current.right != null) {
 					newQueue.add(current.right);
 				}
+			}
 
-				if (newQueue != null && (current.left != null || current.right != null))
-					queueList.add(newQueue);
+			if (newQueue.size() > 0) {
+				queueList.add(newQueue);
 			}
 
 			if (subResult.size() > 0)
