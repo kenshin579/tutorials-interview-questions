@@ -34,35 +34,50 @@ import java.util.Queue;
 public class LevelOrder {
 	/**
 	 * Time Complexity : O(N)
-	 *
+	 * <p>
 	 * Algorithm :
-	 *
 	 */
 	public List<List<Integer>> levelOrder(TreeNode root) {
-		Queue<TreeNode> queue = new ArrayDeque<>();
+		List<Queue<TreeNode>> queueList = new ArrayList<>(1);
+		Queue<TreeNode> currentQueue = new ArrayDeque<>();
 		List<List<Integer>> result = new ArrayList<>();
-		List<Integer> subResult = new ArrayList<>();
+		List<Integer> subResult;
 
 		TreeNode current;
 		if (root != null) {
-			queue.add(root);
+			currentQueue.add(root);
+			queueList.add(currentQueue);
 		}
 
-		while (!queue.isEmpty()) {
-			current = queue.poll();
-			subResult.add(current.val);
+		Queue<TreeNode> newQueue = null;
 
-			if (queue.size() == 0) {
+		while (!queueList.isEmpty()) {
+			currentQueue = queueList.remove(0);
+			subResult = new ArrayList<>();
+
+			while (!currentQueue.isEmpty()) {
+				current = currentQueue.poll();
+				subResult.add(current.val);
+				log.info("current.val : {}", current.val);
+
+				if (queueList.size() == 0) {
+					newQueue = new ArrayDeque<>();
+				}
+
+				if (current.left != null) {
+					newQueue.add(current.left);
+				}
+
+				if (current.right != null) {
+					newQueue.add(current.right);
+				}
+
+				if (newQueue != null && (current.left != null || current.right != null))
+					queueList.add(newQueue);
+			}
+
+			if (subResult.size() > 0)
 				result.add(subResult);
-				subResult = new ArrayList<>();
-			}
-
-			if (current.left != null) {
-				queue.add(current.left);
-			}
-			if (current.right != null) {
-				queue.add(current.right);
-			}
 		}
 		return result;
 	}
