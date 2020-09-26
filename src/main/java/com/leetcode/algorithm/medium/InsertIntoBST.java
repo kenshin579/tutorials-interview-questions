@@ -13,7 +13,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Deprecated
 public class InsertIntoBST {
+	/**
+	 * Time Complexity :
+	 *
+	 * Algorithm :
+	 *
+	 */
 	public TreeNode insertIntoBST(TreeNode root, int val) {
+		if (root == null)
+			return new TreeNode(val);
+
+
 		return root;
 	}
 }
