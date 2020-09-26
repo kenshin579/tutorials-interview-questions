@@ -34,7 +34,7 @@ public class PreorderTraversal {
     }
 
     private void preorderTraversalRecursive(TreeNode current, List<Integer> result) {
-        log.info("current : {} result : {}", current, result);
+//        log.info("current : {} result : {}", current, result);
         if (current != null) { //base case
             result.add(current.val);
             preorderTraversalRecursive(current.left, result);
