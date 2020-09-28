@@ -2,6 +2,7 @@ package com.leetcode.algorithm.easy;
 
 import com.leetcode.algorithm.common.struct.TreeNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,6 +26,10 @@ import java.util.List;
 @Deprecated
 public class LevelOrderBottom {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        return null;
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> subResult = new ArrayList<>();
+
+
+        return result;
     }
 }
