@@ -11,7 +11,6 @@ import lombok.extern.slf4j.Slf4j;
  * https://leetcode.com/problems/insert-into-a-binary-search-tree/
  */
 @Slf4j
-@Deprecated
 public class InsertIntoBST {
 	/**
 	 * Time Complexity :
