@@ -55,4 +55,35 @@ public class InsertIntoBSTTest {
                 .isEqualTo(Arrays.asList(4, 2));
 
     }
+
+    @Test
+    public void insertIntoBST4() {
+        TreeNode root = new TreeNode(4);
+
+        BTreePrinter.printNode(root);
+
+        TreeNode result = new InsertIntoBST().insertIntoBST(root, 2);
+        result = new InsertIntoBST().insertIntoBST(result, 7);
+        BTreePrinter.printNode(result);
+
+        assertThat(TreeNodeUtils.getPreOrderListFromTreeNode(result))
+                .isEqualTo(Arrays.asList(4, 2, 7));
+
+    }
+
+    @Test
+    public void insertIntoBST5() {
+        TreeNode root = new TreeNode(4,
+                new TreeNode(2),
+                new TreeNode(7));
+
+        BTreePrinter.printNode(root);
+
+        TreeNode result = new InsertIntoBST().insertIntoBST(root, 1);
+        BTreePrinter.printNode(result);
+
+        assertThat(TreeNodeUtils.getPreOrderListFromTreeNode(result))
+                .isEqualTo(Arrays.asList(4, 2, 1, 7));
+
+    }
 }
