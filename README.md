@@ -2,12 +2,12 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-09-25
+Updated 2020-09-28
 
 ### 스터디한 알고리즘
 | 사이트  | 총 수 |
 | :---------: | :-----------: |
-| leetcode | 37 |
+| leetcode | 38 |
 | codility | 1 |
 | google | 1 |
 | java | 5 |
@@ -20,11 +20,11 @@ Updated 2020-09-25
 
 | 등 급 | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| 총 수  | 25 | 12 | 0 | 
+| 총 수  | 25 | 13 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| 총 수 | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 7 | 3 |
+| 총 수 | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 8 | 3 |
 
 
 #### Easy
@@ -66,6 +66,7 @@ Updated 2020-09-25
 * 211\. Add and Search Word - Data structure design (WordDictionary.java)
 * 287\. Find the Duplicate Number (FindDuplicate.java)
 * 560\. Subarray Sum Equals K (SubarraySum.java)
+* 701\. Insert into a Binary Search Tree (InsertIntoBST.java)
 * 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
 
 ## codility
