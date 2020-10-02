@@ -25,8 +25,12 @@ public class SameTreeTest {
     
     @Test
     public void sameTree3() {
-        TreeNode tree1 = new TreeNode(1, new TreeNode(2, new TreeNode(3, null, null), new TreeNode(4, null, null)));
-        TreeNode tree2 = new TreeNode(1, new TreeNode(2, new TreeNode(3, null, null), new TreeNode(4, null, null)));
-        assertThat(new SameTree().isSameTree(tree1, tree2).isFalse();
+        TreeNode tree1 = new TreeNode(1, 
+                                      new TreeNode(2, new TreeNode(3, null, null), new TreeNode(4, null, new TreeNode(5, null, null))), 
+                                      new TreeNode(6, null, new TreeNode(7, null, null)));
+        TreeNode tree2 = new TreeNode(1, 
+                                      new TreeNode(2, new TreeNode(3, null, null), new TreeNode(4, null, new TreeNode(5, null, null))), 
+                                      new TreeNode(6, null, new TreeNode(7, null, null)));
+        assertThat(new SameTree().isSameTree(tree1, tree2).isTrue();
     }
 }
