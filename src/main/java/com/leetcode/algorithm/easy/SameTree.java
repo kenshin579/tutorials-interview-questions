@@ -13,7 +13,7 @@ package com.leetcode.algorithm.easy;
  * The function recursively calls itself to check down the branches of a TreeNode, checking until the nodes are 
  * null, at which point they return true.
  */
-class Solution {
+class SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {  // If both branches' current objects are null, pass check for that branch
             return true;
