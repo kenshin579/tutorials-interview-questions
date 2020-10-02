@@ -1,5 +1,7 @@
 package com.leetcode.algorithm.easy;
 
+import com.leetcode.algorithm.common.struct.TreeNode;
+
 /**
  * 100. Same Tree
  * Difficulty : Easy
