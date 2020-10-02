@@ -1,6 +1,10 @@
 package com.leetcode.algorithm.easy;
 
 /**
+ * 100. Same Tree
+ * Difficulty : Easy
+ * Tags : Tree
+ *
  * https://leetcode.com/problems/same-tree/
  */
 class Solution {
