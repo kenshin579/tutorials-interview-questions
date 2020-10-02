@@ -81,8 +81,8 @@ def update_readme(src):
     checked_tag_headers = []
     with open(README_FILE, "a") as f:
         f.write('\nUpdated ' + datetime.now().strftime('%Y-%m-%d') + '\n\n')
-        f.write('### 스터디한 알고리즘\n')
-        f.write('| 사이트  | 총 수 |\n')
+        f.write('### Total Number of Studied Algorithms\n')
+        f.write('| Site  | Total |\n')
         f.write('| :---------: | :-----------: |\n')
 
         # stats
@@ -121,16 +121,16 @@ def print_tags_stats(f, parent_folder_key, study_stats):
     for i in range(len(study_stats[parent_folder_key]['tags'].keys()) + 1):
         f.write('| :------: ')
     f.write('|\n')
-    f.write('| 총 수 ')
+    f.write('| Total ')
     for tag in sorted(study_stats[parent_folder_key]['tags'].keys()):
         f.write('| ' + str(study_stats[parent_folder_key]['tags'][tag]) + ' ')
     f.write('|\n\n')
 
 
 def print_rank_stats(f, parent_folder_key, study_stats):
-    f.write('| 등 급 | Easy | Medium | Hard | \n')
+    f.write('| Difficulty | Easy | Medium | Hard | \n')
     f.write('| :------: | :------: | :------: | :------: |\n')
-    f.write('| 총 수  | ' + str(study_stats[parent_folder_key]['difficulty']['Easy']) + ' | ' +
+    f.write('| Total  | ' + str(study_stats[parent_folder_key]['difficulty']['Easy']) + ' | ' +
             str(study_stats[parent_folder_key]['difficulty']['Medium']) + ' | ' +
             str(study_stats[parent_folder_key]['difficulty']['Hard']) + ' | \n\n')
 
