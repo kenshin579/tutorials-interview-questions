@@ -2,10 +2,10 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-09-28
+Updated 2020-10-02
 
-### 스터디한 알고리즘
-| 사이트  | 총 수 |
+### Total Number of Studied Algorithms
+| Site  | Total |
 | :---------: | :-----------: |
 | leetcode | 38 |
 | codility | 1 |
@@ -18,13 +18,13 @@ Updated 2020-09-28
 
 ## leetcode
 
-| 등 급 | Easy | Medium | Hard | 
+| Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| 총 수  | 25 | 13 | 0 | 
+| Total  | 25 | 13 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| 총 수 | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 8 | 3 |
+| Total | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 8 | 3 |
 
 
 #### Easy
