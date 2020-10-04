@@ -2,12 +2,12 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-02
+Updated 2020-10-04
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
-| leetcode | 38 |
+| leetcode | 39 |
 | codility | 1 |
 | google | 1 |
 | java | 5 |
@@ -20,11 +20,11 @@ Updated 2020-10-02
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 25 | 13 | 0 | 
+| Total  | 26 | 13 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 8 | 3 |
+| Total | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 9 | 3 |
 
 
 #### Easy
@@ -32,6 +32,7 @@ Updated 2020-10-02
 * 14\. Longest Common Prefix (LongestCommonPrefix.java)
 * 20\. Valid Parentheses (IsValid.java)
 * 21\. Merge Two Sorted Lists (MergeTwoLists.java)
+* 100\. Same Tree (SameTree.java)
 * 104\. Maximum Depth of Binary Tree (MaxDepth.java)
 * 111\. Minimum Depth of Binary Tree (MinDepth.java)
 * 112\. Path Sum (PathSum.java)
