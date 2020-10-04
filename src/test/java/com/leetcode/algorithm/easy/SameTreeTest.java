@@ -33,4 +33,91 @@ public class SameTreeTest {
                                       new TreeNode(6, null, new TreeNode(7, null, null)));
         assertThat(new SameTree().isSameTree(tree1, tree2)).isTrue();
     }
+
+    @Test
+    public void isSameTree() {
+        TreeNode p = new TreeNode(1,
+                new TreeNode(2),
+                new TreeNode(3)
+        );
+
+        TreeNode q = new TreeNode(1,
+                new TreeNode(2),
+                new TreeNode(3)
+        );
+
+        assertThat(new SameTree().isSameTree(p, q)).isTrue();
+    }
+
+    @Test
+    public void isSameTree2() {
+        TreeNode p = new TreeNode(1,
+                new TreeNode(2),
+                null
+        );
+
+        TreeNode q = new TreeNode(1,
+                null,
+                new TreeNode(3)
+        );
+
+        assertThat(new SameTree().isSameTree(p, q)).isFalse();
+    }
+
+    @Test
+    public void isSameTree3() {
+        TreeNode p = new TreeNode(1,
+                new TreeNode(2),
+                new TreeNode(1)
+        );
+
+        TreeNode q = new TreeNode(1,
+                new TreeNode(1),
+                new TreeNode(2)
+        );
+
+        assertThat(new SameTree().isSameTree(p, q)).isFalse();
+    }
+
+    @Test
+    public void isSameTree4() {
+        assertThat(new SameTree().isSameTree(null, null)).isTrue();
+    }
+
+    @Test
+    public void isSameTree5() {
+        TreeNode p = new TreeNode(1);
+        TreeNode q = new TreeNode(1);
+
+        assertThat(new SameTree().isSameTree(p, q)).isTrue();
+    }
+
+    @Test
+    public void isSameTree6() {
+        TreeNode p = new TreeNode(1);
+        TreeNode q = null;
+
+        assertThat(new SameTree().isSameTree(p, q)).isFalse();
+    }
+
+    @Test
+    public void isSameTree7() {
+        TreeNode p = new TreeNode(1,
+                new TreeNode(2),
+                null);
+        TreeNode q = new TreeNode(1);
+
+        assertThat(new SameTree().isSameTree(p, q)).isFalse();
+    }
+
+    @Test
+    public void isSameTree8() {
+        TreeNode p = new TreeNode(1,
+                new TreeNode(2),
+                null);
+        TreeNode q = new TreeNode(1);
+
+        assertThat(new SameTree().isSameTree(p, q)).isFalse();
+    }
+
 }
