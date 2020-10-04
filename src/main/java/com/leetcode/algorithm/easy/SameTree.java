@@ -9,13 +9,16 @@ import com.leetcode.algorithm.common.struct.TreeNode;
  *
  * https://leetcode.com/problems/same-tree/
  *
- * Average time complexity: O(N)
- *
- * Brief Explaination:
- * The function recursively calls itself to check down the branches of a TreeNode, checking until the nodes are 
- * null, at which point they return true.
  */
 class SameTree {
+    /**
+     * Time complexity: O(N)
+     * ==> T(N) = 2T(N/2) + 1
+     *
+     * Algorithm :
+     * The function recursively calls itself to check down the branches of a TreeNode, checking until the nodes are
+     * null, at which point they return true.
+     */
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {  // If both branches' current objects are null, pass check for that branch
             return true;
