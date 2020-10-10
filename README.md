@@ -2,19 +2,49 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-04
+Updated 2020-10-10
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
-| leetcode | 39 |
-| codility | 1 |
+| baekjoon | 1 |
 | google | 1 |
 | java | 5 |
 | geeksforgeeks | 7 |
-| baekjoon | 1 |
 | hackerrank | 1 |
-| programmers | 5 |
+| leetcode | 39 |
+| programmers | 8 |
+| codility | 1 |
+
+## baekjoon
+
+* 2003 : 수들의 합2 (SubSum.java)
+
+## google
+
+* Balanced Parenthesis (BalancedParenthesis.java)
+
+## java
+
+* String Permutation (StringPermutation.java)
+* Binary Search (BinarySearch.java)
+* Maximize Num Of Things (MaximizeNumOfThings.java)
+* Object Oriented Problem (Coffee.java)
+* Remove duplicate from an array of integers (LinkedList.java)
+
+## geeksforgeeks
+
+* Transform String (TransformString.java)
+* 최대 긴 Common Sub String 출력 (CommonSubString.java)
+* Job Sequence 문제 (JobSequenceWithDealine.java)
+* SubsetSum (SubsetSum.java)
+* 0-1 Knapsack (Knapsack.java)
+* FractionalKnapsack (FractionalKnapsack.java)
+* Insertion Sort (InsertionSort.java)
+
+## hackerrank
+
+* 높이(height) : 루트 노드에서 가장 깊숙히 있는 노드의 깊이 (HeightOfBinaryTree.java)
 
 ## leetcode
 
@@ -70,45 +100,18 @@ Updated 2020-10-04
 * 701\. Insert into a Binary Search Tree (InsertIntoBST.java)
 * 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
 
-## codility
-
-* Remove String In Order (RemoveStringInOrder.java)
-
-## google
-
-* Balanced Parenthesis (BalancedParenthesis.java)
-
-## java
-
-* Binary Search (BinarySearch.java)
-* Maximize Num Of Things (MaximizeNumOfThings.java)
-* Remove duplicate from an array of integers (LinkedList.java)
-* Object Oriented Problem (Coffee.java)
-* String Permutation (StringPermutation.java)
-
-## geeksforgeeks
-
-* 최대 긴 Common Sub String 출력 (CommonSubString.java)
-* Transform String (TransformString.java)
-* Job Sequence 문제 (JobSequenceWithDealine.java)
-* FractionalKnapsack (FractionalKnapsack.java)
-* Insertion Sort (InsertionSort.java)
-* SubsetSum (SubsetSum.java)
-* 0-1 Knapsack (Knapsack.java)
-
-## baekjoon
-
-* 2003 : 수들의 합2 (SubSum.java)
-
-## hackerrank
-
-* 높이(height) : 루트 노드에서 가장 깊숙히 있는 노드의 깊이 (HeightOfBinaryTree.java)
-
 ## programmers
 
 * Budget (Budget.java)
-* 더 맵게 Heap 문제 (MoreSpicy.java)
-* 42747 HIndex (HIndex.java)
 * 주식 가격 스택/큐 문제 (StockPrice.java)
 * 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
+* https://www\.geeksforgeeks\.org/implementing-generic-graph-in-java/ (Problem3.java)
+* https://algospot\.com/judge/problem/read/QUADTREE (Problem2.java)
+* 시간 초가 이슈도 있음 (Problem4.java)
+* 더 맵게 Heap 문제 (MoreSpicy.java)
+* 42747 HIndex (HIndex.java)
+
+## codility
+
+* Remove String In Order (RemoveStringInOrder.java)
 
