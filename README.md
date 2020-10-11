@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-10
+Updated 2020-10-11
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -13,7 +13,7 @@ Updated 2020-10-10
 | geeksforgeeks | 7 |
 | hackerrank | 1 |
 | leetcode | 39 |
-| programmers | 8 |
+| programmers | 9 |
 | codility | 1 |
 
 ## baekjoon
@@ -103,6 +103,7 @@ Updated 2020-10-10
 ## programmers
 
 * Budget (Budget.java)
+* https://www\.geeksforgeeks\.org/program-convert-time-12-hour-24-hour-format/ (Problem2.java)
 * 주식 가격 스택/큐 문제 (StockPrice.java)
 * 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
 * https://www\.geeksforgeeks\.org/implementing-generic-graph-in-java/ (Problem3.java)
