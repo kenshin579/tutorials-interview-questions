@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
  * https://www.geeksforgeeks.org/program-convert-time-12-hour-24-hour-format/
  */
 @Slf4j
+@Deprecated
 public class Problem2 {
     public String solution(String p, int n) {
         String[] s = p.split(" ");
