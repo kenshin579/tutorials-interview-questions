@@ -3,6 +3,10 @@ package com.programmers.challenge.october;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 쿼드압축 후 개수 세기
+ * Difficulty : Medium
+ * Tags : Compression
+ *
  * https://algospot.com/judge/problem/read/QUADTREE
  * https://haedallog.tistory.com/144
  * https://coding-god.tistory.com/32
@@ -11,7 +15,13 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Deprecated
-public class Problem2 {
+public class QuadTree {
+	/**
+	 * Time Complexity :
+	 *
+	 * Algorithm :
+	 *
+	 */
 	public int[] solution(int[][] arr) {
 		String s = quadTree(arr, 0, 0, arr.length);
 //		log.info("s : {}", s);

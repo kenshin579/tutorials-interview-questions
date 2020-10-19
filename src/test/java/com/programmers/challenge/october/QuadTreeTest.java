@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Problem2Test {
+public class QuadTreeTest {
 
 	@Test
 	public void solution() {
@@ -15,7 +15,7 @@ public class Problem2Test {
 				{ 1, 0, 0, 1 },
 				{ 1, 1, 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 
 	@Test
@@ -31,7 +31,7 @@ public class Problem2Test {
 				{ 0, 0, 0, 0, 1, 0, 0, 1 },
 				{ 0, 0, 0, 0, 1, 1, 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class Problem2Test {
 				{ 0, 0, 1, 1 },
 				{ 0, 0, 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 
 	@Test
@@ -53,6 +53,6 @@ public class Problem2Test {
 				{ 1, 0 },
 				{ 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 }
