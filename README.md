@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-11
+Updated 2020-10-19
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -13,7 +13,7 @@ Updated 2020-10-11
 | geeksforgeeks | 7 |
 | hackerrank | 1 |
 | leetcode | 39 |
-| programmers | 8 |
+| programmers | 6 |
 | codility | 1 |
 
 ## baekjoon
@@ -105,8 +105,6 @@ Updated 2020-10-11
 * Budget (Budget.java)
 * 주식 가격 스택/큐 문제 (StockPrice.java)
 * 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
-* https://www\.geeksforgeeks\.org/implementing-generic-graph-in-java/ (Problem3.java)
-* https://algospot\.com/judge/problem/read/QUADTREE (Problem2.java)
 * 시간 초가 이슈도 있음 (Problem4.java)
 * 더 맵게 Heap 문제 (MoreSpicy.java)
 * 42747 HIndex (HIndex.java)
