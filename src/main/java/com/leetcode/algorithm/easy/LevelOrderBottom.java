@@ -28,13 +28,15 @@ import java.util.Queue;
  *         this.right = right;
  *     }
  * }
+ *
+ * https://leetcode.com/problems/binary-tree-level-order-traversal-ii/discuss/881546/My-Java-DFS-SOlution-and-BFS-Solution
  */
 @Slf4j
 public class LevelOrderBottom {
     /**
-     * Time Complexity : O(N)?
+     * Time Complexity : O(N)
      * <p>
-     * Algorithm :
+     * Algorithm : BFS 방식으로 level 단위로 traversal하기 위해 queue를 사용함
      */
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         Queue<Queue<TreeNode>> queueList = new ArrayDeque<>();
@@ -84,5 +86,9 @@ public class LevelOrderBottom {
 
 
         return result;
+    }
+
+    public List<List<Integer>> levelOrderBottomDFS(TreeNode root) {
+        return null;
     }
 }
