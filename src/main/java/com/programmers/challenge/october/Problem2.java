@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
  * https://soojong.tistory.com/entry/python%EB%B0%B1%EC%A4%80-%EC%BF%BC%EB%93%9C%ED%8A%B8%EB%A6%AC
  */
 @Slf4j
+@Deprecated
 public class Problem2 {
 	public int[] solution(int[][] arr) {
 		String s = quadTree(arr, 0, 0, arr.length);

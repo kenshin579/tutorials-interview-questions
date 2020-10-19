@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  * https://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
  */
 @Slf4j
+@Deprecated
 public class Problem3 {
 	public int solution(int n, int[][] edges) {
 
