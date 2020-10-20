@@ -6,6 +6,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AddTwoIntegersTest {
 
+    /**
+     * 반환값
+     * - 다른 인덱스에 있는 두개의 수를 뽑아서 모든 수
+     * - 오른 차순으로
+     */
     @Test
     public void solution() {
         int[] numbers = {2, 1, 3, 4, 1};
