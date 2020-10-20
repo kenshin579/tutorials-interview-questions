@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 월간 코드 챌린지 시즌1 > 트리 트리오 중간값
  * Difficulty : Medium
- * Tags : Graph
+ * Tags : Tree
  *
  * https://prgms.tistory.com/32
  * https://nam-ki-bok.github.io/quiz/Quiz_TrioTree/
@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Deprecated
-public class GraphDistanceMedium {
+public class TreeDistanceMedium {
 	/**
 	 * Time Complexity :
 	 * Algorithm :
