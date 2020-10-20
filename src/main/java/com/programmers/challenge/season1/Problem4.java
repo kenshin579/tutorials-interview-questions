@@ -1,4 +1,4 @@
-package com.programmers.challenge.october;
+package com.programmers.challenge.season1;
 
 import lombok.extern.slf4j.Slf4j;
 
