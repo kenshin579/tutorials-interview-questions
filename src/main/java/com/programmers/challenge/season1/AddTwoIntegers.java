@@ -15,9 +15,11 @@ import java.util.TreeSet;
 @Slf4j
 public class AddTwoIntegers {
     /**
-     * Time Complexity :
+     * Time Complexity : O(N^2)
      * <p>
      * Algorithm :
+     * - loop을 돌때 항시 다른 인덱스를 더하도록 해야함
+     * - 중복과 정렬을 동시에 하기 위해 SortedSet을 사용함
      */
     public int[] solution(int[] numbers) {
         SortedSet<Integer> result = new TreeSet<>();
