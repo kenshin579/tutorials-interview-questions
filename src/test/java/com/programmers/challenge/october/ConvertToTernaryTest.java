@@ -4,11 +4,11 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Problem1Test {
+public class ConvertToTernaryTest {
 
 	@Test
 	public void solution() {
-		assertThat(new Problem1().solution(45)).isEqualTo(7);
+		assertThat(new ConvertToTernary().solution(45)).isEqualTo(7);
 
 	}
 }
