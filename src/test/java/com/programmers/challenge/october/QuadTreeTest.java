@@ -4,8 +4,11 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Problem2Test {
+public class QuadTreeTest {
 
+	/**
+	 * 반환 값 : {0의 개수, 1의 개수}
+	 */
 	@Test
 	public void solution() {
 		int[] expected = { 4, 9 };
@@ -15,7 +18,7 @@ public class Problem2Test {
 				{ 1, 0, 0, 1 },
 				{ 1, 1, 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 
 	@Test
@@ -31,7 +34,7 @@ public class Problem2Test {
 				{ 0, 0, 0, 0, 1, 0, 0, 1 },
 				{ 0, 0, 0, 0, 1, 1, 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 
 	@Test
@@ -43,7 +46,7 @@ public class Problem2Test {
 				{ 0, 0, 1, 1 },
 				{ 0, 0, 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 
 	@Test
@@ -53,6 +56,16 @@ public class Problem2Test {
 				{ 1, 0 },
 				{ 1, 1 }
 		};
-		assertThat(new Problem2().solution(arr)).isEqualTo(expected);
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
+	}
+
+	@Test
+	public void solution5() {
+		int[] expected = { 0, 1 };
+		int[][] arr = {
+				{ 1, 1 },
+				{ 1, 1 }
+		};
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
 	}
 }
