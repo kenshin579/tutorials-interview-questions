@@ -3,6 +3,13 @@ package com.programmers.challenge.season1;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 월간 코드 챌린지 시즌1 > 트리 트리오 중간값
+ * Difficulty : Medium
+ * Tags : Graph
+ *
+ * https://prgms.tistory.com/32
+ * https://nam-ki-bok.github.io/quiz/Quiz_TrioTree/
+ *
  * https://www.geeksforgeeks.org/implementing-generic-graph-in-java/
  * https://www.geeksforgeeks.org/graph-and-its-representations/
  * https://stackoverflow.com/questions/3601180/calculate-distance-between-2-nodes-in-a-graph
@@ -12,7 +19,12 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Deprecated
-public class Problem3 {
+public class GraphDistanceMedium {
+	/**
+	 * Time Complexity :
+	 * Algorithm :
+	 *
+	 */
 	public int solution(int n, int[][] edges) {
 
 
