@@ -6,6 +6,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class QuadTreeTest {
 
+	/**
+	 * 반환 값 : {0의 개수, 1의 개수}
+	 */
 	@Test
 	public void solution() {
 		int[] expected = { 4, 9 };
@@ -51,6 +54,16 @@ public class QuadTreeTest {
 		int[] expected = { 1, 3 };
 		int[][] arr = {
 				{ 1, 0 },
+				{ 1, 1 }
+		};
+		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
+	}
+
+	@Test
+	public void solution5() {
+		int[] expected = { 0, 1 };
+		int[][] arr = {
+				{ 1, 1 },
 				{ 1, 1 }
 		};
 		assertThat(new QuadTree().solution(arr)).isEqualTo(expected);
