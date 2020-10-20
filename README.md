@@ -13,7 +13,7 @@ Updated 2020-10-20
 | geeksforgeeks | 7 |
 | hackerrank | 1 |
 | leetcode | 40 |
-| programmers | 7 |
+| programmers | 8 |
 | codility | 1 |
 
 ## baekjoon
@@ -106,6 +106,7 @@ Updated 2020-10-20
 * Budget (Budget.java)
 * 주식 가격 스택/큐 문제 (StockPrice.java)
 * 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
+* 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
 * 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
 * 시간 초가 이슈도 있음 (Problem4.java)
 * 더 맵게 Heap 문제 (MoreSpicy.java)
