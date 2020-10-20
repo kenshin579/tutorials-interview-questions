@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Deprecated
-public class TreeDistanceMedium {
+public class MediumDiameterOfTree {
 	/**
 	 * Time Complexity :
 	 * Algorithm :
