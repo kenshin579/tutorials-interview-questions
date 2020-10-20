@@ -13,7 +13,7 @@ Updated 2020-10-20
 | geeksforgeeks | 7 |
 | hackerrank | 1 |
 | leetcode | 40 |
-| programmers | 8 |
+| programmers | 9 |
 | codility | 1 |
 
 ## baekjoon
@@ -109,6 +109,7 @@ Updated 2020-10-20
 * 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
 * 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
 * 시간 초가 이슈도 있음 (Problem4.java)
+* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
 * 더 맵게 Heap 문제 (MoreSpicy.java)
 * 42747 HIndex (HIndex.java)
 
