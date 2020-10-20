@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GraphDistanceMediumTest {
+public class TreeDistanceMediumTest {
 
 	@Test
 	public void solution() {
@@ -13,7 +13,7 @@ public class GraphDistanceMediumTest {
 				{ 2, 3 },
 				{ 3, 4 }
 		};
-		assertThat(new GraphDistanceMedium().solution(4, edges)).isEqualTo(2);
+		assertThat(new TreeDistanceMedium().solution(4, edges)).isEqualTo(2);
 	}
 
 	@Test
@@ -25,6 +25,6 @@ public class GraphDistanceMediumTest {
 				{ 4, 5 }
 		};
 
-		assertThat(new GraphDistanceMedium().solution(5, edges)).isEqualTo(2);
+		assertThat(new TreeDistanceMedium().solution(5, edges)).isEqualTo(2);
 	}
 }
