@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
  * Difficulty : Easy
  * Tags : Bit
  *
+ * https://programmers.co.kr/learn/courses/30/lessons/68935
+ *
  * https://prgms.tistory.com/32
  * https://www.geeksforgeeks.org/ternary-number-system-or-base-3-numbers/
  */
@@ -16,6 +18,9 @@ public class ConvertToTernary {
 	 * Time Complexity :
 	 *
 	 * Algorithm :
+	 * 1. 10 진수 -> 3 진수로 변환
+	 * 2. bit값을 앞뒤로 바꿈
+	 * 3. 변경 값을 10진수로 변경
 	 */
 	public int solution(int n) {
 		int answer;
@@ -40,7 +45,6 @@ public class ConvertToTernary {
 //				log.info("{}*{}^{} = {}", chars[i], 3, chars.length - 1 - i, chars[i] * Math.pow(3, chars.length - 1 - i));
 			}
 		}
-
 		return answer;
 	}
 
@@ -59,8 +63,6 @@ public class ConvertToTernary {
 			end--;
 		}
 
-		String s = new String(chars);
-//		log.info("s: {}", s);
-		return s;
+		return new String(chars);
 	}
 }
