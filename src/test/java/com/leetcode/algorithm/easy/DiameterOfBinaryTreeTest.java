@@ -17,4 +17,9 @@ public class DiameterOfBinaryTreeTest {
 
         assertThat(new DiameterOfBinaryTree().diameterOfBinaryTree(root)).isEqualTo(3);
     }
+
+    @Test
+    public void diameterOfBinaryTree2() {
+        assertThat(new DiameterOfBinaryTree().diameterOfBinaryTree(null)).isEqualTo(0);
+    }
 }
