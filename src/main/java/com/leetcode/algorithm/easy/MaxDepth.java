@@ -27,7 +27,8 @@ import java.util.Queue;
 @Slf4j
 public class MaxDepth {
     /**
-     * MaxDepth == Height of Tree
+     * todo : 이렇게 제출하면 맞는데...
+     * MaxDepth == Height of Tree (?)
      * Time Complexity : O(N)
      * ==> T(N) = 2T(N/2) + 1
      *
