@@ -1,6 +1,7 @@
 package com.leetcode.algorithm.easy;
 
 import com.leetcode.algorithm.common.struct.TreeNode;
+import com.utils.TreeNodeUtils;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -25,16 +26,16 @@ public class DiameterOfBinaryTree {
     public int diameterOfBinaryTree(TreeNode root) {
         if (root == null)
             return 0;
-        int leftHeight = new MaxDepth().maxDepth(root.left);
-        int rightHeight = new MaxDepth().maxDepth(root.right);
+        int leftHeight = TreeNodeUtils.height(root.left);
+        int rightHeight = TreeNodeUtils.height(root.right);
+        log.info("1.{}:{}", leftHeight, rightHeight);
+
         int leftDiameter = diameterOfBinaryTree(root.left);
         int rightDiameter = diameterOfBinaryTree(root.right);
-
+        log.info("2.{}:{}", leftDiameter, rightDiameter);
         int max = Math.max(leftHeight + rightHeight + 1, //root를 지나가는 경우
                 Math.max(leftDiameter, rightDiameter)); //root를 지나가지 않는 경우
-
-        log.info("{}, {}", leftHeight, rightHeight);
-        log.info("max = {} ({}, {})", max, leftHeight + rightHeight + 1, Math.max(leftDiameter, rightDiameter));
+        log.info("max = {} ({}:{})", max, leftHeight + rightHeight + 1, Math.max(leftDiameter, rightDiameter));
 
         return max;
     }

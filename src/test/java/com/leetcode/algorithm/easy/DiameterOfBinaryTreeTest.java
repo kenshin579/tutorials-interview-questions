@@ -1,6 +1,7 @@
 package com.leetcode.algorithm.easy;
 
 import com.leetcode.algorithm.common.struct.TreeNode;
+import com.leetcode.algorithm.common.util.BTreePrinter;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,6 +16,7 @@ public class DiameterOfBinaryTreeTest {
                         new TreeNode(5)),
                 new TreeNode(3));
 
+        BTreePrinter.printNode(root);
         assertThat(new DiameterOfBinaryTree().diameterOfBinaryTree(root)).isEqualTo(3);
     }
 
