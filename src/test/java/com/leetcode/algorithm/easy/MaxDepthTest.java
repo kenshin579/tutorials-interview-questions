@@ -20,6 +20,7 @@ public class MaxDepthTest {
         BTreePrinter.printNode(root);
 
         assertThat(new MaxDepth().maxDepth(root)).isEqualTo(3);
+//        assertThat(new MaxDepth().maxDepthBFS(root)).isEqualTo(3);
     }
 
     @Test
