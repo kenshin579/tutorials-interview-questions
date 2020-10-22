@@ -29,4 +29,16 @@ public class TriangleSnailTest {
         int[] expected = {1};
         assertThat(new TriangleSnail().solution(1)).isEqualTo(expected);
     }
+
+    @Test
+    public void solution5() {
+        int[] expected = {1, 2, 3};
+        assertThat(new TriangleSnail().solution(2)).isEqualTo(expected);
+    }
+
+    @Test
+    public void solution6() {
+        int[] expected = {1, 2, 6, 3, 4, 5};
+        assertThat(new TriangleSnail().solution(3)).isEqualTo(expected);
+    }
 }
