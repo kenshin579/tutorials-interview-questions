@@ -26,17 +26,28 @@ public class DiameterOfBinaryTree {
     public int diameterOfBinaryTree(TreeNode root) {
         if (root == null)
             return 0;
-        int leftHeight = TreeNodeUtils.height(root.left);
-        int rightHeight = TreeNodeUtils.height(root.right);
-        log.info("1.{}:{}", leftHeight, rightHeight);
+        int leftHeight = maxDepth(root.left);
+        int rightHeight = maxDepth(root.right);
+//        log.info("  1 ==> lh{}:rh{}", leftHeight, rightHeight);
 
         int leftDiameter = diameterOfBinaryTree(root.left);
         int rightDiameter = diameterOfBinaryTree(root.right);
-        log.info("2.{}:{}", leftDiameter, rightDiameter);
-        int max = Math.max(leftHeight + rightHeight + 1, //root를 지나가는 경우
+//        log.info("  2 ==> ld:{}:rd{}", leftDiameter, rightDiameter);
+
+        int max = Math.max(leftHeight + rightHeight, //root를 지나가는 경우
                 Math.max(leftDiameter, rightDiameter)); //root를 지나가지 않는 경우
-        log.info("max = {} ({}:{})", max, leftHeight + rightHeight + 1, Math.max(leftDiameter, rightDiameter));
+//        log.info("max = {} ({}:max:{})", max, leftHeight + rightHeight + 1, Math.max(leftDiameter, rightDiameter));
 
         return max;
+    }
+
+    private int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftMaxDepth = maxDepth(root.left);
+        int rightMaxDepth = maxDepth(root.right);
+
+        return Math.max(leftMaxDepth, rightMaxDepth) + 1;
     }
 }
