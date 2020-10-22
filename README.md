@@ -2,59 +2,61 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-20
+Updated 2020-10-22
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
-| baekjoon | 1 |
-| google | 1 |
 | java | 5 |
-| geeksforgeeks | 7 |
-| hackerrank | 1 |
-| leetcode | 40 |
 | programmers | 9 |
+| hackerrank | 1 |
 | codility | 1 |
-
-## baekjoon
-
-* 2003 : 수들의 합2 (SubSum.java)
-
-## google
-
-* Balanced Parenthesis (BalancedParenthesis.java)
+| google | 1 |
+| leetcode | 41 |
+| geeksforgeeks | 7 |
+| baekjoon | 1 |
 
 ## java
 
-* String Permutation (StringPermutation.java)
-* Binary Search (BinarySearch.java)
 * Maximize Num Of Things (MaximizeNumOfThings.java)
+* String Permutation (StringPermutation.java)
 * Object Oriented Problem (Coffee.java)
 * Remove duplicate from an array of integers (LinkedList.java)
+* Binary Search (BinarySearch.java)
 
-## geeksforgeeks
+## programmers
 
-* Transform String (TransformString.java)
-* 최대 긴 Common Sub String 출력 (CommonSubString.java)
-* Job Sequence 문제 (JobSequenceWithDealine.java)
-* SubsetSum (SubsetSum.java)
-* 0-1 Knapsack (Knapsack.java)
-* FractionalKnapsack (FractionalKnapsack.java)
-* Insertion Sort (InsertionSort.java)
+* Budget (Budget.java)
+* 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
+* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
+* 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
+* 시간 초가 이슈도 있음 (Problem4.java)
+* 주식 가격 스택/큐 문제 (StockPrice.java)
+* 42747 HIndex (HIndex.java)
+* 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
+* 더 맵게 Heap 문제 (MoreSpicy.java)
 
 ## hackerrank
 
 * 높이(height) : 루트 노드에서 가장 깊숙히 있는 노드의 깊이 (HeightOfBinaryTree.java)
 
+## codility
+
+* Remove String In Order (RemoveStringInOrder.java)
+
+## google
+
+* Balanced Parenthesis (BalancedParenthesis.java)
+
 ## leetcode
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 27 | 13 | 0 | 
+| Total  | 28 | 13 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 10 | 3 |
+| Total | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 11 | 3 |
 
 
 #### Easy
@@ -78,6 +80,7 @@ Updated 2020-10-20
 * 409\. Longest Palindrome (LongestPalindrome.java)
 * 520\. Detect Capital (DetectCapital.java)
 * 541\. Reverse String II (ReverseStr.java)
+* 543\. Diameter of Binary Tree (DiameterOfBinaryTree.java)
 * 557\. Reverse Words in a String III (ReverseWords.java)
 * 704\. Binary Search (Search.java)
 * 705\. Design HashSet (MyHashSet.java)
@@ -93,27 +96,25 @@ Updated 2020-10-20
 * 102\. Binary Tree Level Order Traversal (LevelOrder.java)
 * 144\. Binary Tree Preorder Traversal (PreorderTraversal.java)
 * 147\. Insertion Sort List (InsertionSortList.java)
-* 208\. Implement Trie (Prefix Tree) (Trie.java)
 * 208\. Implement Trie (Prefix Tree) (TrieWithMap.java)
+* 208\. Implement Trie (Prefix Tree) (Trie.java)
 * 211\. Add and Search Word - Data structure design (WordDictionary.java)
 * 287\. Find the Duplicate Number (FindDuplicate.java)
 * 560\. Subarray Sum Equals K (SubarraySum.java)
 * 701\. Insert into a Binary Search Tree (InsertIntoBST.java)
 * 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
 
-## programmers
+## geeksforgeeks
 
-* Budget (Budget.java)
-* 주식 가격 스택/큐 문제 (StockPrice.java)
-* 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
-* 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
-* 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
-* 시간 초가 이슈도 있음 (Problem4.java)
-* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
-* 더 맵게 Heap 문제 (MoreSpicy.java)
-* 42747 HIndex (HIndex.java)
+* 최대 긴 Common Sub String 출력 (CommonSubString.java)
+* Job Sequence 문제 (JobSequenceWithDealine.java)
+* Transform String (TransformString.java)
+* FractionalKnapsack (FractionalKnapsack.java)
+* SubsetSum (SubsetSum.java)
+* 0-1 Knapsack (Knapsack.java)
+* Insertion Sort (InsertionSort.java)
 
-## codility
+## baekjoon
 
-* Remove String In Order (RemoveStringInOrder.java)
+* 2003 : 수들의 합2 (SubSum.java)
 
