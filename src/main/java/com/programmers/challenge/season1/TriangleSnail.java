@@ -13,8 +13,11 @@ import java.util.List;
  * https://programmers.co.kr/learn/courses/30/lessons/68645
  * https://prgms.tistory.com/29
  * https://velog.io/@delay/programmers68645
+ * https://hongjuzzang.github.io/solution/code_p68645/
+ * https://minhamina.tistory.com/58
  */
 @Slf4j
+@Deprecated
 public class TriangleSnail {
     /**
      * Time Complexity : O(N)
