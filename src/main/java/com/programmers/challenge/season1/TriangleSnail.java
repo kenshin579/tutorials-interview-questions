@@ -12,6 +12,7 @@ import java.util.List;
  * <p>
  * https://programmers.co.kr/learn/courses/30/lessons/68645
  * https://prgms.tistory.com/29
+ * https://velog.io/@delay/programmers68645
  */
 @Slf4j
 public class TriangleSnail {
@@ -24,43 +25,37 @@ public class TriangleSnail {
         int[][] arr = new int[n][n];
 
         //채우기
-        fillDataInTriangleSnailOrder(arr, 0, 0, 0, n);
+        //N = 6
+        int count = fillDataInTriangleSnailOrder(arr, 0, 0, 0, n);
+        log.info("1.count: {}", count);
 
+        count = fillDataInTriangleSnailOrder(arr, 2, 1, count, 3);
+        log.info("2.count: {}", count);
         //출력하기
         List<Integer> result = getResultInOrder(arr, n);
         return result.stream().mapToInt(Number::intValue).toArray();
     }
 
-    private void fillDataInTriangleSnailOrder(int[][] arr, int rowIndex, int colIndex, int count, int size) {
-        if (size == 0)
-            return;
+    private int fillDataInTriangleSnailOrder(int[][] arr, int rowIndex, int colIndex, int count, int size) {
+        log.info("r:{} c:{} count:{} size:{}", rowIndex, colIndex, count, size);
+//        if (size == 0)
+//            return;
 
         //맨 왼쪽 채우기
-        for (int i = rowIndex; i < rowIndex + size; i++) {
-            arr[i][0] = ++count;
+        for (int i = rowIndex; i < rowIndex + size - 1; i++) {
+            arr[i][colIndex] = ++count;
         }
 
         //만 아래 채우기
-        count--;
-        for (int i = colIndex; i < colIndex + size; i++) {
-            arr[size - 1][i] = ++count;
+        for (int i = colIndex; i < colIndex + size - 1; i++) {
+            arr[rowIndex + size - 1][i] = ++count;
         }
 
         //대각선 채우기
-        count--;
-        for (int i = size - 1; i >= 1; i--) { //todo : index 수정이 필요함
-            arr[i][i] = ++count;
+        for (int i = colIndex + size - 1; i >= colIndex; i--) {
+//            arr[][i] = ++count;
         }
-
-        //반복
-        int subSize = size < 4 ? 0 : size - 4 + 1;
-        rowIndex = 0;
-        colIndex = rowIndex - 1;
-
-        log.info("rowIndex: {} colIndex:{} count:{} subSize: {}", rowIndex, colIndex, count, subSize);
-
-
-//        fillDataInTriangleSnailOrder(arr, );
+        return count;
 
     }
 
