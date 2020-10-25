@@ -9,11 +9,11 @@ import java.util.List;
 /**
  * 월간 코드 챌린지 시즌1 > 트리 트리오 중간값
  * Difficulty : Medium
- * Tags : Tree
+ * Tags : Graph
  * <p>
+ * https://programmers.co.kr/learn/courses/30/lessons/68937
  * https://prgms.tistory.com/32
  * https://nam-ki-bok.github.io/quiz/Quiz_TrioTree/
- * <p>
  * https://www.geeksforgeeks.org/implementing-generic-graph-in-java/
  * https://www.geeksforgeeks.org/graph-and-its-representations/
  * https://stackoverflow.com/questions/3601180/calculate-distance-between-2-nodes-in-a-graph
@@ -31,58 +31,81 @@ public class MediumDiameterOfTree {
     /**
      * Time Complexity :
      * Algorithm :
-     * 1. graph traverse
-     * 2. distance
+     * 1. graph traverse하면서 distance을 계산한다
+     * 2. distance 값을 기반으로
      */
     public int solution(int n, int[][] edges) {
         //todo : 이 코드를 최대한 이해해보는 걸로 함
 
-
-        List<Integer>[] list = new ArrayList[n + 1];
+        List<Integer>[] adj = new ArrayList[n + 1];
         for (int i = 1; i <= n; i++) {
-            list[i] = new ArrayList<>();
+            adj[i] = new ArrayList<>();
         }
         for (int[] e : edges) {
-            list[e[0]].add(e[1]);
-            list[e[1]].add(e[0]);
+            adj[e[0]].add(e[1]);
+            adj[e[1]].add(e[0]);
         }
 
-        int[] result = bfs(list, 1, n);
+        print(adj);
+        int[] distance = bfs(adj, 1, n);
+        log.info("node : {} distance : {}", 1, distance);
+
         int s = 1, max = 0, cnt = 0;
         for (int i = 2; i <= n; i++) {
-            if (result[i] > result[s]) s = i;
+            if (distance[i] > distance[s])
+                s = i; //distance가 가장 큰의 node를 찾음 (가장 먼곳)
         }
-        result = bfs(list, s, n);
-        print(list);
-        log.info("result : {}", result);
+        distance = bfs(adj, s, n);
+        log.info("node : {} distance : {}", s, distance);
 
         s = 1;
         for (int i = 1; i <= n; i++) {
-            if (result[i] > result[s]) s = i;
+            if (distance[i] > distance[s])
+                s = i; //다시 가장 먼곳의 node index를 찾음
         }
-        for (int i : result) max = Math.max(max, i);
-        for (int i : result) if (max == i) cnt++;
-        if (cnt >= 2) return max;
+
+        for (int i : distance)
+            max = Math.max(max, i);
+        for (int i : distance) {
+            if (max == i)
+                cnt++;
+        }
+
+        if (cnt >= 2)
+            return max;
+
         max = 0;
         cnt = 0;
-        result = bfs(list, s, n);
-        for (int i : result) max = Math.max(max, i);
-        for (int i : result) if (max == i) cnt++;
-        if (cnt >= 2) return max;
+        distance = bfs(adj, s, n);
+        log.info("node : {} distance : {}", s, distance);
+
+        for (int i : distance) {
+            max = Math.max(max, i);
+            log.info("max : {}", max);
+        }
+
+        for (int i : distance) {
+            if (max == i)
+                cnt++;
+        }
+
+        if (cnt >= 2)
+            return max;
         return max - 1;
     }
 
-    private static int[] bfs(List<Integer>[] list, int s, int n) {
+    private static int[] bfs(List<Integer>[] adj, int startNode, int n) {
         boolean[] visit = new boolean[n + 1];
         int[] dist = new int[n + 1];
         LinkedList<Integer> qu = new LinkedList<>();
-        qu.add(s);
-        visit[s] = true;
+        qu.add(startNode);
+        visit[startNode] = true;
 
         while (!qu.isEmpty()) {
             int num = qu.poll();
-            for (int i : list[num]) {
-                if (i == num || visit[i]) continue;
+            for (int i : adj[num]) {
+                if (i == num || visit[i])
+                    continue;
                 visit[i] = true;
                 qu.add(i);
                 dist[i] = dist[num] + 1;
