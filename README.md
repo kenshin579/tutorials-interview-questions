@@ -2,18 +2,18 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-22
+Updated 2020-10-25
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
 | java | 5 |
-| programmers | 9 |
+| programmers | 10 |
 | hackerrank | 1 |
 | codility | 1 |
 | google | 1 |
 | leetcode | 41 |
-| geeksforgeeks | 7 |
+| geeksforgeeks | 9 |
 | baekjoon | 1 |
 
 ## java
@@ -27,6 +27,7 @@ Updated 2020-10-22
 ## programmers
 
 * Budget (Budget.java)
+* 월간 코드 챌린지 시즌1 > 트리 트리오 중간값 (TreeTrioMediumValue.java)
 * 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
 * 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
 * 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
@@ -110,6 +111,8 @@ Updated 2020-10-22
 * Job Sequence 문제 (JobSequenceWithDealine.java)
 * Transform String (TransformString.java)
 * FractionalKnapsack (FractionalKnapsack.java)
+* Graph (인접 리스트로 구현) (Graph.java)
+* Minimum value of distance of farthest node in a Graph (MinFarthestDistance.java)
 * SubsetSum (SubsetSum.java)
 * 0-1 Knapsack (Knapsack.java)
 * Insertion Sort (InsertionSort.java)
