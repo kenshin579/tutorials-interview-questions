@@ -3,6 +3,7 @@ package com.programmers.challenge.season1;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import java.util.List;
  * 월간 코드 챌린지 시즌1 > 트리 트리오 중간값
  * Difficulty : Medium
  * Tags : Graph
+ * Score : 7.7/100.0
+ *
  * <p>
  * https://programmers.co.kr/learn/courses/30/lessons/68937
  * https://prgms.tistory.com/32
@@ -26,92 +29,71 @@ import java.util.List;
  * https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html
  */
 @Slf4j
-@Deprecated
 public class MediumDiameterOfTree {
     /**
+     * todo : 메모리 초과 및 입력값도 틀린 부분도 많음
+     *
      * Time Complexity :
      * Algorithm :
      * 1. graph traverse하면서 distance을 계산한다
      * 2. distance 값을 기반으로
      */
     public int solution(int n, int[][] edges) {
-        //todo : 이 코드를 최대한 이해해보는 걸로 함
-
         List<Integer>[] adj = new ArrayList[n + 1];
         for (int i = 1; i <= n; i++) {
             adj[i] = new ArrayList<>();
         }
+
         for (int[] e : edges) {
             adj[e[0]].add(e[1]);
             adj[e[1]].add(e[0]);
         }
 
-        print(adj);
-        int[] distance = bfs(adj, 1, n);
-        log.info("node : {} distance : {}", 1, distance);
+        int[][] distance = new int[n + 1][n + 1];
 
-        int s = 1, max = 0, cnt = 0;
-        for (int i = 2; i <= n; i++) {
-            if (distance[i] > distance[s])
-                s = i; //distance가 가장 큰의 node를 찾음 (가장 먼곳)
-        }
-        distance = bfs(adj, s, n);
-        log.info("node : {} distance : {}", s, distance);
-
-        s = 1;
+//        print(adj);
         for (int i = 1; i <= n; i++) {
-            if (distance[i] > distance[s])
-                s = i; //다시 가장 먼곳의 node index를 찾음
+            bfs(adj, distance, i, n);
         }
 
-        for (int i : distance)
-            max = Math.max(max, i);
-        for (int i : distance) {
-            if (max == i)
-                cnt++;
-        }
-
-        if (cnt >= 2)
-            return max;
-
-        max = 0;
-        cnt = 0;
-        distance = bfs(adj, s, n);
-        log.info("node : {} distance : {}", s, distance);
-
-        for (int i : distance) {
-            max = Math.max(max, i);
-            log.info("max : {}", max);
-        }
-
-        for (int i : distance) {
-            if (max == i)
-                cnt++;
-        }
-
-        if (cnt >= 2)
-            return max;
-        return max - 1;
+        //todo : 전체 distance를 계산하지 않고 더 simple하게 하는 방법이 있다고 하는데 잘 이해가 안됨
+        //https://nam-ki-bok.github.io/quiz/Quiz_TrioTree/
+        return findMaxDistanceAmongMediumValues(distance);
     }
 
-    private static int[] bfs(List<Integer>[] adj, int startNode, int n) {
-        boolean[] visit = new boolean[n + 1];
-        int[] dist = new int[n + 1];
-        LinkedList<Integer> qu = new LinkedList<>();
-        qu.add(startNode);
-        visit[startNode] = true;
+    private int findMaxDistanceAmongMediumValues(int[][] distance) {
+        int max = 0;
+        int medium;
 
-        while (!qu.isEmpty()) {
-            int num = qu.poll();
-            for (int i : adj[num]) {
-                if (i == num || visit[i])
-                    continue;
-                visit[i] = true;
-                qu.add(i);
-                dist[i] = dist[num] + 1;
+        for (int i = 0; i < distance.length; i++) {
+            medium = getMediumValue(distance[i]);
+            if (medium > max) {
+                max = medium;
             }
         }
-        return dist;
+        return max;
+    }
+
+    private int getMediumValue(int[] distance) {
+        return Arrays.stream(distance).filter(it -> it != 0).sorted().skip(1).findFirst().orElse(0);
+    }
+
+    private static void bfs(List<Integer>[] adj, int[][] dist, int startNode, int n) {
+        boolean[] visited = new boolean[n + 1];
+        LinkedList<Integer> queue = new LinkedList<>();
+        queue.add(startNode);
+        visited[startNode] = true;
+
+        while (!queue.isEmpty()) {
+            int num = queue.poll();
+            for (int node : adj[num]) {
+                if (!visited[node]) {
+                    visited[node] = true;
+                    queue.add(node);
+                    dist[startNode][node] = dist[startNode][num] + 1;
+                }
+            }
+        }
     }
 
     private void print(List<Integer>[] list) {

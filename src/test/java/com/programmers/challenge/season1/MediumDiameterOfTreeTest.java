@@ -2,6 +2,9 @@ package com.programmers.challenge.season1;
 
 import org.junit.Test;
 
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MediumDiameterOfTreeTest {
