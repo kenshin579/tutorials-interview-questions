@@ -29,7 +29,7 @@ import java.util.List;
  * https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html
  */
 @Slf4j
-public class MediumDiameterOfTree {
+public class TreeTrioMediumValue {
     /**
      * todo : 메모리 초과 및 입력값도 틀린 부분도 많음
      *

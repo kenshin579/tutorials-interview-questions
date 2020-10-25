@@ -2,12 +2,9 @@ package com.programmers.challenge.season1;
 
 import org.junit.Test;
 
-import java.util.SortedSet;
-import java.util.TreeSet;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MediumDiameterOfTreeTest {
+public class TreeTrioMediumValueTest {
 
 	@Test
 	public void solution() {
@@ -16,7 +13,7 @@ public class MediumDiameterOfTreeTest {
 				{ 2, 3 },
 				{ 3, 4 }
 		};
-		assertThat(new MediumDiameterOfTree().solution(4, edges)).isEqualTo(2);
+		assertThat(new TreeTrioMediumValue().solution(4, edges)).isEqualTo(2);
 	}
 
 	@Test
@@ -28,6 +25,6 @@ public class MediumDiameterOfTreeTest {
 				{ 4, 5 }
 		};
 
-		assertThat(new MediumDiameterOfTree().solution(5, edges)).isEqualTo(2);
+		assertThat(new TreeTrioMediumValue().solution(5, edges)).isEqualTo(2);
 	}
 }
