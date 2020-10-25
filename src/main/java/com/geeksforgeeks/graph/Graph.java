@@ -22,7 +22,12 @@ public class Graph {
             adj[i] = new LinkedList();
     }
 
-    // Function to add an edge into the graph
+    /**
+     * Function to add an edge into the graph
+     * directed graph 여서 edge는 하나만 추가하거임
+     * @param v
+     * @param w
+     */
     public void addEdge(int v, int w) {
         adj[v].add(w);
     }
