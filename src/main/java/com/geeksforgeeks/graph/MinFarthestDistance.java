@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.Vector;
 
 /**
  * Minimum value of distance of farthest node in a Graph
@@ -35,38 +34,28 @@ public class MinFarthestDistance {
      * 2. 거리중에서 가장 작은 값을 반환함
      */
     public int minFarthestDistance(int[][] edges, int n) {
-        Graph g = new Graph(n);
+        Graph undirectedGraph = new Graph(n + 1);
 
         // Resize distance vector
         farthestDistance = new int[n + 1];
         Arrays.fill(farthestDistance, 0);
 
-        // To create adjacency list for graph
-        @SuppressWarnings("unchecked")
-        Vector<Integer>[] Adj = new Vector[n + 1];
 
-        for (int i = 0; i < n + 1; i++) {
-            Adj[i] = new Vector<>();
-        }
-
-        // Create Adjacency list for every
-        // edge given in arr[][]
-        for (int i = 0; i < n - 1; i++) {
-            Adj[edges[i][0]].add(edges[i][1]);
-            Adj[edges[i][1]].add(edges[i][0]);
+        for (int i = 0; i < edges.length; i++) {
+            undirectedGraph.addEdge(edges[i][0], edges[i][1]); //Adj[1] = 4
+            undirectedGraph.addEdge(edges[i][1], edges[i][0]); //Adj[4] = 1
         }
 
         // DFS Traversal for every node in the
         // graph to update the distance vector
         for (int node = 1; node <= n; node++) {
-
             // Clear and resize vis[] before
             // DFS traversal for every vertex
             visited = new boolean[n + 1];
             Arrays.fill(visited, false);
 
             // DFS Traversal for vertex i
-            dfs(node, Adj, 0);
+            dfs(node, undirectedGraph, 0);
         }
 
         log.info("farthestDistance : {}", farthestDistance);
@@ -84,18 +73,18 @@ public class MinFarthestDistance {
 
     // Function for DFS traversal to update
     // the distance vector
-    private void dfs(int node, Vector<Integer>[] Adj, int distance) {
+    private void dfs(int node, Graph graph, int distance) {
         // Mark the visited array for vertex u
         visited[node] = true;
 
         // Traverse the adjacency list for u
-        for (int it : Adj[node]) {
+        for (int it : graph.getAdj(node)) {
             // If the any node is not visited,
             // then recursively call for next
             // vertex with distance increment
             // by 1
             if (!visited[it]) {
-                dfs(it, Adj, distance + 1);
+                dfs(it, graph, distance + 1);
             }
         }
 
@@ -111,12 +100,17 @@ public class MinFarthestDistance {
         Graph(int maxVertices) {
             this.maxVertices = maxVertices;
             adj = new LinkedList[maxVertices];
+
             for (int i = 0; i < maxVertices; ++i)
                 adj[i] = new LinkedList();
         }
 
         public void addEdge(int v, int w) {
             adj[v].add(w);
+        }
+
+        public LinkedList<Integer> getAdj(int node) {
+            return this.adj[node];
         }
     }
 }
