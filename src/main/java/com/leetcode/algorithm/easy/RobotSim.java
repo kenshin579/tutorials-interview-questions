@@ -6,6 +6,7 @@ package com.leetcode.algorithm.easy;
  * Tags : Graph
  *
  * https://leetcode.com/problems/walking-robot-simulation/
+ * https://leetcode.com/problems/walking-robot-simulation/discuss/474276/JAVA-31-ms-straight-forward-with-comments
  */
 public class RobotSim {
     /**
@@ -14,6 +15,7 @@ public class RobotSim {
      *
      */
     public int robotSim(int[] commands, int[][] obstacles) {
+
         return 0;
     }
 }
