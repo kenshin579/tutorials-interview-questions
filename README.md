@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-26
+Updated 2020-10-27
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -12,7 +12,7 @@ Updated 2020-10-26
 | hackerrank | 1 |
 | codility | 1 |
 | google | 1 |
-| leetcode | 41 |
+| leetcode | 42 |
 | geeksforgeeks | 9 |
 | baekjoon | 1 |
 
@@ -54,11 +54,11 @@ Updated 2020-10-26
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 28 | 13 | 0 | 
+| Total  | 29 | 13 | 0 | 
 
-| Tags | Array | BinarySearch | BitManipulation | Etc | Hash | LinkedList | Map | Set | String | Tree | Trie | 
-| :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 1 | 10 | 11 | 3 |
+| Tags | Array | BinarySearch | BitManipulation | Etc | Graph | Hash | LinkedList | Map | Set | String | Tree | Trie | 
+| :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
+| Total | 1 | 1 | 1 | 5 | 1 | 1 | 6 | 1 | 1 | 10 | 11 | 3 |
 
 
 #### Easy
@@ -87,6 +87,7 @@ Updated 2020-10-26
 * 704\. Binary Search (Search.java)
 * 705\. Design HashSet (MyHashSet.java)
 * 744\. Find Smallest Letter Greater Than Target (FindSmallestLetterGreaterThanTarget.java)
+* 874\. Walking Robot Simulation (RobotSim.java)
 * 876\. Middle of the Linked List (MiddleNode.java)
 * 1290\. Convert Binary Number in a Linked List to Integer (GetDecimalValue.java)
 * 1512\. Number of Good Pairs (NumberOfGoodPairs.java)
