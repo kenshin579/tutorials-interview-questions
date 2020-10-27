@@ -12,10 +12,9 @@ public class RobotSimTest {
     @Test
     public void robotSim() {
         int[] commands = {4, -1, 3};
-        int[][] obstacles = {{}};
+        int[][] obstacles = {};
 
         assertThat(new RobotSim().robotSim(commands, obstacles)).isEqualTo(25);
-
     }
 
     @Test
