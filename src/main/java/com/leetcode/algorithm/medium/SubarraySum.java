@@ -15,23 +15,18 @@ import java.util.Map;
  */
 @Slf4j
 public class SubarraySum {
-    public int subarraySum(int[] nums, int k) {
-        return solution2(nums, k);
-    }
-
     /**
+     * Time Complexity : O(n)
+     *
+     * Algorithm :
      * hint : map 사용하기
      * - 그전의 sum을 각각 map에 기록을 둔다
      * - 현재 값 - K의 값이 map에 있으면 subarray의 값이 zero라는 의미이고 매칭이 있다는 의미로 count를 ++하면 된다
      * ㅁ. 9, 4 | 20, 30, 10 , 5
      * <p>
-     * O(n)
      *
-     * @param nums
-     * @param k
-     * @return
      */
-    private int solution2(int[] nums, int k) {
+    public int subarraySum(int[] nums, int k) {
         int count = 0;
         int currSum = 0;
         int key;
@@ -52,14 +47,13 @@ public class SubarraySum {
         return count;
     }
 
+
     /**
-     * O(N^2)
+     * Time Complexity : O(N^2)
      *
-     * @param nums
-     * @param k
-     * @return
+     * Algorithm :
      */
-    private int solution1(int[] nums, int k) {
+    public int subarraySum2(int[] nums, int k) {
         int count = 0;
         int sum;
         for (int i = 0; i < nums.length; i++) {
