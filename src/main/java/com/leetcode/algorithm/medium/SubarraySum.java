@@ -18,31 +18,33 @@ public class SubarraySum {
     /**
      * Time Complexity : O(n)
      *
-     * Algorithm :
-     * hint : map 사용하기
-     * - 그전의 sum을 각각 map에 기록을 둔다
-     * - 현재 값 - K의 값이 map에 있으면 subarray의 값이 zero라는 의미이고 매칭이 있다는 의미로 count를 ++하면 된다
-     * ㅁ. 9, 4 | 20, 30, 10 , 5
-     * <p>
+     * Algorithm : map 사용하기
+     * 1. 그전의 sum을 각각 map에 기록을 둔다
      *
+     * todo : 다시 작성하기 - 2. (현재 값 - K)의 값이 map에 있으면 subarray의 값이 zero라는 의미이고 매칭이 있다는 의미로 count를 ++하면 된다
      */
     public int subarraySum(int[] nums, int k) {
         int count = 0;
-        int currSum = 0;
+        int accumulatedSum = 0;
         int key;
-        Map<Integer, Integer> prevSumMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            currSum += nums[i];
-            if (currSum == k) {
+        Map<Integer, Integer> allPrevSumsVsCount = new HashMap<>();
+
+        for (int num : nums) {
+            accumulatedSum += num;
+            log.info("accumulatedSum : {} num:{}", accumulatedSum, num);
+            if (accumulatedSum == k) {
                 count++;
             }
 
-            key = currSum - k;
-            if (prevSumMap.containsKey(key)) {
-                count += prevSumMap.get(key);
+            key = accumulatedSum - k; //target값을 뺀 값이 map에 있는지 확인
+            log.info("key : {}", key);
+            if (allPrevSumsVsCount.containsKey(key)) {
+                count += allPrevSumsVsCount.get(key); //todo: 정확하게 이해는 못하기는 했음
             }
 
-            prevSumMap.put(currSum, prevSumMap.getOrDefault(currSum, 0) + 1);
+            allPrevSumsVsCount.put(accumulatedSum, allPrevSumsVsCount.getOrDefault(accumulatedSum, 0) + 1);
+            log.info("allPrevSumsVsCount : {} count:{}", allPrevSumsVsCount, count);
+            System.out.println();
         }
         return count;
     }
@@ -52,16 +54,14 @@ public class SubarraySum {
      * Time Complexity : O(N^2)
      *
      * Algorithm :
+     * 1.outer, inner loop을 돌면서 sum이 target(k) 값이 같은 경우에 count 증가
      */
     public int subarraySum2(int[] nums, int k) {
         int count = 0;
         int sum;
         for (int i = 0; i < nums.length; i++) {
-            sum = nums[i];
-            if (sum == k) {
-                count++;
-            }
-            for (int j = i + 1; j < nums.length; j++) {
+            sum = 0;
+            for (int j = i; j < nums.length; j++) {
                 sum += nums[j];
                 if (sum == k) {
                     count++;
