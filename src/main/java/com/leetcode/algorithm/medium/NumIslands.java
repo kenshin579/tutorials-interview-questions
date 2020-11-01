@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * 200. Number of Islands
  * Difficulty : Medium
- * Tag : Graph
+ * Tags : Graph
  * <p>
  * https://leetcode.com/problems/number-of-islands/
  */
