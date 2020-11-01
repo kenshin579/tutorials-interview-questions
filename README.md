@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-10-27
+Updated 2020-11-01
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -12,7 +12,7 @@ Updated 2020-10-27
 | hackerrank | 1 |
 | codility | 1 |
 | google | 1 |
-| leetcode | 42 |
+| leetcode | 43 |
 | geeksforgeeks | 9 |
 | baekjoon | 1 |
 
@@ -54,11 +54,11 @@ Updated 2020-10-27
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 29 | 13 | 0 | 
+| Total  | 29 | 14 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Graph | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 1 | 1 | 1 | 5 | 1 | 1 | 6 | 1 | 1 | 10 | 11 | 3 |
+| Total | 1 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 10 | 11 | 3 |
 
 
 #### Easy
@@ -99,6 +99,7 @@ Updated 2020-10-27
 * 102\. Binary Tree Level Order Traversal (LevelOrder.java)
 * 144\. Binary Tree Preorder Traversal (PreorderTraversal.java)
 * 147\. Insertion Sort List (InsertionSortList.java)
+* 200\. Number of Islands (NumIslands.java)
 * 208\. Implement Trie (Prefix Tree) (TrieWithMap.java)
 * 208\. Implement Trie (Prefix Tree) (Trie.java)
 * 211\. Add and Search Word - Data structure design (WordDictionary.java)
