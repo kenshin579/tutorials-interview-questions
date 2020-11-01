@@ -12,7 +12,7 @@ Updated 2020-11-01
 | hackerrank | 1 |
 | codility | 1 |
 | google | 1 |
-| leetcode | 43 |
+| leetcode | 44 |
 | geeksforgeeks | 9 |
 | baekjoon | 1 |
 
@@ -54,11 +54,11 @@ Updated 2020-11-01
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 29 | 14 | 0 | 
+| Total  | 29 | 15 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Graph | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 1 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 10 | 11 | 3 |
+| Total | 1 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 11 | 11 | 3 |
 
 
 #### Easy
@@ -104,6 +104,7 @@ Updated 2020-11-01
 * 208\. Implement Trie (Prefix Tree) (Trie.java)
 * 211\. Add and Search Word - Data structure design (WordDictionary.java)
 * 287\. Find the Duplicate Number (FindDuplicate.java)
+* 394\. Decode String (DecodeString.java)
 * 560\. Subarray Sum Equals K (SubarraySum.java)
 * 701\. Insert into a Binary Search Tree (InsertIntoBST.java)
 * 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
