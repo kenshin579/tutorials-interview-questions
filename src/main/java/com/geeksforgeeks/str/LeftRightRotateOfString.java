@@ -3,9 +3,9 @@ package com.geeksforgeeks.str;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 543. Diameter of Binary Tree
+ * Left Right Rotate of String
  * Difficulty : Easy
- * Tags : Tree
+ * Tags : String
  *
  * https://www.geeksforgeeks.org/left-rotation-right-rotation-string-2/
  */
@@ -18,7 +18,7 @@ public class LeftRightRotateOfString {
      */
     public String rotateString(String str, int rotation) {
         rotation = rotation % str.length();
-        if (rotation > 0) { //right rotate
+        if (rotation > 0) {
             return rightRotate(str, rotation);
         }
         return leftRotate(str, Math.abs(rotation));
