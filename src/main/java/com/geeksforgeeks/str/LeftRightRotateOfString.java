@@ -12,9 +12,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class LeftRightRotateOfString {
     /**
-     * Time Complexity :
+     * Time Complexity : O(1)
+     * - substring의 구현에 따라서 달라질 것 같음 O(1)일 거라고 가정함
      *
-     * Algorithm :
+     * Algorithm : substring 메서드를 이용해서 작업함
+     * 1. left rotation인 경우
+     * - abc -> bc[0-1] + a[2] -> bca
+     * 2. right rotation인 경우
+     * - 기존 left rotation 메서드 사용
+     * - abc -> c[2] + ab[0-1] -> cab
      */
     public String rotateString(String str, int rotation) {
         rotation = rotation % str.length();

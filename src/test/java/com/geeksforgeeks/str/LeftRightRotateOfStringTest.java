@@ -15,7 +15,17 @@ public class LeftRightRotateOfStringTest {
     }
 
     @Test
+    public void rotateString_left2() {
+        assertThat(new LeftRightRotateOfString().rotateString("abc", -1)).isEqualTo("bca");
+    }
+
+    @Test
     public void rotateString_right() {
         assertThat(new LeftRightRotateOfString().rotateString("GeeksforGeeks", 2)).isEqualTo("ksGeeksforGee");
+    }
+
+    @Test
+    public void rotateString_right2() {
+        assertThat(new LeftRightRotateOfString().rotateString("abc", 1)).isEqualTo("cab");
     }
 }
