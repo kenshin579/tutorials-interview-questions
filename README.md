@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-11-01
+Updated 2020-11-04
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -13,7 +13,7 @@ Updated 2020-11-01
 | codility | 1 |
 | google | 1 |
 | leetcode | 44 |
-| geeksforgeeks | 9 |
+| geeksforgeeks | 10 |
 | baekjoon | 1 |
 
 ## java
@@ -120,6 +120,7 @@ Updated 2020-11-01
 * SubsetSum (SubsetSum.java)
 * 0-1 Knapsack (Knapsack.java)
 * Insertion Sort (InsertionSort.java)
+* Left Right Rotate of String (LeftRightRotateOfString.java)
 
 ## baekjoon
 
