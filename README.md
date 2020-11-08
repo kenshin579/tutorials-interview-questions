@@ -2,13 +2,13 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-11-04
+Updated 2020-11-08
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
 | java | 5 |
-| programmers | 11 |
+| programmers | 12 |
 | hackerrank | 1 |
 | codility | 1 |
 | google | 1 |
@@ -32,6 +32,7 @@ Updated 2020-11-04
 * 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
 * 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
 * 시간 초가 이슈도 있음 (Problem4.java)
+* 월간 코드 챌린지 시즌1 > 이진 변환 반복하기 (BinaryBitOperation.java)
 * 주식 가격 스택/큐 문제 (StockPrice.java)
 * 찾아라 프로그래밍 마에스터 > 게임 맵 최단거리 (GameMapShortestPath.java)
 * 42747 HIndex (HIndex.java)
