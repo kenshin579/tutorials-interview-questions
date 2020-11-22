@@ -15,18 +15,20 @@ public class LookAndSaySequence {
     /**
      * Time Complexity :
      *
+     * Algorithm :
      */
     public String lookAndSaySequence(int n) {
         return "";
     }
 
-    String countAndSay(int n) {
+    String countAndSay(String numStr) {
         StringBuilder sb = new StringBuilder();
-        String numStr = Integer.toString(n);
-        int count;
+//        String numStr = Integer.toString(n);
+        int count = 0;
+        char prevNum;
 
         for (int i = 0; i < numStr.length(); i++) {
-
+            log.info("count : {} sb : {}", count, sb);
         }
 
         return sb.toString();

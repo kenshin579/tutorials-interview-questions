@@ -34,17 +34,12 @@ public class LookAndSaySequenceTest {
     }
 
     @Test
-    public void countAndSay() {
-        assertThat(new LookAndSaySequence().countAndSay(1)).isEqualTo(11);
-    }
-
-    @Test
     public void countAndSay2() {
-        assertThat(new LookAndSaySequence().countAndSay(11)).isEqualTo(21);
+        assertThat(new LookAndSaySequence().countAndSay("11")).isEqualTo(21);
     }
 
     @Test
     public void countAndSay3() {
-        assertThat(new LookAndSaySequence().countAndSay(21)).isEqualTo(1211);
+        assertThat(new LookAndSaySequence().countAndSay("21")).isEqualTo(1211);
     }
 }
