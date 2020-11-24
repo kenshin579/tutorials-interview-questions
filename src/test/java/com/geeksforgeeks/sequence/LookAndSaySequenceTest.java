@@ -15,31 +15,41 @@ public class LookAndSaySequenceTest {
      */
     @Test
     public void lookAndSaySequence() {
-        assertThat(new LookAndSaySequence().lookAndSaySequence(1)).isEqualTo(1);
+        assertThat(new LookAndSaySequence().lookAndSaySequence(1)).isEqualTo("1");
     }
 
     @Test
     public void lookAndSaySequence2() {
-        assertThat(new LookAndSaySequence().lookAndSaySequence(2)).isEqualTo(11);
+        assertThat(new LookAndSaySequence().lookAndSaySequence(2)).isEqualTo("11");
     }
 
     @Test
     public void lookAndSaySequence3() {
-        assertThat(new LookAndSaySequence().lookAndSaySequence(3)).isEqualTo(1211);
+        assertThat(new LookAndSaySequence().lookAndSaySequence(3)).isEqualTo("21");
     }
 
     @Test
     public void lookAndSaySequence4() {
-        assertThat(new LookAndSaySequence().lookAndSaySequence(4)).isEqualTo(111221);
+        assertThat(new LookAndSaySequence().lookAndSaySequence(4)).isEqualTo("1211");
+    }
+
+    @Test
+    public void lookAndSaySequence5() {
+        assertThat(new LookAndSaySequence().lookAndSaySequence(5)).isEqualTo("111221");
     }
 
     @Test
     public void countAndSay2() {
-        assertThat(new LookAndSaySequence().countAndSay("11")).isEqualTo(21);
+        assertThat(new LookAndSaySequence().countAndSay("11")).isEqualTo("21");
     }
 
     @Test
     public void countAndSay3() {
-        assertThat(new LookAndSaySequence().countAndSay("21")).isEqualTo(1211);
+        assertThat(new LookAndSaySequence().countAndSay("21")).isEqualTo("1211");
+    }
+
+    @Test
+    public void countAndSay4() {
+        assertThat(new LookAndSaySequence().countAndSay("1211")).isEqualTo("111221");
     }
 }

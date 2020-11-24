@@ -18,17 +18,33 @@ public class LookAndSaySequence {
      * Algorithm :
      */
     public String lookAndSaySequence(int n) {
-        return "";
+        String num = "1";
+        if (n == 1) {
+            return num;
+        }
+
+        for (int i = 1; i < n; i++) {
+            log.info("num : {}", num);
+            num = countAndSay(num);
+        }
+        return num;
     }
 
-    String countAndSay(String numStr) {
+    String countAndSay(String num) {
         StringBuilder sb = new StringBuilder();
-//        String numStr = Integer.toString(n);
-        int count = 0;
-        char prevNum;
+        char prevNum = num.charAt(0);
+        num = num.substring(1) + " ";
+        int count = 1;
 
-        for (int i = 0; i < numStr.length(); i++) {
-            log.info("count : {} sb : {}", count, sb);
+        for (char curNum : num.toCharArray()) {
+//            log.info("prevNum: {} curNum : {} count : {} sb : {}", prevNum, curNum, count, sb);
+            if (prevNum != curNum) {
+                sb.append(count).append(prevNum);
+                prevNum = curNum;
+                count = 1;
+            } else {
+                count++;
+            }
         }
 
         return sb.toString();
