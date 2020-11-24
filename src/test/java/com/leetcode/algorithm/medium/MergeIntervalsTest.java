@@ -1,9 +1,13 @@
 package com.leetcode.algorithm.medium;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+
+import java.util.Stack;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Slf4j
 public class MergeIntervalsTest {
 
 	@Test
@@ -36,5 +40,65 @@ public class MergeIntervalsTest {
 		};
 
 		assertThat(new MergeIntervals().merge(intervals)).isEqualTo(result);
+	}
+
+	@Test
+	public void merge3() {
+		int[][] intervals = {
+				{ 1, 4 },
+				{ 2, 3 }
+		};
+
+		int[][] result = {
+				{ 1, 4 }
+		};
+
+		assertThat(new MergeIntervals().merge(intervals)).isEqualTo(result);
+	}
+
+	@Test
+	public void merge4() {
+		int[][] intervals = {
+				{ 1, 2 },
+				{ 3, 4 }
+		};
+
+		int[][] result = {
+				{ 1, 2 },
+				{ 3, 4 }
+		};
+
+		assertThat(new MergeIntervals().merge(intervals)).isEqualTo(result);
+	}
+
+	@Test
+	public void isMutuallyExclusiveOverlapped() {
+		assertThat(new MergeIntervals().isMutuallyExclusiveOverlapped(new int[] {1, 3}, new int[] {3, 4})).isTrue();
+	}
+
+	@Test
+	public void sort() {
+		int[][] intervals = {
+				{ 1, 4 },
+				{ 4, 5 },
+				{ 3, 4 }
+		};
+
+		int[][] merge = new MergeIntervals().merge(intervals);
+
+		for (int i = 0; i < merge.length - 1; i++) {
+			assertThat(merge[i][0]).isLessThan(merge[i + 1][0]);
+		}
+	}
+
+	@Test
+	public void test_stack() {
+		Stack<int[]> stack = new Stack<>();
+
+		stack.push(new int[] { 2, 3 });
+		stack.push(new int[] { 1, 4 });
+		int[] pop = stack.pop();
+		assertThat(pop[0]).isEqualTo(1);
+		assertThat(pop[1]).isEqualTo(4);
 	}
 }
