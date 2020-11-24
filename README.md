@@ -2,13 +2,13 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-11-22
+Updated 2020-11-24
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
 | hackerrank | 1 |
-| geeksforgeeks | 10 |
+| geeksforgeeks | 11 |
 | baekjoon | 1 |
 | codility | 1 |
 | google | 1 |
@@ -32,6 +32,7 @@ Updated 2020-11-22
 * Graph (인접 리스트로 구현) (Graph.java)
 * Minimum value of distance of farthest node in a Graph (MinFarthestDistance.java)
 * FractionalKnapsack (FractionalKnapsack.java)
+* Look and Say Sequence (LookAndSaySequence.java)
 
 ## baekjoon
 
