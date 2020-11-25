@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-11-24
+Updated 2020-11-25
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -13,7 +13,7 @@ Updated 2020-11-24
 | codility | 1 |
 | google | 1 |
 | java | 5 |
-| leetcode | 44 |
+| leetcode | 45 |
 | programmers | 13 |
 
 ## hackerrank
@@ -58,11 +58,11 @@ Updated 2020-11-24
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 29 | 15 | 0 | 
+| Total  | 29 | 16 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Graph | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 1 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 11 | 11 | 3 |
+| Total | 2 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 11 | 11 | 3 |
 
 
 #### Easy
@@ -97,6 +97,7 @@ Updated 2020-11-24
 * 1512\. Number of Good Pairs (NumberOfGoodPairs.java)
 
 #### Medium
+* 56\. Merge Intervals (MergeIntervals.java)
 * 77\. Combinations (Combinations.java)
 * 78\. Subsets (Subsets.java)
 * 92\. Reverse Linked List II (ReverseBetween.java)
