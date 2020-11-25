@@ -13,9 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class LookAndSaySequence {
     /**
-     * Time Complexity :
+     * Time Complexity : O(N * M), N: 입력값, M: string 가장의 긴 값
      *
      * Algorithm :
+     * 1.countAndSay(num) <-- 숫자를 보고 몇개 있지를
+     * - 1 | ## <-- 분리해서 첫번째, 두번째 char가 다르면, 다음 char로 넘어감
+     * - 같은 char이면 count를 하나씩 올림
+     * 2.fibonacci sequence처럼 앞의 결과를 가지고 처리를 해야 해서 loop을 돌면서 countAndSay를 호출함
      */
     public String lookAndSaySequence(int n) {
         String num = "1";
