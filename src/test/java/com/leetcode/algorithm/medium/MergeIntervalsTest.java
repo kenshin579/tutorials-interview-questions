@@ -72,6 +72,19 @@ public class MergeIntervalsTest {
     }
 
     @Test
+    public void merge5() {
+        int[][] intervals = {
+                {1, 4},
+                {4, 5}
+        };
+
+        int[][] result = {
+                {1, 5}
+        };
+        assertThat(new MergeIntervals().merge(intervals)).isEqualTo(result);
+    }
+
+    @Test
     public void convertStackToArrays() {
         Stack<int[]> stack = new Stack<>();
         stack.push(new int[]{2, 3});
@@ -96,6 +109,8 @@ public class MergeIntervalsTest {
     @Test
     public void contains() {
         assertThat(new MergeIntervals().contains(new int[]{1, 5}, new int[]{2, 4})).isTrue();
+        assertThat(new MergeIntervals().contains(new int[]{1, 5}, new int[]{1, 5})).isTrue();
+
         assertThat(new MergeIntervals().contains(new int[]{1, 5}, new int[]{3, 9})).isFalse();
         assertThat(new MergeIntervals().contains(new int[]{1, 5}, new int[]{8, 10})).isFalse();
     }

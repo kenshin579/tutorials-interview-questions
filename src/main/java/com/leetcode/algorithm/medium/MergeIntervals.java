@@ -15,12 +15,13 @@ import java.util.Stack;
  * https://www.geeksforgeeks.org/merging-intervals/
  */
 @Slf4j
-@Deprecated
 public class MergeIntervals {
     /**
-     * Time Complexity :
+     * Time Complexity : O(N)
      * <p>
      * Algorithm : Stack을 사용하는 방법
+     * 1. stack에 하나 추가
+     * 2. stack에서 하나씩 꺼내면서 나머지 intervals의 값을 loop을 돌면서 overlap이면 merge하도록 함
      */
     public int[][] merge(int[][] intervals) {
         Stack<int[]> stack = new Stack<>();
@@ -62,10 +63,10 @@ public class MergeIntervals {
     }
 
     boolean isPartiallyOverlapped(int[] x, int[] y) {
-        return !contains(x, y) && y[0] > x[0] && y[0] < x[1];
+        return !contains(x, y) && y[0] >= x[0] && y[0] <= x[1];
     }
 
     boolean contains(int[] x, int[] y) {
-        return y[0] > x[0] && x[1] > y[1];
+        return y[0] >= x[0] && x[1] >= y[1];
     }
 }
