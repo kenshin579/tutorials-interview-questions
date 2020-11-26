@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-11-25
+Updated 2020-11-26
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
@@ -13,7 +13,7 @@ Updated 2020-11-25
 | codility | 1 |
 | google | 1 |
 | java | 5 |
-| leetcode | 45 |
+| leetcode | 46 |
 | programmers | 13 |
 
 ## hackerrank
@@ -58,11 +58,11 @@ Updated 2020-11-25
 
 | Difficulty | Easy | Medium | Hard | 
 | :------: | :------: | :------: | :------: |
-| Total  | 29 | 16 | 0 | 
+| Total  | 29 | 17 | 0 | 
 
 | Tags | Array | BinarySearch | BitManipulation | Etc | Graph | Hash | LinkedList | Map | Set | String | Tree | Trie | 
 | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
-| Total | 2 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 11 | 11 | 3 |
+| Total | 3 | 1 | 1 | 5 | 2 | 1 | 6 | 1 | 1 | 11 | 11 | 3 |
 
 
 #### Easy
@@ -110,6 +110,7 @@ Updated 2020-11-25
 * 211\. Add and Search Word - Data structure design (WordDictionary.java)
 * 287\. Find the Duplicate Number (FindDuplicate.java)
 * 394\. Decode String (DecodeString.java)
+* 435\. Non-overlapping Intervals (EraseOverlapInterval.java)
 * 560\. Subarray Sum Equals K (SubarraySum.java)
 * 701\. Insert into a Binary Search Tree (InsertIntoBST.java)
 * 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
