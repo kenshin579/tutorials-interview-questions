@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NonOverlappingIntervalTest {
+public class EraseOverlapIntervalTest {
 
     /**
-     * 반환 값 :
+     * 반환 값 : 겹치는 intervals이 없게 하려면 최소 몇개의 interval을 삭제해야 하나?
      */
     @Test
     public void eraseOverlapIntervals() {
@@ -18,7 +18,7 @@ public class NonOverlappingIntervalTest {
                 {1, 3}
         };
 
-        assertThat(new NonOverlappingInterval().eraseOverlapIntervals(intervals)).isEqualTo(1);
+        assertThat(new EraseOverlapInterval().eraseOverlapIntervals(intervals)).isEqualTo(1);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class NonOverlappingIntervalTest {
                 {1, 2}
         };
 
-        assertThat(new NonOverlappingInterval().eraseOverlapIntervals(intervals)).isEqualTo(2);
+        assertThat(new EraseOverlapInterval().eraseOverlapIntervals(intervals)).isEqualTo(2);
     }
 
     @Test
@@ -39,6 +39,6 @@ public class NonOverlappingIntervalTest {
                 {2, 3}
         };
 
-        assertThat(new NonOverlappingInterval().eraseOverlapIntervals(intervals)).isEqualTo(0);
+        assertThat(new EraseOverlapInterval().eraseOverlapIntervals(intervals)).isEqualTo(0);
     }
 }
