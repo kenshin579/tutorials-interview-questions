@@ -62,6 +62,11 @@ public class PathSum {
      * Time Complexity : O(N)
      * <p>
      * Algorithm : BFS
+     * 1. node를 queue에 넣으면서 travers한다
+     * - traverse할 때 현재 sum을 sums에 기록해둔다
+     * 2. node을 queue에 꺼낼 때 sum도 같이 꺼내서 현재 sum과 currentNode.val의 합이 target sum과 같은 경우에 true를 반환한다
+     * nodes : [5, 4, 8, 11, 13, 4, 7, 2]
+     * sums : [0, 5, 5, 9, 13, 13, 20, 20]
      */
     public boolean hasPathSum2(TreeNode root, int sum) {
         log.info("root : {}, sum : {}", root, sum);
@@ -70,31 +75,38 @@ public class PathSum {
         }
 
         LinkedList<TreeNode> nodes = new LinkedList<>();
-        LinkedList<Integer> values = new LinkedList<>();
+        LinkedList<Integer> sums = new LinkedList<>();
 
         nodes.add(root);
-        values.add(root.val);
-        TreeNode current;
-        Integer value;
+        sums.add(0);
+        TreeNode currentNode;
+        Integer currentSum;
 
         while (!nodes.isEmpty()) {
-            current = nodes.poll();
-            value = values.poll();
-            log.info("value : {} current : {}", value, current);
+            currentNode = nodes.poll();
+            currentSum = sums.poll();
+            log.info("currentSum : {} val : {}", currentSum, currentNode.val);
+            currentSum = currentSum + currentNode.val;
+            log.info("currentSum : {}", currentSum);
 
-            if (sum == value) {
+            if (currentNode.left == null && currentNode.right == null
+                    && sum == currentSum) {
                 return true;
             }
 
-            if (root.left != null) {
-                nodes.add(current.left);
-                values.add(value + current.left.val);
+            if (currentNode.left != null) {
+                nodes.add(currentNode.left);
+                sums.add(currentSum);
             }
 
-            if (root.right != null) {
-                nodes.add(current.right);
-                values.add(value + current.right.val);
+            if (currentNode.right != null) {
+                nodes.add(currentNode.right);
+                sums.add(currentSum);
             }
+
+            log.info("nodes : {}", nodes);
+            log.info("sums : {}", sums);
+            System.out.println();
         }
 
         return false;
