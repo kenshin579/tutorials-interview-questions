@@ -3,11 +3,13 @@ package com.leetcode.algorithm.easy;
 import com.leetcode.algorithm.common.struct.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.LinkedList;
+
 /**
  * 112. Path Sum
  * Difficulty : Easy
  * Tags : Tree
- *
+ * <p>
  * https://leetcode.com/problems/path-sum/
  * <p>
  * Definition for a binary tree node.
@@ -24,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
  * }
  * }
  * <p>
- *
+ * <p>
  * https://leetcode.com/problems/path-sum/
  * https://leetcode.com/problems/path-sum/discuss/816992/Simple-recursive-solution-wvideo-whiteboard-explanation
  * https://www.programcreek.com/2013/01/leetcode-path-sum/
@@ -34,7 +36,7 @@ public class PathSum {
     /**
      * Time Complexity : O(N)
      * ==> T(N) = 2T(N/2) + 1
-     *
+     * <p>
      * Algorithm :DFS
      * - Subproblem 찾기 : 문제를 더 작게 만들기 위해서 sum에서 현재 노드의 값을 빼면서 recursive하게 호출함
      * - Base 케이스는 root가 null일 때는 false 이고 sum이 현재 값과 같은 경우에는 true를 반환하도록 함
@@ -58,11 +60,42 @@ public class PathSum {
 
     /**
      * Time Complexity : O(N)
-     *
+     * <p>
      * Algorithm : BFS
      */
-    public boolean hasPathSumBFS(TreeNode root, int sum) {
+    public boolean hasPathSum2(TreeNode root, int sum) {
         log.info("root : {}, sum : {}", root, sum);
+        if (root == null) {
+            return false;
+        }
+
+        LinkedList<TreeNode> nodes = new LinkedList<>();
+        LinkedList<Integer> values = new LinkedList<>();
+
+        nodes.add(root);
+        values.add(root.val);
+        TreeNode current;
+        Integer value;
+
+        while (!nodes.isEmpty()) {
+            current = nodes.poll();
+            value = values.poll();
+            log.info("value : {} current : {}", value, current);
+
+            if (sum == value) {
+                return true;
+            }
+
+            if (root.left != null) {
+                nodes.add(current.left);
+                values.add(value + current.left.val);
+            }
+
+            if (root.right != null) {
+                nodes.add(current.right);
+                values.add(value + current.right.val);
+            }
+        }
 
         return false;
     }

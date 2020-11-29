@@ -30,6 +30,7 @@ public class PathSumTest {
     @Test
     public void hasPathSum4() {
         assertThat(new PathSum().hasPathSum(null, 0)).isFalse();
+        assertThat(new PathSum().hasPathSum2(null, 0)).isFalse();
     }
 
     @Test
@@ -38,6 +39,7 @@ public class PathSumTest {
         BTreePrinter.printNode(root);
 
         assertThat(new PathSum().hasPathSum(root, 5)).isTrue();
+        assertThat(new PathSum().hasPathSum2(root, 5)).isTrue();
     }
 
     @Test
@@ -49,6 +51,7 @@ public class PathSumTest {
         BTreePrinter.printNode(root);
 
         assertThat(new PathSum().hasPathSum(root, 13)).isTrue();
+        assertThat(new PathSum().hasPathSum2(root, 13)).isTrue();
     }
 
     @Test
