@@ -20,6 +20,13 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class GetDecimalValue {
+    /**
+     * Time Complexity : O(N)
+     *
+     * Algorithm :
+     * 1.ListNode의 size를 먼저 확인
+     * 2.ListNode를 travserse하면서 size 크기 만큼 2^n을 해서 sum하면 된다
+     */
     public int getDecimalValue(ListNode head) {
         ListNode tempNode = head;
         int nthCount = 0;
