@@ -6,10 +6,6 @@ package com.leetcode.algorithm.common.struct;
 public class LinkedList {
     public ListNode head;
 
-    public LinkedList() {
-        head = null;    // head 노드 초기화
-    }
-
     /**
      * Time Complexity : O(N)
      *
