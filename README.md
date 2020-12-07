@@ -2,7 +2,7 @@
 
 # Algorithm - Table of Contents
 
-Updated 2020-12-06
+Updated 2020-12-07
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
