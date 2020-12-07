@@ -15,6 +15,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Deprecated
 public class IsBalanced {
+    /**
+     * Time Complexity:
+     * Algorithm : height-balanced하는 방법은 diff로 확인하면 됨
+     * 1.
+     */
     public boolean isBalanced(TreeNode root) {
 
 
