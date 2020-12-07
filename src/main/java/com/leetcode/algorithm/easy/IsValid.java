@@ -15,18 +15,20 @@ import java.util.Stack;
  */
 @Slf4j
 public class IsValid {
-    Map<Character, Character> bracketMap = new HashMap<Character, Character>() {
+    Map<Character, Character> bracketMap = new HashMap<>() {
         {
-            put('(', ')' );
-            put('{', '}' );
-            put('[', ']' );
+            put('(', ')');
+            put('{', '}');
+            put('[', ']');
         }
     };
 
     /**
-     * Time Complexity :
-     * Algorithm :
-     * - 이건 stack 사용하면 됨
+     * Time Complexity : O(N), s의 길이
+     * Algorithm : 이건 stack 사용하면 됨
+     * 1. OpenBracket이면 stack에 push
+     * 2. CloseBracket이면 stack에서 pop한 OpenBracket과 match이 되는지 확인
+     * 3. Stack에 아무것도 없으면 true 반환한다
      */
     public boolean isValid(String s) {
         char[] charS = s.toCharArray();
@@ -45,7 +47,7 @@ public class IsValid {
         for (char currChar : charS) {
             if (this.isOpenBracket(currChar)) {
                 stack.push(currChar);
-            } else {
+            } else { //CloseBracket인 경우
                 popChar = stack.pop();
                 Character matchChar = bracketMap.get(popChar);
                 if (!matchChar.equals(currChar)) {
