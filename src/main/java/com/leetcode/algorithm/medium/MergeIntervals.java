@@ -37,9 +37,10 @@ public class MergeIntervals {
             interval = stack.pop();
 
             if (isPartiallyOverlapped(interval, intervals[i])) {
-                stack.push(new int[] {interval[0], intervals[i][1]});
-            } else if (contains(interval, intervals[i])) {
-                stack.push(interval);
+                stack.push(new int[] {interval[0], Math.max(interval[1], intervals[i][1])}); //포함되는 경우 max를 사용할 수 있다고 함
+//                stack.push(new int[] {interval[0], intervals[i][1]});
+//            } else if (contains(interval, intervals[i])) {
+//                stack.push(interval);
             } else {
                 stack.push(interval);
                 stack.push(intervals[i]);
@@ -63,7 +64,8 @@ public class MergeIntervals {
     }
 
     boolean isPartiallyOverlapped(int[] x, int[] y) {
-        return !contains(x, y) && y[0] >= x[0] && y[0] <= x[1];
+//        return !contains(x, y) && y[0] >= x[0] && y[0] <= x[1];
+        return y[0] <= x[1]; //정렬이 이미 되어 있어서 simplify 할 수 있음
     }
 
     boolean contains(int[] x, int[] y) {
