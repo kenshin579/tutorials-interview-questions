@@ -1,20 +1,20 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkenshin579%2Ftutorials-interview-questions&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![HitCount](http://hits.dwyl.com/kenshin579/tutorials-interview-questions.svg)](http://hits.dwyl.com/kenshin579/tutorials-interview-questions)
 
 # Algorithm - Table of Contents
 
-Updated 2020-12-06
+Updated 2020-12-23
 
 ### Total Number of Studied Algorithms
 | Site  | Total |
 | :---------: | :-----------: |
 | leetcode | 46 |
+| programmers | 13 |
+| geeksforgeeks | 11 |
 | codility | 1 |
 | google | 1 |
 | hackerrank | 1 |
-| geeksforgeeks | 11 |
 | baekjoon | 1 |
 | java | 5 |
-| programmers | 13 |
 
 ## leetcode
 
@@ -77,6 +77,36 @@ Updated 2020-12-06
 * 701\. Insert into a Binary Search Tree (InsertIntoBST.java)
 * 1008\. Construct Binary Search Tree from Preorder Traversal (BstFromPreorder.java)
 
+## programmers
+
+* 42747 HIndex (HIndex.java)
+* 찾아라 프로그래밍 마에스터 > 게임 맵 최단거리 (GameMapShortestPath.java)
+* 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
+* 더 맵게 Heap 문제 (MoreSpicy.java)
+* 주식 가격 스택/큐 문제 (StockPrice.java)
+* 시간 초가 이슈도 있음 (Problem4.java)
+* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
+* 월간 코드 챌린지 시즌1 > 이진 변환 반복하기 (BinaryBitOperation.java)
+* 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
+* 월간 코드 챌린지 시즌1 > 트리 트리오 중간값 (TreeTrioMediumValue.java)
+* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (DotProduct.java)
+* 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
+* Budget (Budget.java)
+
+## geeksforgeeks
+
+* Job Sequence 문제 (JobSequenceWithDealine.java)
+* Transform String (TransformString.java)
+* 최대 긴 Common Sub String 출력 (CommonSubString.java)
+* Insertion Sort (InsertionSort.java)
+* Look and Say Sequence (LookAndSaySequence.java)
+* Left Right Rotate of String (LeftRightRotateOfString.java)
+* Minimum value of distance of farthest node in a Graph (MinFarthestDistance.java)
+* Graph (인접 리스트로 구현) (Graph.java)
+* FractionalKnapsack (FractionalKnapsack.java)
+* 0-1 Knapsack (Knapsack.java)
+* SubsetSum (SubsetSum.java)
+
 ## codility
 
 * Remove String In Order (RemoveStringInOrder.java)
@@ -89,45 +119,15 @@ Updated 2020-12-06
 
 * 높이(height) : 루트 노드에서 가장 깊숙히 있는 노드의 깊이 (HeightOfBinaryTree.java)
 
-## geeksforgeeks
-
-* Transform String (TransformString.java)
-* 최대 긴 Common Sub String 출력 (CommonSubString.java)
-* Job Sequence 문제 (JobSequenceWithDealine.java)
-* FractionalKnapsack (FractionalKnapsack.java)
-* Insertion Sort (InsertionSort.java)
-* Minimum value of distance of farthest node in a Graph (MinFarthestDistance.java)
-* Graph (인접 리스트로 구현) (Graph.java)
-* Left Right Rotate of String (LeftRightRotateOfString.java)
-* Look and Say Sequence (LookAndSaySequence.java)
-* 0-1 Knapsack (Knapsack.java)
-* SubsetSum (SubsetSum.java)
-
 ## baekjoon
 
 * 2003 : 수들의 합2 (SubSum.java)
 
 ## java
 
-* Maximize Num Of Things (MaximizeNumOfThings.java)
-* Binary Search (BinarySearch.java)
 * Remove duplicate from an array of integers (LinkedList.java)
-* Object Oriented Problem (Coffee.java)
 * String Permutation (StringPermutation.java)
-
-## programmers
-
-* 주식 가격 스택/큐 문제 (StockPrice.java)
-* 42747 HIndex (HIndex.java)
-* 크레인 인형뽑기 게임 - 2019 카카오 개발자 겨울 인턴쉽 (CraneDoll.java)
-* Budget (Budget.java)
-* 더 맵게 Heap 문제 (MoreSpicy.java)
-* 월간 코드 챌린지 시즌1 > 트리 트리오 중간값 (TreeTrioMediumValue.java)
-* 월간 코드 챌린지 시즌1 > 이진 변환 반복하기 (BinaryBitOperation.java)
-* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (ConvertToTernary.java)
-* 월간 코드 챌린지 시즌1 > 두 개 뽑아서 더하기 (AddTwoIntegers.java)
-* 월간 코드 챌린지 시즌1 > 쿼드압축 후 개수 세기 (QuadTree.java)
-* 시간 초가 이슈도 있음 (Problem4.java)
-* 월간 코드 챌린지 시즌1 > 3진법 뒤집기 (DotProduct.java)
-* 찾아라 프로그래밍 마에스터 > 게임 맵 최단거리 (GameMapShortestPath.java)
+* Binary Search (BinarySearch.java)
+* Object Oriented Problem (Coffee.java)
+* Maximize Num Of Things (MaximizeNumOfThings.java)
 
