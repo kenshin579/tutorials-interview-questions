@@ -6,6 +6,7 @@ import (
 )
 
 /*
+https://leetcode.com/problems/detect-capital/
 https://stackoverflow.com/questions/59293525/how-to-check-if-a-string-is-all-upper-or-lower-case-in-go
 */
 func DetectCapitalUse(word string) bool {
