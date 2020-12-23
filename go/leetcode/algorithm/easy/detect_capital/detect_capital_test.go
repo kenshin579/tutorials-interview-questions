@@ -1,10 +1,22 @@
 package detect_capital
 
 import (
-	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
+
+func Test_detectCapitalUse1(t *testing.T) {
+	assert.True(t, DetectCapitalUse("USA"))
+	assert.True(t, DetectCapitalUse("leetcode"))
+	assert.True(t, DetectCapitalUse("Google"))
+}
+
+func Test_detectCapitalUse2(t *testing.T) {
+	assert.False(t, DetectCapitalUse("FlagG"))
+	assert.False(t, DetectCapitalUse("USa"))
+	assert.False(t, DetectCapitalUse("usA"))
+	assert.False(t, DetectCapitalUse("uSa"))
+}
 
 func Test_detectCapitalUse(t *testing.T) {
 	type args struct {
@@ -28,10 +40,4 @@ func Test_detectCapitalUse(t *testing.T) {
 			}
 		})
 	}
-}
-
-func Test_detectCapitalUse1(t *testing.T) {
-	use := DetectCapitalUse("USA")
-	fmt.Println("use", use)
-
 }
