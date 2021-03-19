@@ -24,14 +24,14 @@ public class PathSumTest {
 
         BTreePrinter.printNode(root);
 
-        assertThat(new PathSum().hasPathSum(root, 22)).isTrue();
-        assertThat(new PathSum().hasPathSum2(root, 22)).isTrue();
+        assertThat(new PathSum().hasPathSumDFS(root, 22)).isTrue();
+        assertThat(new PathSum().hasPathSumBFS(root, 22)).isTrue();
     }
 
     @Test
     public void hasPathSum4() {
-        assertThat(new PathSum().hasPathSum(null, 0)).isFalse();
-        assertThat(new PathSum().hasPathSum2(null, 0)).isFalse();
+        assertThat(new PathSum().hasPathSumDFS(null, 0)).isFalse();
+        assertThat(new PathSum().hasPathSumBFS(null, 0)).isFalse();
     }
 
     @Test
@@ -39,8 +39,8 @@ public class PathSumTest {
         TreeNode root = new TreeNode(5);
         BTreePrinter.printNode(root);
 
-        assertThat(new PathSum().hasPathSum(root, 5)).isTrue();
-        assertThat(new PathSum().hasPathSum2(root, 5)).isTrue();
+        assertThat(new PathSum().hasPathSumDFS(root, 5)).isTrue();
+        assertThat(new PathSum().hasPathSumBFS(root, 5)).isTrue();
     }
 
     @Test
@@ -51,8 +51,8 @@ public class PathSumTest {
 
         BTreePrinter.printNode(root);
 
-        assertThat(new PathSum().hasPathSum(root, 13)).isTrue();
-        assertThat(new PathSum().hasPathSum2(root, 13)).isTrue();
+        assertThat(new PathSum().hasPathSumDFS(root, 13)).isTrue();
+        assertThat(new PathSum().hasPathSumBFS(root, 13)).isTrue();
     }
 
     @Test
@@ -62,13 +62,13 @@ public class PathSumTest {
                 null);
         BTreePrinter.printNode(root);
 
-        assertThat(new PathSum().hasPathSum(root, 1)).isFalse();
-        assertThat(new PathSum().hasPathSum2(root, 1)).isFalse();
+        assertThat(new PathSum().hasPathSumDFS(root, 1)).isFalse();
+        assertThat(new PathSum().hasPathSumBFS(root, 1)).isFalse();
     }
 
     @Test
     public void hasPathSum7() {
-        assertThat(new PathSum().hasPathSum(null, 0)).isFalse();
-        assertThat(new PathSum().hasPathSum2(null, 0)).isFalse();
+        assertThat(new PathSum().hasPathSumDFS(null, 0)).isFalse();
+        assertThat(new PathSum().hasPathSumBFS(null, 0)).isFalse();
     }
 }
