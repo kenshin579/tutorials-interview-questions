@@ -41,7 +41,7 @@ public class PathSum {
      * - Subproblem 찾기 : 문제를 더 작게 만들기 위해서 sum에서 현재 노드의 값을 빼면서 recursive하게 호출함
      * - Base 케이스는 root가 null일 때는 false 이고 sum이 현재 값과 같은 경우에는 true를 반환하도록 함
      */
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSumDFS(TreeNode root, int sum) {
         log.info("root : {}, sum : {}", root, sum);
 
         if (root == null) {
@@ -52,8 +52,8 @@ public class PathSum {
             return true;
         }
 
-        boolean left = hasPathSum(root.left, sum - root.val);
-        boolean right = hasPathSum(root.right, sum - root.val);
+        boolean left = hasPathSumDFS(root.left, sum - root.val);
+        boolean right = hasPathSumDFS(root.right, sum - root.val);
         log.info("left : {} right : {}", left, right);
         return left || right;
     }
@@ -68,7 +68,7 @@ public class PathSum {
      * nodes : [5, 4, 8, 11, 13, 4, 7, 2]
      * sums : [0, 5, 5, 9, 13, 13, 20, 20]
      */
-    public boolean hasPathSum2(TreeNode root, int sum) {
+    public boolean hasPathSumBFS(TreeNode root, int sum) {
         log.info("root : {}, sum : {}", root, sum);
         if (root == null) {
             return false;
